@@ -24,4 +24,3 @@ if {[catch {
 }
 
 ad_returnredirect $return_url
-
