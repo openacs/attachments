@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="0.2" url="http://software.openforce.net/openacs/packages/attachments-0.2.apm">
+    <version name="0.3" url="http://software.openforce.net/openacs/packages/attachments-0.3.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -18,8 +18,8 @@
         <vendor url="http://openforce.biz">OpenForce, Inc.</vendor>
         <description format="text/plain">Attachments</description>
 
-        <provides url="attachments" version="0.2"/>
-        <requires url="file-storage" version="4.1"/>
+        <provides url="attachments" version="0.3"/>
+        <requires url="file-storage" version="4.2"/>
 
         <files>
             <file type="package_spec" path="attachments.info"/>
@@ -40,6 +40,7 @@
             <file type="content_page" path="www/attach-2.tcl"/>
             <file type="content_page" path="www/attach.adp"/>
             <file type="content_page" path="www/attach.tcl"/>
+            <file type="query_file" path="www/attach.xql"/>
             <file type="content_page" path="www/download/index.vuh"/>
             <file type="query_file" path="www/download/index.xql"/>
             <file type="query_file" db_type="oracle" path="www/file-add-2-oracle.xql"/>

@@ -1,6 +1,6 @@
-<master src="master">
-<property name="title">Attach A File to @pretty_object_name@</property>
-<property name="context_bar">@context_bar@</property>
+<master>
+<property name="title">Attach a File to @pretty_object_name@</property>
+<property name="context">@context@</property>
 
 You are attaching a document to @pretty_object_name@.
 
@@ -22,8 +22,8 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
       <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">URL</a>
 <p>
 <if @contents:rowcount@ gt 0>
-  <table width="85%" cellpadding="5" cellspacing="5">
-    <tr>
+  <table width="85%" cellpadding="5" cellspacing="0" class="table-display">
+    <tr class="table-header">
       <td>&nbsp;</td>
       <td>Name</td>
       <td>Action</td>
@@ -32,6 +32,12 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
       <td>Last Modified</td>
     </tr>
 <multiple name="contents">
+<if @contents.rownum@ odd>
+    <tr class="oddrow">
+</if>
+<else>
+    <tr class="evenrow">
+</else>
     <tr>
 <if @contents.type@ eq "folder">
       <td><img src="graphics/folder.gif"></td>

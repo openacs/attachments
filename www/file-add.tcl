@@ -19,7 +19,7 @@ ad_page_contract {
     }
 } -properties {
     folder_id:onevalue
-    context_bar:onevalue
+    context:onevalue
     title:onevalue
     lock_title_p:onevalue
 }
@@ -30,8 +30,8 @@ ad_require_permission $folder_id write
 
 # set templating datasources
 
-set context_bar {{Attach File}}
-set fs_context_bar [fs_context_bar_list -final "Add File" $folder_id]
+set context {{Attach File}}
+set fs_context [fs_context_bar_list -final "Add File" $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection

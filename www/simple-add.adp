@@ -1,6 +1,6 @@
-<master src="master">
+<master>
 <property name="title">Attach URL</property>
-<property name="context_bar">@context_bar@</property>
+<property name="context">@context@</property>
 
 You are attaching a <b>new url</b> to @pretty_object_name@.<p>
 

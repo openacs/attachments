@@ -1,4 +1,3 @@
-
 ad_page_contract {
 
     Attach something to an object
@@ -46,11 +45,7 @@ set n_contents [fs::get_folder_contents_count -folder_id $folder_id -user_id $us
 set folder_name [fs::get_object_name -object_id $folder_id]
 
 # Folder contents
-set rows [fs::get_folder_contents \
-    -folder_id $folder_id \
-    -user_id $user_id]
-
-template::util::list_of_ns_sets_to_multirow -rows $rows -var_name "contents"
+db_multirow contents select_folder_contents {}
 
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
@@ -60,6 +55,5 @@ if {$folder_id == $root_folder_id} {
     set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
 }
 
-set context_bar {Attach}
+set context "Attach"
 
-ad_return_template

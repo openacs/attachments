@@ -1,6 +1,6 @@
-<master src="master">
+<master>
 <property name="title">Upload New Attachment</property>
-<property name="context_bar">@context_bar@</property>
+<property name="context">@context@</property>
 
 You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 
