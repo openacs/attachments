@@ -45,104 +45,33 @@ set user_id [ad_conn user_id]
 # Get the ip
 set creation_ip [ad_conn peeraddr]
 
-set mime_type [cr_filename_to_mime_type -create $upload_file]
+set fs_package_id [site_node::get_element -url "[dotlrn::get_url]/file-storage/" -element "package_id"]
 
-# Get the storage type
-set indb_p [ad_parameter "StoreFilesInDatabaseP" -package_id [ad_conn package_id]]
-
-db_transaction {
-
-    # create the new item
-    if {$indb_p} {
-
-	set file_id [db_exec_plsql new_lob_file "
-	begin
-    		:1 := file_storage.new_file (
-        		title => :title,
-        		folder_id => :folder_id,
-        		creation_user => :user_id,
-        		creation_ip => :creation_ip,
-		        indb_p => 't'
-   			);
-
-        end;"]
-
-	set version_id [db_exec_plsql new_version "
-	begin
-    		:1 := file_storage.new_version (
-        		filename => :filename,
-        		description => :description,
-        		mime_type => :mime_type,
-        		item_id => :file_id,
-        		creation_user => :user_id,
-        		creation_ip => :creation_ip
-    			);
-        end;"]
-
-	db_dml lob_content "
-	update cr_revisions
-	set    content = empty_lob()
-	where  revision_id = :version_id
-	returning content into :1" -blob_files [list ${upload_file.tmpfile}]
-
-
-	# Unfortunately, we can only calculate the file size after the lob is uploaded 
-	db_dml lob_size "
-	update cr_revisions
- 	set content_length = dbms_lob.getlength(content) 
-	where revision_id = :version_id"
-
-    } else {
-
-	set file_id [db_exec_plsql new_fs_file "
-	begin
-    		:1 := file_storage.new_file (
-        		title => :title,
-        		folder_id => :folder_id,
-        		creation_user => :user_id,
-        		creation_ip => :creation_ip,
-		        indb_p => 'f'
-   			);
-	end;"]
-
-
-	set version_id [db_exec_plsql new_version "
-	begin
-
-    		:1 := file_storage.new_version (
-        		filename => :filename,
-        		description => :description,
-        		mime_type => :mime_type,
-        		item_id => :file_id,
-        		creation_user => :user_id,
-        		creation_ip => :creation_ip
-    			);
-
-        end;"]
-
-	set tmp_filename [cr_create_content_file $file_id $version_id ${upload_file.tmpfile}]
-	set tmp_size [cr_file_size $tmp_filename]
-
-	db_dml fs_content_size "
-	update cr_revisions
-	set content = '$tmp_filename',
-            content_length = $tmp_size
-	where  revision_id = :version_id"
-
-    }
-
+#db_transaction {
+    set file_id [db_nextval "acs_object_id_seq"]
+    fs::add_file \
+            -name $upload_file \
+            -item_id $file_id \
+            -parent_id $folder_id \
+            -tmp_filename ${upload_file.tmpfile}\
+            -creation_user $user_id \
+            -creation_ip $creation_ip \
+            -title $title \
+            -description $description \
+            -package_id $fs_package_id
+                                                                                                                          
     # attach the file_id
     attachments::attach -object_id $object_id -attachment_id $file_id
 
-} on_error {
+#} on_error {
 
     # most likely a duplicate name or a double click
 
-    set folder_url index?folder_id?$folder_id
-    ad_return_complaint 1 "[_ attachments.lt_You_probably_clicked_]"
+#    set folder_url index?folder_id?$folder_id
+#    ad_return_complaint 1 "[_ attachments.lt_You_probably_clicked_]"
 
-       ad_script_abort
-}
+#       ad_script_abort
+#}
 
 
 ad_returnredirect $return_url

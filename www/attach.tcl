@@ -17,8 +17,6 @@ set user_id [ad_conn user_id]
 
 # We require the write permission on an object
 permission::require_permission -object_id $object_id -privilege write
-set write_permission_p \
-        [permission::permission_p -object_id $folder_id -privilege write]
 
 # Give the object a nasty name if it doesn't have a pretty name
 if {[empty_string_p $pretty_object_name]} {
@@ -26,9 +24,8 @@ if {[empty_string_p $pretty_object_name]} {
 }
 
 # Load up file storage information
-set root_folder_id [attachments::get_root_folder]
 if {[empty_string_p $folder_id]} {
-    set folder_id $root_folder_id
+    set folder_id [dotlrn_fs::get_user_shared_folder -user_id $user_id]
 } 
 
 # sanity check
@@ -36,6 +33,9 @@ if {[empty_string_p $folder_id]} {
     ad_return_complaint 1 "[_ attachments.lt_Error_empty_folder_id]"
     ad_script_abort
 }
+
+set write_permission_p \
+        [permission::permission_p -object_id $folder_id -privilege write]
 
 # Check permission
 permission::require_permission -object_id $folder_id -privilege read
@@ -53,11 +53,7 @@ db_multirow -unclobber contents select_folder_contents {} {
 
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
-if {$folder_id == $root_folder_id} {
-    set fs_context_bar_html "[_ attachments.Top]"
-} else {
-    set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
-}
+set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
 
 set context "[_ attachments.Attach]"
 
