@@ -23,5 +23,14 @@ url_id = :attachment_id
 </querytext>
 </fullquery>
 
+
+  <fullquery name="select_attachment_title">      
+    <querytext>
+      select r.title 
+      from cr_revisions r, cr_items i 
+      where i.item_id = :attachment_id 
+      and r.revision_id  = i.live_revision
+    </querytext>
+  </fullquery>
  
 </queryset>

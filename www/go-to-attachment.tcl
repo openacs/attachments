@@ -26,7 +26,8 @@ switch $object_type {
     }
 
     content_item {
-        ad_returnredirect "download/$object_id?object_id=$object_id&attachment_id=$attachment_id"
+        set title [db_string select_attachment_title {}]
+        ad_returnredirect "download/[ad_urlencode $title]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
         return
     }
