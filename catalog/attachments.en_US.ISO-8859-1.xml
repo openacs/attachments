@@ -10,6 +10,10 @@
   <msg key="Add_pretty_name">Add %pretty_name%</msg>
   <msg key="Attach">Attach</msg>
   <msg key="attach_new">Attach a &lt;b&gt;new&lt;/b&gt;:</msg>
+  <description key="attach_new">This key is going to give problems with word-order for several languages, because the &quot;attach new&quot; grammar is quite specific to English. For example the best translation in Dutch would be &quot;Nieuwe xxxx toevoegen&quot;, but we do not know xxxx yet. A work around is to write &quot;Voeg toe nieuw&quot;, but depending on what is behind it, grammar requires &quot;Voeg toe nieuwe&quot;. So, we get a very forced translation: &quot;Voeg toe nieuw(e)&quot;.
+
+Please fix.</description>
+
   <msg key="Attach_URL">Attach URL</msg>
   <description key="Attach_URL">Used as title on page for attaching a URL to an object.</description>
 

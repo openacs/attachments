@@ -26,7 +26,7 @@
   <msg key="lt_No_such_attachment_fo">Nessun tipo di allegato per questo oggetto.</msg>
   <msg key="lt_The_specified_parent_">La cartella superiore specificata non &amp;egrave; valida.</msg>
   <msg key="lt_To_attach_a_file_alre">Per allegare un file gi&amp;agrave; in una cartella, apri la cartella cliccando sul suo nome, poi clicca sul link &amp;quot;[ Scegli ]&amp;quot; vicino al file.
-Per caricare il file in una cartella, apri la cartella cliccando sul suo nome, poi clicca l'appropriato &amp;quot;Allega nuovo: File | </msg>
+Per caricare il file in una cartella, apri la cartella cliccando sul suo nome, poi clicca l'appropriato &amp;quot;Allega nuovo: File | URL&amp;quot; link</msg>
   <msg key="lt_Upload_New_Attachment">Carica un nuovo allegato</msg>
   <msg key="lt_Use_the_Browse_button">Usa il bottone &quot;Sfoglia...&quot; per individuare il tuo file, poi clicca su &quot;Apri&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">Stai allegando un documento a %pretty_object_name%.</msg>
