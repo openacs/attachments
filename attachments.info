@@ -10,10 +10,10 @@
 
     <version name="0.5" url="http://openacs.org/repository/download/apm/attachments-0.5.apm">
         <owner url="http://openacs.org">OpenACS</owner>
-        <summary>Attachments</summary>
+        <summary>Attachment support</summary>
         <release-date>2003-11-10</release-date>
         <vendor url="http://openacs.org">OpenACS</vendor>
-        <description format="text/plain">Attachments</description>
+        <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
         <provides url="attachments" version="0.5"/>
         <requires url="file-storage" version="4.6.2"/>
