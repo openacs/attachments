@@ -2,7 +2,7 @@
 <property name="title">Upload New Attachment</property>
 <property name="context_bar">@context_bar@</property>
 
-You are attaching a document to @pretty_object_name@.<p>
+You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 
 <form enctype=multipart/form-data method=POST action="file-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">

@@ -14,8 +14,13 @@ ad_page_contract {
 # Perms
 permission::require_permission -object_id $object_id -privilege write
 
-# Perform the attachment
-attachments::attach -object_id $object_id -attachment_id $item_id
+if {[catch {
+    # Perform the attachment
+    attachments::attach -object_id $object_id -attachment_id $item_id
+} errmsg]} {
+    # Attachment already exists, just keep going
+    ns_log Notice "Attachment $item_id to Object $object_id already exists"
+}
 
 ad_returnredirect $return_url
 
