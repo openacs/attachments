@@ -29,10 +29,10 @@
     </tr>
 <multiple name="contents">
 <if @contents.rownum@ odd>
-    <tr class="oddrow">
+    <tr class="odd">
 </if>
 <else>
-    <tr class="evenrow">
+    <tr class="even">
 </else>
     <tr>
 <if @contents.type@ eq "folder">
