@@ -1,6 +1,8 @@
-<master>
-<property name="title">Create @pretty_name@</property>
+<master src="master">
+<property name="title">Attach URL</property>
 <property name="context_bar">@context_bar@</property>
+
+You are attaching a document to @pretty_object_name@.<p>
 
 <form method=POST action="simple-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">

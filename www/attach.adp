@@ -1,18 +1,20 @@
-<master>
+<master src="master">
+<property name="title">Attach A File to @pretty_object_name@</property>
+<property name="context_bar">@context_bar@</property>
+
 You are attaching a document to @pretty_object_name@.<p>
 
 Choose a location for your attachment. If your attachment already
-exists in the file storage folder, simply select it. Otherwise, you
+exists in the file storage folder, simply select it.<br>
+Otherwise, you
 may upload a new attachment.
 
 <p>
-@fs_context_bar@
+@fs_context_bar_html@
 <p>
-      <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">Upload a new attachment
-      file</a>
+Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">File</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">Create a new URL
-      attachment</a>
+      <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">URL</a>
 <p>
 <if @contents:rowcount@ gt 0>
   <table width="85%" cellpadding="5" cellspacing="5">

@@ -35,7 +35,8 @@ create table attachments (
                                 references acs_objects(object_id)
                                 on delete cascade,
     item_id                     constraint attachments_item_id_fk
-                                references cr_items(item_id),
+                                references acs_objects(object_id)
+                                on delete cascade,
     constraint                  attachments_pk
                                 primary key (object_id, item_id)
 );

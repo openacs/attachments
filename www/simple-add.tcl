@@ -9,6 +9,7 @@ ad_page_contract {
     folder_id:integer,notnull
     object_id:integer,notnull
     return_url:notnull
+    pretty_object_name:notnull
     {type "fs_url"}
     {title ""}
     {lock_title_p 0}
@@ -34,7 +35,8 @@ if {[empty_string_p $pretty_name]} {
     return -code error "No such type"
 }
 
-set context_bar [fs_context_bar_list -final "Add $pretty_name" $folder_id]
+set context_bar {{Attach URL}}
+set fs_context_bar [fs_context_bar_list -final "Add $pretty_name" $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection

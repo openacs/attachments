@@ -25,8 +25,9 @@ if {[empty_string_p $pretty_object_name]} {
 
 # Load up file storage information
 
+set root_folder_id [attachments::get_root_folder]
 if {[empty_string_p $folder_id]} {
-    set folder_id [attachments::get_root_folder]
+    set folder_id $root_folder_id
 }
 
 # Check permission
@@ -45,8 +46,14 @@ set rows [fs::get_folder_contents \
 
 template::util::list_of_ns_sets_to_multirow -rows $rows -var_name "contents"
 
-set fs_context_bar [fs_context_bar_list -root_folder_id [attachments::get_root_folder] -final "Attach" $folder_id]
-
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
+
+if {$folder_id == $root_folder_id} {
+    set fs_context_bar_html "Top"
+} else {
+    set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
+}
+
+set context_bar {Attach}
 
 ad_return_template

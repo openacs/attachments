@@ -8,6 +8,7 @@ ad_page_contract {
     folder_id:integer,notnull
     object_id:integer,notnull
     return_url:notnull
+    pretty_object_name:notnull
     {title ""}
     {lock_title_p 0}
 } -validate {
@@ -29,7 +30,8 @@ ad_require_permission $folder_id write
 
 # set templating datasources
 
-set context_bar [fs_context_bar_list -final "Add File" $folder_id]
+set context_bar {{Attach File}}
+set fs_context_bar [fs_context_bar_list -final "Add File" $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection
