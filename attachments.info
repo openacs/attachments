@@ -6,6 +6,7 @@
     <pretty-plural>Attachments</pretty-plural>
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
+    <auto-mount>attachments</auto-mount>
 
     <version name="0.3" url="http://software.openforce.net/openacs/packages/attachments-0.3.apm">
     <database-support>
