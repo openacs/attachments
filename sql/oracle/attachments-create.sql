@@ -30,6 +30,9 @@ create table attachments_fs_root_folder_map (
                                 primary key (package_id, folder_id)
 );
 
+--RI Indexes
+create index attachments_fsr_fm_folder_id_i ON attachments_fs_root_folder_map(folder_id);
+
 create table attachments (
     object_id                   constraint attachments_object_id_fk
                                 references acs_objects (object_id)
@@ -46,3 +49,7 @@ create table attachments (
     constraint                  attachments_pk
                                 primary key (object_id, item_id)
 );
+
+--RI Indexes
+create index attachments_item_id_idx ON attachments(item_id);
+

@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="0.3" url="http://software.openforce.net/openacs/packages/attachments-0.3.apm">
+    <version name="0.4" url="http://software.openforce.net/openacs/packages/attachments-0.4.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -18,7 +18,7 @@
         <vendor url="http://openforce.biz">OpenForce, Inc.</vendor>
         <description format="text/plain">Attachments</description>
 
-        <provides url="attachments" version="0.3"/>
+        <provides url="attachments" version="0.4"/>
         <requires url="file-storage" version="4.2"/>
 
         <files>
@@ -26,9 +26,11 @@
             <file type="data_model_create" db_type="oracle" path="sql/oracle/attachments-create.sql"/>
             <file type="data_model_drop" db_type="oracle" path="sql/oracle/attachments-drop.sql"/>
             <file type="data_model_upgrade" db_type="oracle" path="sql/oracle/upgrade/upgrade-0.1d-0.2.sql"/>
+            <file type="data_model_upgrade" db_type="oracle" path="sql/oracle/upgrade/upgrade-0.3-0.4.sql"/>
             <file type="data_model_create" db_type="postgresql" path="sql/postgresql/attachments-create.sql"/>
             <file type="data_model_drop" db_type="postgresql" path="sql/postgresql/attachments-drop.sql"/>
             <file type="data_model_upgrade" db_type="postgresql" path="sql/postgresql/upgrade/upgrade-0.1d-0.2.sql"/>
+            <file type="data_model_upgrade" db_type="postgresql" path="sql/postgresql/upgrade/upgrade-0.3-0.4.sql"/>
             <file type="query_file" db_type="oracle" path="tcl/attachments-procs-oracle.xql"/>
             <file type="query_file" db_type="postgresql" path="tcl/attachments-procs-postgresql.xql"/>
             <file type="tcl_procs" path="tcl/attachments-procs.tcl"/>
