@@ -1,24 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <message_catalog package_key="attachments" package_version="0.5" locale="ms_my" charset="utf-8">
 
-  <msg key="Action">Tindakan</msg>
   <msg key="Add_File">Tambah Fail</msg>
-  <msg key="Add_pretty_name">Tambah %pretty_name%</msg>
   <msg key="Attach">Lampirkan</msg>
-  <msg key="attach_new">Lampirkan yang &lt;b&gt;baru&lt;/b&gt;:</msg>
   <msg key="Attach_URL">Lampirkan URL</msg>
   <msg key="Choose">Pilih</msg>
   <msg key="Description">Keterangan:</msg>
   <msg key="File">Fail</msg>
-  <msg key="Last_Modified">Ubahsuaian Terakhir</msg>
-  <msg key="lt_Attach_a_File_to_pret">Lampirkan satu Fail kepada %pretty_object_name%</msg>
-  <msg key="lt_Created_by_the_attach">Dihasilkan oleh pakej perlampiran</msg>
-  <msg key="lt_No_such_attachment_fo">Tiada lampiran sebegitu untuk objek ini</msg>
-  <msg key="lt_Upload_New_Attachment">Muatnaik Lampiran Baru</msg>
-  <msg key="lt_You_are_attaching_a_d">Anda sedang melampirkan document kepada %pretty_object_name%.</msg>
-  <msg key="lt_Your_file_is_larger_t">Fail anda lebih besar daripada saiz maksima yang dibenarkan dalam sistem ini (%max_number_of_bytes% bytes)</msg>
   <msg key="Name">Nama</msg>
-  <msg key="No_such_type">Tiada jenis sebegitu</msg>
   <msg key="Object">Objek</msg>
   <msg key="Size">Saiz</msg>
   <msg key="Title">Tajuk:</msg>
@@ -26,6 +15,4 @@
   <msg key="Type">Jenis</msg>
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
-  <msg key="you_are_attaching_document_to_object">Anda sedang melampirkan dokumen baru kepada %pretty_object_name%.</msg>
-  <msg key="you_are_attaching_url_to_object">Anda sedang melampirkan url baru kepada %pretty_object_name%.</msg>
 </message_catalog>

@@ -41,6 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Nome de arquivo do ficheiro :</msg>
-  <msg key="you_are_attaching_document_to_object">Está a anexar um novo documento a %pretty_object_name%. </msg>
-  <msg key="you_are_attaching_url_to_object">Está a anexar um novo URL a %pretty_object_name%. </msg>
 </message_catalog>
