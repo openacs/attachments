@@ -84,21 +84,26 @@ namespace eval attachments {
         db_dml delete_attachment {}
     }
 
+    ad_proc -public get_package_key {} {
+        return attachments
+    }
+
     ad_proc -public get_url {
     } {
         return [parameter::get  \
-            -package_id [apm_package_id_from_key attachments] \
+            -package_id [apm_package_id_from_key [get_package_key]] \
             -parameter RelativeUrl
         ]
     }
 
     ad_proc -public add_attachment_url {
+        {-folder_id ""}
         {-package_id ""}
         {-object_id:required}
         {-return_url ""}
         {-pretty_name ""}
     } {
-        return "[attachments::get_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&object_id=$object_id&return_url=[ns_urlencode $return_url]"
+        return "[attachments::get_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&folder_id=$folder_id&object_id=$object_id&return_url=[ns_urlencode $return_url]"
     }
 
     ad_proc -public goto_attachment_url {
