@@ -41,4 +41,6 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">버전 파일이름:</msg>
+  <msg key="you_are_attaching_document_to_object">%pretty_object_name%에 새 문서를 첨부합니다.</msg>
+  <msg key="you_are_attaching_url_to_object">%pretty_object_name%에 새 url을  첨부합니다.</msg>
 </message_catalog>

@@ -45,7 +45,7 @@ link</msg>
   <msg key="lt_Use_the_Browse_button">Use the &quot;Browse...&quot; button to locate your file, 
     then click &quot;Open&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">You are attaching a document to %pretty_object_name%.</msg>
-  <msg key="lt_You_probably_clicked_">You probably clicked on the Add button more than once. Check if the file is properly loaded on the &lt;a href=&quot;%folder_url%&quot;&gt;folder&lt;/a&gt; you want, or you can use the Back button to return and re-enter the version file. Here is the error message: &lt;pre&gt;%errmsg%&lt;pre&gt;</msg>
+  <msg key="lt_You_probably_clicked_">You probably clicked on the Add button more than once. Check if the file is properly loaded on the &lt;a href=&quot;%folder_url%&quot;&gt;folder&lt;/a&gt; you want, or you can use the Back button to return and re-enter the version file.</msg>
   <msg key="lt_Your_file_is_larger_t">Your file is larger than the maximum file size allowed on this system (%max_number_of_bytes% bytes)</msg>
   <msg key="Name">Name</msg>
   <msg key="No_such_type">No such type</msg>

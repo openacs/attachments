@@ -42,4 +42,6 @@ Per caricare il file in una cartella, apri la cartella cliccando sul suo nome, p
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Versione file :</msg>
+  <msg key="you_are_attaching_document_to_object">Stai allegando un nuovo documento a %pretty_object_name%</msg>
+  <msg key="you_are_attaching_url_to_object">Stai allegando un nuovo collegameno a %pretty_object_name%.</msg>
 </message_catalog>
