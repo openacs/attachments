@@ -17,8 +17,6 @@ set user_id [ad_conn user_id]
 
 # We require the write permission on an object
 permission::require_permission -object_id $object_id -privilege write
-set write_permission_p \
-        [permission::permission_p -object_id $folder_id -privilege write]
 
 # Give the object a nasty name if it doesn't have a pretty name
 if {[empty_string_p $pretty_object_name]} {
@@ -36,6 +34,9 @@ if {[empty_string_p $folder_id]} {
     ad_return_complaint 1 "[_ attachments.lt_Error_empty_folder_id]"
     ad_script_abort
 }
+
+set write_permission_p \
+        [permission::permission_p -object_id $folder_id -privilege write]
 
 # Check permission
 permission::require_permission -object_id $folder_id -privilege read
