@@ -28,16 +28,14 @@ ad_page_contract {
 # a new one if one doesn't exist. A BUG.
 set root_folder_id [db_string has_fs_root_folder_p_select \
      "select folder_id from fs_root_folders where package_id = :package_id" \
-     -default 0
-]
+     -default 0 ]
 
 if {$root_folder_id == 0} {
     # look for a fs root folder candidate, by looking for an file-storage
     # sibling of our parent (uncle? or aunt? node). Should generalize sibling 
     # stuff, search by parent etc.
     set parent_id [site_node::get_parent \
-        -node_id [site_node::get_node_id_from_object_id -object_id $package_id]
-    ]
+        -node_id [site_node::get_node_id_from_object_id -object_id $package_id] ]
 
     #
     # todo
@@ -49,23 +47,22 @@ if {$root_folder_id == 0} {
     # else ask to create a new root folder
     ad_return_template
 
-
 } else {
     if {[attachments::root_folder_p -pacakge_id $package_id]} {
         # sanity check that the attachments_root_folder and fs_root_folder match
         set attachments_root_folder [attachments::get_root_folder \
-             -package_id $package_id
-        ]
+             -package_id $package_id ]
 
         if {$attachments_root_folder != $root_folder_id} {
             ad_return_complaint 1 "Error: Attachment root folder and fs root folder different!"
-    } else {
-        # since this pkg already has a root folder do the mapping and return
-        attachments::map_root_folder \
-            -package_id $package_id \
-            -folder_id $root_folder_id
-
-        ad_returnredirect $referer
+        } else {
+            # since this pkg already has a root folder do the mapping and return
+            attachments::map_root_folder \
+                -package_id $package_id \
+                -folder_id $root_folder_id
+            
+            ad_returnredirect $referer
+            ad_script_abort
         }
     }
 }
