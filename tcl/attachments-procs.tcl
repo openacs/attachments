@@ -110,8 +110,9 @@ namespace eval attachments {
         {-package_id ""}
         {-object_id:required}
         {-attachment_id:required}
+        {-base_url ""}
     } {
-        return "[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
+        return "${base_url}[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
     }
 
     ad_proc -public graphic_url {
@@ -122,6 +123,7 @@ namespace eval attachments {
 
     ad_proc -public get_attachments {
         {-object_id:required}
+        {-base_url ""}
     } {
         returns a list of attachment ids and names
     } {
@@ -129,7 +131,7 @@ namespace eval attachments {
         set lst_with_urls [list]
 
         foreach el $lst {
-            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id [lindex $el 0]]]
+            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id [lindex $el 0] -base_url $base_url]]
             lappend lst_with_urls [concat $el $append_lst]
         }
 
