@@ -2,7 +2,7 @@
 <property name="title">Attach URL</property>
 <property name="context">@context@</property>
 
-You are attaching a <b>new url</b> to @pretty_object_name@.<p>
+You are attaching a <b>new URL</b> to @pretty_object_name@.<p>
 
 <form method=POST action="simple-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">
