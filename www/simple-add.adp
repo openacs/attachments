@@ -2,7 +2,9 @@
 <property name="title">#attachments.Attach_URL#</property>
 <property name="context">@context;noquote@</property>
 
-#attachments.You_are_attaching_a# <b>#attachments.new_url#</b> #attachments.lt_to_pretty_object_name#<p>
+<p>
+#attachments.you_are_attaching_url_to_object#
+</p>
 
 <form method=POST action="simple-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">
