@@ -17,6 +17,8 @@ set user_id [ad_conn user_id]
 
 # We require the write permission on an object
 permission::require_permission -object_id $object_id -privilege write
+set write_permission_p \
+        [permission::permission_p -object_id $folder_id -privilege write]
 
 # Give the object a nasty name if it doesn't have a pretty name
 if {[empty_string_p $pretty_object_name]} {

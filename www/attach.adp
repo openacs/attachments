@@ -13,9 +13,11 @@
 <p>
 @fs_context_bar_html;noquote@
 <p>
+<if @write_permission_p@ eq 1>
 #attachments.attach_new#  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.File#</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.URL#</a>
+</if>
 <p>
 <if @contents:rowcount@ gt 0>
   <table width="85%" cellpadding="5" cellspacing="0" class="table-display">

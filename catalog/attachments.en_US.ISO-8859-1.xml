@@ -36,11 +36,7 @@ Please fix.</description>
   <msg key="lt_No_file-storage_folde">No file-storage folders found to link to. Would you like to create one?</msg>
   <msg key="lt_No_such_attachment_fo">No such attachment for this object</msg>
   <msg key="lt_The_specified_parent_">The specified parent folder is not valid.</msg>
-  <msg key="lt_To_attach_a_file_alre">To attach a file already in a folder, open the folder by clicking the
-folder's name, then click the &amp;quot;[ Choose ]&amp;quot; link next to the file. To
-upload a new file into a folder, open the folder by clicking the
-folder's name, then click the appropriate  &amp;quot;Attach a new: File | URL&amp;quot;
-link</msg>
+  <msg key="lt_To_attach_a_file_alre">To attach a file already in a folder, open the folder by clicking the folder's name, then click the &amp;quot;[ Choose ]&amp;quot; link next to the file. If you have appropriate system permissions, you will also be able to upload a new file into a folder. To do so, open the folder by clicking the link.  The &quot;Attach a new: File | URL&quot; link will only appear if you have permission to use it.</msg>
   <msg key="lt_Upload_New_Attachment">Upload New Attachment</msg>
   <msg key="lt_Use_the_Browse_button">Use the &quot;Browse...&quot; button to locate your file, 
     then click &quot;Open&quot;.</msg>
