@@ -18,9 +18,8 @@ if {![db_0or1row select_attachment_data {}]} {
 }
 
 switch $object_type {
-    fs_url {
-        set url [db_string select_url {}]
-        ad_returnredirect $url
+    content_extlink {
+        ad_returnredirect [db_string select_url {}]
         ad_script_abort
         return
     }

@@ -41,7 +41,6 @@ set fs_context_bar [fs_context_bar_list -final "[_ attachments.Add_pretty_name]"
 # Should probably generate the item_id and version_id now for
 # double-click protection
 
-
 # if title isn't passed in ignore lock_title_p
 if {[empty_string_p $title]} {
     set lock_title_p 0
