@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="attachments" package_version="0.5" locale="AR_LB" charset="utf-8">
+<message_catalog package_key="attachments" package_version="0.5" locale="ar_LB" charset="utf-8">
 
   <msg key="Action">الفعل</msg>
   <msg key="Add_File">أضفْ ملفاً</msg>
@@ -22,7 +22,7 @@
   <msg key="lt_Error_empty_folder_id">خطأُ: هويةُ الحافظةُ فارغةُ!</msg>
   <msg key="lt_Folder_folder_name_is">الحافظةُ %folder_name% فارغةٌ</msg>
   <msg key="lt_Found_file-storage_fo">هل تحبّ الرّبط إليها؟... xxx إسم الحافطة xxx وجدت حافظة تخزين الملفّات</msg>
-  <msg key="lt_No_file-storage_folde">لا حافظات تخزين الملفّات وجِدَتْ للرّبطِ إليها. هل تحبّ خلق واحداً؟</msg>
+  <msg key="lt_No_file-storage_folde">لا حافظات تخزين الملفّات وجِدَتْ للرّبطِ إليها. هل تحبّ إنشاء واحداً؟</msg>
   <msg key="lt_No_such_attachment_fo">لا مثل هذا الملحق لهذا الكائن</msg>
   <msg key="lt_The_specified_parent_">الحافظةُ الأصلُ المحدّدةُ لَيستْ صالحةَ.</msg>
   <msg key="lt_To_attach_a_file_alre">لإلحاق ملف في حافظة، إفتحْ الحافظة بنقر اسم الحافظة، ثم انقر &amp;quot;[إخترْ] &amp;quot; ثم ارتبط بالملف. لإرسال ملف جديد في حافظة، إفتح الحافظة بنقر اسم الحافظة، ثم انقر الرابطة &amp;quot; إربطْ جديدا: ملف | الموقع &amp;quot; الملائمة </msg>
@@ -40,5 +40,7 @@
   <msg key="Type">نَوع</msg>
   <msg key="URL">موقع</msg>
   <msg key="URL_1">موقع:</msg>
-  <msg key="Version_filename_">إصدار اسمُ المَلَف:</msg>
+  <msg key="Version_filename_">إاسمُ المَلَف المعدل:</msg>
+  <msg key="you_are_attaching_document_to_object"> أنت تقوم بإلحاق وثيقة جديدة إلى %pretty_object_name%.</msg>
+  <msg key="you_are_attaching_url_to_object">أنت تقوم بإلحاق موقع جديد إلى %pretty_object_name%.</msg>
 </message_catalog>
