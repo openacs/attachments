@@ -141,7 +141,7 @@ namespace eval attachments {
     } {
         returns a list of attachment ids and names which are approved: {item_id name url}
     } {
-        set lst [db_list_of_lists select_attachments {}]
+        set lst [db_list select_attachments {}]
         set lst_with_urls [list]
 
         foreach item_id $lst {
@@ -163,7 +163,7 @@ namespace eval attachments {
     } {
         returns a list of attachment ids and names: {item_id name approved_p url}
     } {
-        set lst [db_list_of_lists select_attachments {}]
+        set lst [db_list select_attachments {}]
         set lst_with_urls [list]
 
         foreach item_id $lst {
