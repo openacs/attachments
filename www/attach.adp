@@ -2,12 +2,17 @@
 <property name="title">Attach A File to @pretty_object_name@</property>
 <property name="context_bar">@context_bar@</property>
 
-You are attaching a document to @pretty_object_name@.<p>
+You are attaching a document to @pretty_object_name@.
 
-Choose a location for your attachment. If your attachment already
-exists in the file storage folder, simply select it.<br>
-Otherwise, you
-may upload a new attachment.
+<p>
+
+<small>
+To attach a file already in a folder, open the folder by clicking the
+folder's name, then click the &quot;[ Choose ]&quot; link next to the file. To
+upload a new file into a folder, open the folder by clicking the
+folder's name, then click the appropriate  &quot;Attach a new: File | URL&quot;
+link
+</small>
 
 <p>
 @fs_context_bar_html@
