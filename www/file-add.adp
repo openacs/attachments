@@ -2,7 +2,7 @@
 <property name="title">#attachments.lt_Upload_New_Attachment#</property>
 <property name="context">@context;noquote@</property>
 
-#attachments.You_are_attaching_a# <b>#attachments.new#</b> #attachments.lt_document_to_pretty_ob#<p>
+#attachments.you_are_attaching_document_to_object#
 
 <form enctype=multipart/form-data method=POST action="file-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">
