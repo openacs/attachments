@@ -15,9 +15,7 @@
   <msg key="lt_Add_Attachment_Folder">ÃÖבע והÍג הÅÑÊÈÇ× ÇהÍÇבØÉ</msg>
   <msg key="lt_Attach_a_File_to_pret">ÃהÍג והבס Èנ %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% ÈזÏÇכ</msg>
-  <msg key="lt_contentscontent_size__?">%contents.content_size% ÈÇךÊ</msg>
   <msg key="lt_Created_by_the_attach">ÎןהנגÊע ÈÑÒוÉנ ÇהוהÍגÇÊנ</msg>
-  <msg key="lt_document_to_pretty_ob">טËךגÉ Åהי %pretty_object_name%.</msg>
   <msg key="lt_dont_know_how_to_deal">הÇ זמÙעÑבע דךבךÉ ÇהÊמÙמÇוןה וÙ חÐÇ זטÙנ ÇהוהÍג</msg>
   <msg key="lt_Error_Attachment_root">Î×Ãן: והÍג ÍÇבØÉן ÇהÌÐÑנ טÍÇבØÉ ÌÐÑנ fs וÎÊהךבÇז!</msg>
   <msg key="lt_Error_empty_folder_id">Î×Ãן: חטךÉן ÇהÍÇבØÉן בÇÑÚÉן!</msg>
@@ -27,15 +25,12 @@
   <msg key="lt_No_such_attachment_fo">הÇ וËה חÐÇ ÇהוהÍג החÐÇ ÇהדÇÆז</msg>
   <msg key="lt_The_specified_parent_">ÇהÍÇבØÉן ÇהÃÕהן ÇהוÍÏסÏÉן המךÓÊע ÕÇהÍÉמ.</msg>
   <msg key="lt_To_attach_a_file_alre">הÅהÍÇג והב בך ÍÇבØÉ¬ ÅבÊÍע ÇהÍÇבØÉ ÈזגÑ ÇÓו ÇהÍÇבØÉ¬ Ëו ÇזגÑ &amp;quot;[ÅÎÊÑע] &amp;quot; Ëו ÇÑÊÈ× ÈÇהוהב. הÅÑÓÇה והב ÌÏךÏ בך ÍÇבØÉ¬ ÅבÊÍ ÇהÍÇבØÉ ÈזגÑ ÇÓו ÇהÍÇבØÉ¬ Ëו ÇזגÑ ÇהÑÇÈ×É &amp;quot; ÅÑÈ×ע ÌÏךÏÇ: והב | ÇהוטגÙ &amp;quot; ÇהוהÇÆוÉ </msg>
-  <msg key="lt_to_pretty_object_name">Åהי %pretty_object_name%.</msg>
   <msg key="lt_Upload_New_Attachment">ÃÑÓהע והÍגכ ÌÏךÏÇכ</msg>
   <msg key="lt_Use_the_Browse_button">ÅÓÊÙוהע ÒÑע &quot;ÊמÕבסÍע&quot;. . . הÊמÍÏךÏ ודÇז והבנדמ¬ Ëו ÇזגÑע &quot;ÇבÊÍע&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">ÃזÊ ÊמןהÍג טËךגÉ Èאנ %pretty_object_name%. </msg>
   <msg key="lt_You_probably_clicked_">זגÑÊ וז ÇהוÍÊוה Ùהי ÒÑס ÃÖבע ÃדËÑ וז וÑÉ. ÑÇגÈע ÅÐÇ Çהוהב Íוסהמ ÈÔדה ÕÍךÍ Ùהי &lt;a href=&quot;%folder_url%&quot;&gt; ÍÇבØÉ &lt;/a&gt; ÍÇבØÉ Ãט ÃזÊ ÊÓÊ×ךÙ ÅÓÊÙוÇה ÒÑס ÇהÑÌטÙ הÙטÏÉ טÅÙÇÏÉ ÅÏÎÇה והב ÇהÅÕÏÇÑ.</msg>
   <msg key="lt_Your_file_is_larger_t">והבסד ÃדÈÑ וז ÍÌו Çהוהבס ÇהÃגÕי ÇהוÓוטÍ Ùהי חÐÇ ÇהזסØÇו (%max_number_of_bytes% ÈÇךÊÓ)</msg>
   <msg key="Name">ÅÓנו</msg>
-  <msg key="new">ÌÏךÏ</msg>
-  <msg key="new_url">וטגÙ ÌÏךÏ</msg>
   <msg key="No_such_type">הÇ וËה חÐÇ ÇהזסטÙ</msg>
   <msg key="Object">דÇÆז</msg>
   <msg key="Size">ÍמÌו</msg>
@@ -43,7 +38,5 @@
   <msg key="Top">גוסÉ</msg>
   <msg key="Type">זמטÙ</msg>
   <msg key="URL">וטגÙ</msg>
-  <msg key="URL_?">וטגÙ:</msg>
   <msg key="Version_filename_">ÅÕÏÇÑ ÇÓון Çהומהמב:</msg>
-  <msg key="You_are_attaching_a">ÃזÊ ÊןהÍג</msg>
 </message_catalog>

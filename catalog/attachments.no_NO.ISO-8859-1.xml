@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% innhold </msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% byte </msg>
   <msg key="lt_Created_by_the_attach">Generert av vedleggssystemet</msg>
-  <msg key="lt_document_to_pretty_ob">Dokument til %pretty_object_name%. </msg>
   <msg key="lt_dont_know_how_to_deal">vet ikke hva jeg skal gjøre med denne vedleggstypen</msg>
   <msg key="lt_Error_Attachment_root">Feil: Rotmappe for vedlegg og fs er forskjellige!</msg>
   <msg key="lt_Error_empty_folder_id">Feil: tom mappe_id!</msg>
@@ -27,15 +26,12 @@
   <msg key="lt_No_such_attachment_fo">Intet sådant vedlegg for dette objektet</msg>
   <msg key="lt_The_specified_parent_">Spesifisert foreldre-folder ikke gyldig.</msg>
   <msg key="lt_To_attach_a_file_alre">For å legge til en fil som allerede er i en mappe, åpne mappen ved først å klikke på navnet til meppen, så klikk &amp;quot;[ Velg ]&amp;quot;-lenken ved siden av filen. For å laste opp en ny fil til en mappe, åpne mappen ved å klikke på mappens navnm så klikker du på den korrekte &amp;quot;Legg til en ny: Fil | URL&amp;quot;-lenken</msg>
-  <msg key="lt_to_pretty_object_name">til %pretty_object_name%.</msg>
   <msg key="lt_Upload_New_Attachment">Last opp nytt vedlegg</msg>
   <msg key="lt_Use_the_Browse_button">Nruk &quot;Søk...&quot;-knappen for å finne filen din, så klikker du &quot;Åpne&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">Du legger ved et dokument til %pretty_object_name%. </msg>
   <msg key="lt_You_probably_clicked_">Du har sannsynligvis klikket på Legg til-knappen mer enn en gang. Sjekk om filen er skikkelig innlagt i &lt;a href=&quot;%folder_url%&quot;&gt;mappen&lt;/a&gt; du ønsker, eller bruk Tilbake-knappen for å gjenta operasjonen.</msg>
   <msg key="lt_Your_file_is_larger_t">Filen din er større enn maksimum filstørrelse tillatt på dette systemet (%max_number_of_bytes% bytes)</msg>
   <msg key="Name">navn</msg>
-  <msg key="new">ny</msg>
-  <msg key="new_url">ny URL</msg>
   <msg key="No_such_type">Ingen slik type</msg>
   <msg key="Object">Objekt</msg>
   <msg key="Size">Størrelse</msg>
@@ -45,5 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Versjon filnavn :</msg>
-  <msg key="You_are_attaching_a">Du legger ved en</msg>
 </message_catalog>

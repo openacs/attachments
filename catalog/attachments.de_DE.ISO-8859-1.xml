@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% Element(e)</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% Byte</msg>
   <msg key="lt_Created_by_the_attach">Erstellt vom Anlage-Programmpaket</msg>
-  <msg key="lt_document_to_pretty_ob">Datei zu %pretty_object_name%.</msg>
   <msg key="lt_dont_know_how_to_deal">Bearbeitungsweise dieses Anlage-Typs unbekannt</msg>
   <msg key="lt_Error_Attachment_root">Fehler: Anlagen-Wurzelordner unf Datenspeicher-Wurzelordner sind verschieden!</msg>
   <msg key="lt_Error_empty_folder_id">Fehler: leere Ordner-Identifikation</msg>
@@ -28,15 +27,12 @@
   <msg key="lt_The_specified_parent_">Der angegebene übergeordnete Ordner ist ungültig.</msg>
   <msg key="lt_To_attach_a_file_alre">Um eine Datei anzufügen, die schon in einem Ordner vorhanden ist, öffnen Sie den Ordner, indem Sie auf die Bezeichnung des Ordners klicken, dann klicken Sie auf den Link &amp;quot;[ Wählen ]&amp;quot; neben der Datei. Um eine neue Datei in einen Ordner hochzuladen, öffnenSie den Ordner indem Sie auf die Bezeichnung des Ordners klicken, dann klicken Sie auf 
 den entsprechenden Link &amp;quot;Anfügen einer neuen: Datei | URL&amp;quot;</msg>
-  <msg key="lt_to_pretty_object_name">zu %pretty_object_name%. </msg>
   <msg key="lt_Upload_New_Attachment">Neue Anlage hochladen</msg>
   <msg key="lt_Use_the_Browse_button">Klicken Sie auf &quot;Durchsuchen...&quot;, wählen Sie die gewünschte Datei aus und klicken Sie auf &quot;Öffnen&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">Anhängen eines Dokuments an %pretty_object_name%</msg>
   <msg key="lt_You_probably_clicked_">Sie haben möglicherweise mehrmals auf die Schaltfläche &quot;Hinzufügen&quot; geklickt. Überprüfen Sie, ob die Datei ordnungsgemäß in den gewünschten &lt;a href=&quot;%folder_url%&quot;&gt;Ordner&lt;/a&gt; geladen wurde oder gehen Sie mit Hilfe des Browsers eine Seite zurück und geben Sie die Dateiversion erneut ein.</msg>
   <msg key="lt_Your_file_is_larger_t">Ihre Datei überschreitet die innerhalb des Systems zulässige Maximalgröße (%max_number_of_bytes% Bytes).</msg>
   <msg key="Name">Name</msg>
-  <msg key="new">neu</msg>
-  <msg key="new_url">neue URL</msg>
   <msg key="No_such_type">Typ nicht vorhanden</msg>
   <msg key="Object">Objekt</msg>
   <msg key="Size">Größe</msg>
@@ -46,5 +42,4 @@ den entsprechenden Link &amp;quot;Anfügen einer neuen: Datei | URL&amp;quot;</ms
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Dateiname der Version:</msg>
-  <msg key="You_are_attaching_a">Sie sind beim Anfügen eines</msg>
 </message_catalog>

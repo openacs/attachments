@@ -11,12 +11,9 @@
   <msg key="Last_Modified">¬ќ— е—с… ўпѕсд</msg>
   <msg key="lt_Attach_a_File_to_pret">%pretty_object_name% √дЌв едбс »р </msg>
   <msg key="lt_Folder_folder_name_is">б«—Џ…м %folder_name% «дЌ«бЎ…п  </msg>
-  <msg key="lt_to_pretty_object_name">%pretty_object_name% ≈дй</msg>
   <msg key="lt_Upload_New_Attachment">√—”дт едЌвл ћѕкѕ«л</msg>
   <msg key="lt_You_are_attaching_a_d">.%pretty_object_name% √ж   опдЌв иЋкв… »р </msg>
   <msg key="Name">≈”ре</msg>
-  <msg key="new">Ќѕкѕ</msg>
-  <msg key="new_url">ћѕкѕ url</msg>
   <msg key="No_such_type">д« еЋд з–« «джсиў</msg>
   <msg key="Object">‘скЅ</msg>
   <msg key="Size">Ќће</msg>
@@ -25,5 +22,4 @@
   <msg key="Type">жоиў</msg>
   <msg key="URL">URL</msg>
   <msg key="Version_filename_">≈’ѕ«— «”еп «деодоб</msg>
-  <msg key="You_are_attaching_a">√ж   пдЌв</msg>
 </message_catalog>

@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% nimike</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% tavua</msg>
   <msg key="lt_Created_by_the_attach">Luotu attachments-paketilla</msg>
-  <msg key="lt_document_to_pretty_ob">kohteeseen %pretty_object_name% kuuluva dokumentti</msg>
   <msg key="lt_dont_know_how_to_deal">en tiedä, kuinka tämän liitetiedostotyypin kanssa tulisi toimia</msg>
   <msg key="lt_Error_Attachment_root">Virhe: Liitetiedostojen juurihakemisto ja fs-juurihakemisto poikkeavat toisistaan!</msg>
   <msg key="lt_Error_empty_folder_id">Virhe: folder_id on tyhjä!</msg>
@@ -27,15 +26,12 @@
   <msg key="lt_No_such_attachment_fo">Kyseistä liitetiedostoa ei löydy tälle kohteelle.</msg>
   <msg key="lt_The_specified_parent_">Määritelty isähakemisto ei kelpaa.</msg>
   <msg key="lt_To_attach_a_file_alre">Liittääksesi tiedoston joka löytyy jo kansiosta avaa kansio näpäyttämällä sen nimeä. Klikkaa sitten &amp;quot;[ Choose ]&amp;quot; -linkkiä tiedoston vieressä. Tallentaaksesi uuden tiedoston kansioon avaa kansio ja klikkaa sitten asianmukaista &amp;quot;Attach a new: File | URL&amp;quot; -linkkiä.</msg>
-  <msg key="lt_to_pretty_object_name">kohteeseen %pretty_object_name%.</msg>
   <msg key="lt_Upload_New_Attachment">Lisää uusi liitetiedosto</msg>
   <msg key="lt_Use_the_Browse_button">Käytä &quot;Browse...&quot; -näppäintä etsiäksesi haluamasi tiedosto, ja valitse sen jälkeen &quot;Open&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">Olet liittämässä dokumenttia kohteeseen %pretty_object_name%.</msg>
   <msg key="lt_You_probably_clicked_">Painoit Lisää-painiketta luultavasti useammin kuin kerran. Tarkista, onko tiedosto haluamassasi &lt;a href=&quot;%folder_url%&quot;&gt;kansiossa&lt;/a&gt;, tai käytä Back-näppäintä ja anna tiedosto uudelleen.</msg>
   <msg key="lt_Your_file_is_larger_t">Tiedostosi on suurempi kuin järjestelmän suurin sallittu tiedostokoko (%max_number_of_bytes% bytes).</msg>
   <msg key="Name">Nimi</msg>
-  <msg key="new">uusi</msg>
-  <msg key="new_url">uusi url</msg>
   <msg key="No_such_type">Kyseistä tyyppiä ei ole olemassa</msg>
   <msg key="Object">Kohde</msg>
   <msg key="Size">Koko</msg>
@@ -45,5 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Version tiedostonimi:</msg>
-  <msg key="You_are_attaching_a">Olet liittämässä</msg>
 </message_catalog>

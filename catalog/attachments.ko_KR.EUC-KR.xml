@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% 항목</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% 바이트</msg>
   <msg key="lt_Created_by_the_attach">첨부된 패케이지에 의해 생성되었습니다.</msg>
-  <msg key="lt_document_to_pretty_ob">%pretty_object_name%에 기록</msg>
   <msg key="lt_dont_know_how_to_deal">이 첨부된 유형을 어떻게 취급해야 할 지 모르겠습니다.</msg>
   <msg key="lt_Error_Attachment_root">오류: 첨부 루트 폴더와 fs 루트 폴더가 다릅니다.</msg>
   <msg key="lt_Error_empty_folder_id">오류: 빈 폴더 아이디!!</msg>
@@ -27,15 +26,12 @@
   <msg key="lt_No_such_attachment_fo">이 오브젝트를 위한 첨부가 없습니다. </msg>
   <msg key="lt_The_specified_parent_">지정된 부모 폴더가 유효하지 않습니다.</msg>
   <msg key="lt_To_attach_a_file_alre">폴더에 이미 있는 파일을 첨부하기 위해서는, 폴더 이름을 클릭해서 폴더를 열고, &amp;quot;[ 선택 ]&amp;quot;을 클릭하고 파일을 연결합니다. 폴더로 새로운 파일을 업로드하기 위해서는 폴더이름을 클릭해서 폴더를 열고 적절한 &amp;quot;새롭게 첨부: 파일 | URL&amp;quot;를 클릭하고 연결하시오.</msg>
-  <msg key="lt_to_pretty_object_name">%pretty_object_name%로</msg>
   <msg key="lt_Upload_New_Attachment">새로운 첨부 업로드</msg>
   <msg key="lt_Use_the_Browse_button">여러분의 파일의 위치를 찾기 위해 &quot;브라우즈..&quot; 버튼을 사용하고 &quot;열기&quot;버튼을 클릭하시오.</msg>
   <msg key="lt_You_are_attaching_a_d">%pretty_object_name%에 문서를 추가하였습니다.</msg>
   <msg key="lt_You_probably_clicked_">아마도 추가 버튼을 한번이상 클릭한 것 같습니다. 원하는 파일이&lt;a href=&quot;%folder_url%&quot;&gt;폴더&lt;/a&gt;에 로드되어있는지 체크하거나 돌아가서 새로운 버전의 파일을 다시 입력하기 위해 뒤로 버튼을 사용할 수 있습니다.</msg>
   <msg key="lt_Your_file_is_larger_t">파일이 이 시스템에서 허용하는 최대 파일 크기(%max_number_of_bytes% bytes) 보다 큽니다.</msg>
   <msg key="Name">이름</msg>
-  <msg key="new">새로운</msg>
-  <msg key="new_url">새로운 URL</msg>
   <msg key="No_such_type">이런 유형이 없습니다</msg>
   <msg key="Object">오브젝트</msg>
   <msg key="Size">크기</msg>
@@ -45,5 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">버전 파일이름:</msg>
-  <msg key="You_are_attaching_a">첨부했습니다.</msg>
 </message_catalog>

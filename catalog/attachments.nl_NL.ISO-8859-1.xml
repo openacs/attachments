@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% item</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Aangemaakt door de Bijlagen package</msg>
-  <msg key="lt_document_to_pretty_ob">document aan %pretty_object_name%.</msg>
   <msg key="lt_dont_know_how_to_deal">weet niet hoe met dit type bijlagen om te gaan</msg>
   <msg key="lt_Error_Attachment_root">Fout: basismap van Bijlagen en Bestanden is verschillend!</msg>
   <msg key="lt_Error_empty_folder_id">Fout: geen folder_id!</msg>
@@ -27,15 +26,12 @@
   <msg key="lt_No_such_attachment_fo">Geen van dergelijke bijlagen voor dit object</msg>
   <msg key="lt_The_specified_parent_">De gekozen bovenliggende map is niet geldig</msg>
   <msg key="lt_To_attach_a_file_alre">Om een bestand uit een map bij te voegen, dient op de mapnaam te worden geklikt en vervolgens op de link &amp;quot;[ Kiezen ]&amp;quot; naast het bestand. Om een nieuw bestand in een map te plaatsen, dient  op de mapnaam te worden geklikt en vervolgens op de link &amp;quot;Invoeren nieuw bestand | URL&amp;quot;</msg>
-  <msg key="lt_to_pretty_object_name">aan %pretty_object_name%.</msg>
   <msg key="lt_Upload_New_Attachment">Nieuwe bijlage bijvoegen</msg>
   <msg key="lt_Use_the_Browse_button">Gebruik de &quot;Snuffel/Browse...&quot; knop om het bestand te vinden en klik dan op &quot;Open&quot;. </msg>
   <msg key="lt_You_are_attaching_a_d">Er wordt een document aan %pretty_object_name% toegevoegd.</msg>
   <msg key="lt_You_probably_clicked_">U heeft waarschijnlijk meer dan eens op de 'Toevoegen' knop geklikt. Controleer of het bestand correct in de &lt;a href=&quot;%folder_url%&quot;&gt;gewenste map&lt;/a&gt; is geladen. De Back/Terug knop van de browser kan gebruikt worden om de handeling te herhalen.</msg>
   <msg key="lt_Your_file_is_larger_t">Het bestand is groter dan de maximaal toegestane omvang (%max_number_of_bytes% bytes)</msg>
   <msg key="Name">Naam</msg>
-  <msg key="new">nieuw</msg>
-  <msg key="new_url">nieuwe URL</msg>
   <msg key="No_such_type">Geen van dergelijk type</msg>
   <msg key="Object">Object</msg>
   <msg key="Size">Grootte</msg>
@@ -45,5 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Versie bestandsnaam:</msg>
-  <msg key="You_are_attaching_a">Aanhechten van een</msg>
 </message_catalog>

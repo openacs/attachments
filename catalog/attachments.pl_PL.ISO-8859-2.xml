@@ -17,7 +17,6 @@
   <msg key="lt_contentscontent_size_">%contents.content_size% obiekt /?/</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% bajt</msg>
   <msg key="lt_Created_by_the_attach">Utworzony przez pakiet Za³±czniki</msg>
-  <msg key="lt_document_to_pretty_ob">dokument do %pretty_object_name%.</msg>
   <msg key="lt_dont_know_how_to_deal">nie wiem co zrobiæ z tym typem za³±cznika</msg>
   <msg key="lt_Error_Attachment_root">B³±d: Ró¿ne katalogi g³ówne dla Za³±czników i Systemu Plików!</msg>
   <msg key="lt_Error_empty_folder_id">B³±d: pusty folder_id!</msg>
@@ -27,15 +26,12 @@
   <msg key="lt_No_such_attachment_fo">Brak za³±cznika dla tego obiektu</msg>
   <msg key="lt_The_specified_parent_">Ten folder nadrzêdny jest b³êdny. </msg>
   <msg key="lt_To_attach_a_file_alre">By za³±czyæ plik, który jest ju¿ w folderze, otwórz folder klikaj±c jego nazwê, potem kliknij link &amp;quot;[ Wybierz ]&amp;quot; obok pliku. By wgraæ nowy plik do foldera, otwórz folder klikaj±c jego nazwê, potem kliknij odpowiedni link: &amp;quot;Za³±cz nowy: Plik | URL&amp;quot;</msg>
-  <msg key="lt_to_pretty_object_name">do %pretty_object_name%.</msg>
   <msg key="lt_Upload_New_Attachment">Wgraj Nowy Za³±cznik</msg>
   <msg key="lt_Use_the_Browse_button">Wybierz plik u¿ywaj±c przycisku &quot;Przegl±daj...&quot; lub &quot;Browse...&quot;, nastêpnie kliknij &quot;Otwórz&quot; lub &quot;Open&quot;.</msg>
   <msg key="lt_You_are_attaching_a_d">Za³±czasz dokument do %pretty_object_name%.</msg>
   <msg key="lt_You_probably_clicked_">Prawdopodobnie dwukrotnie klikniêto przycisk Dodaj. Sprawd¼ czy plik zosta³ prawid³owo wgrany do &lt;a href=&quot;%folder_url%&quot;&gt;¿±danego foldera&lt;/a&gt; albo cofnij przegl±darkê i wprowad¼ now± wersjê pliku. </msg>
   <msg key="lt_Your_file_is_larger_t">Twój plik jest zbyt du¿y. Maksymalna wielko¶æ to %max_number_of_bytes% bajtów.</msg>
   <msg key="Name">Nazwa</msg>
-  <msg key="new">nowy</msg>
-  <msg key="new_url">nowy url</msg>
   <msg key="No_such_type">Brak takiego typu</msg>
   <msg key="Object">Obiekt</msg>
   <msg key="Size">Rozmiar</msg>
@@ -45,5 +41,4 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Nazwa Pliku Wersji:</msg>
-  <msg key="You_are_attaching_a">Za³±czasz</msg>
 </message_catalog>

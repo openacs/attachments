@@ -12,8 +12,6 @@
   <msg key="Last_Modified">Дата изм.</msg>
   <msg key="lt_Use_the_Browse_button">Нажмите на кнопку &quot;Browse...&quot; (&quot;Найти...&quot;) для того чтобы найти нужный файл, затем нажмите &quot;Open...&quot; (&quot;Открыть...&quot;).</msg>
   <msg key="Name">Имя</msg>
-  <msg key="new">новое</msg>
-  <msg key="new_url">новый URL</msg>
   <msg key="No_such_type">Тип отсутствует</msg>
   <msg key="Object">Объект</msg>
   <msg key="Size">Размер</msg>
