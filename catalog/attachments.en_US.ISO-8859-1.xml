@@ -19,7 +19,7 @@
   <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Created by the attachments packge</msg>
   <msg key="lt_document_to_pretty_ob">document to %pretty_object_name%.</msg>
-  <msg key="lt_dont_know_how_to_deal">don't know how to deal with this attachment type</msg>
+  <msg key="lt_dont_know_how_to_deal">Don't know how to deal with attachment type %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Error: Attachment root folder and fs root folder different!</msg>
   <msg key="lt_Error_empty_folder_id">Error: empty folder_id!</msg>
   <msg key="lt_Folder_folder_name_is">Folder %folder_name% is empty</msg>

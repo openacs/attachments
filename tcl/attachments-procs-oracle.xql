@@ -4,8 +4,7 @@
 
     <fullquery name="attachments::get_attachments.select_attachments">
         <querytext>
-            select item_id,
-                   acs_object.name(item_id)
+            select item_id
             from attachments
             where object_id = :object_id
             and approved_p = 't'
@@ -15,7 +14,6 @@
     <fullquery name="attachments::get_all_attachments.select_attachments">
         <querytext>
             select item_id,
-                   acs_object.name(item_id),
                    approved_p
             from attachments
             where object_id = :object_id

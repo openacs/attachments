@@ -144,9 +144,14 @@ namespace eval attachments {
         set lst [db_list_of_lists select_attachments {}]
         set lst_with_urls [list]
 
-        foreach el $lst {
-            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id [lindex $el 0] -base_url $base_url]]
-            lappend lst_with_urls [concat $el $append_lst]
+        foreach item_id $lst {
+            if { [content_extlink::extlink_p -item_id $item_id] } {
+              set label [content_extlink::extlink_name -item_id $item_id]
+            } else {
+              set label [fs::get_object_name -object_id $item_id]
+            }
+            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
+            lappend lst_with_urls [concat [list $item_id $label] $append_lst]
         }
 
         return $lst_with_urls
@@ -161,9 +166,14 @@ namespace eval attachments {
         set lst [db_list_of_lists select_attachments {}]
         set lst_with_urls [list]
 
-        foreach el $lst {
-            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id [lindex $el 0] -base_url $base_url]]
-            lappend lst_with_urls [concat $el $append_lst]
+        foreach item_id $lst {
+            if { [content_extlink::extlink_p -item_id $item_id] } {
+              set label [content_extlink::extlink_name -item_id $item_id]
+            } else {
+              set label [fs::get_object_name -object_id $item_id] 
+            }
+            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
+            lappend lst_with_urls [concat [list $item_id $label] $append_lst]
         }
 
         return $lst_with_urls
