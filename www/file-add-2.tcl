@@ -45,8 +45,7 @@ set user_id [ad_conn user_id]
 # Get the ip
 set creation_ip [ad_conn peeraddr]
 
-set root_folder [attachments::get_root_folder]
-set fs_package_id [db_string get_fs_package_id "select package_id from fs_root_folders where folder_id=:root_folder"]
+set fs_package_id [site_node::get_element -url "[dotlrn::get_url]/file-storage/" -element "package_id"]
 
 #db_transaction {
     set file_id [db_nextval "acs_object_id_seq"]

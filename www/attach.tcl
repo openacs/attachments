@@ -24,9 +24,8 @@ if {[empty_string_p $pretty_object_name]} {
 }
 
 # Load up file storage information
-set root_folder_id [attachments::get_root_folder]
 if {[empty_string_p $folder_id]} {
-    set folder_id $root_folder_id
+    set folder_id [dotlrn_fs::get_user_shared_folder -user_id $user_id]
 } 
 
 # sanity check
@@ -54,11 +53,7 @@ db_multirow -unclobber contents select_folder_contents {} {
 
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
-if {$folder_id == $root_folder_id} {
-    set fs_context_bar_html "[_ attachments.Top]"
-} else {
-    set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
-}
+set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
 
 set context "[_ attachments.Attach]"
 
