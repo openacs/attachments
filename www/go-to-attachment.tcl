@@ -2,7 +2,7 @@
 ad_page_contract {
     Go to an attachment
     
-    @author Ben Adida (ben@openforce)
+    @author Ben Adida (ben@openforce.net)
 } {
     {object_id:integer,notnull}
     {attachment_id:integer,notnull}

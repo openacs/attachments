@@ -17,7 +17,7 @@ ad_page_contract {
     If it can't find one, it prompts to make new one.
 
     @author Arjun Sanyal (arjun@openforce.net)
-    @version $Id$
+    @cvs-id $Id$
 
 } -query {
     {package_id:notnull}

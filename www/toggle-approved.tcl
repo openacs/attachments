@@ -1,8 +1,8 @@
 ad_page_contract {
 
-    @author <a href="mailto:yon@openforce.net">yon@openforce.net</a>
+    @author yon@openforce.net
     @creation-date 2002-08-29
-    @version $Id$
+    @cvs-id $Id$
 
 } -query {
     {object_id:integer,notnull}

@@ -3,8 +3,9 @@ ad_page_contract {
 
     Attach something to an object
 
-    @author arjun@openforce.net,ben@openforce
-    @version $Id$
+    @author arjun@openforce.net
+    @author ben@openforce
+    @cvs-id $Id$
 
 } -query {
     {object_id:notnull}

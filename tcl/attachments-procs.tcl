@@ -14,7 +14,7 @@ ad_library {
     Attachments
 
     @author Arjun Sanyal (arjun@openforce.net)
-    @version $Id$
+    @cvs-id $Id$
 }
 
 namespace eval attachments {

@@ -17,7 +17,7 @@ ad_page_contract {
     Creates a new fs root folder and maps it to the passed in packge_id
 
     @author Arjun Sanyal (arjun@openforce.net)
-    @version $Id$
+    @cvs-id $Id$
 
 } -query {
     {package_id:notnull}

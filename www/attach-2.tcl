@@ -2,8 +2,9 @@ ad_page_contract {
 
     Attaches something to an object
 
-    @author Arjun Sanyal (arjun@openforce.net), Ben Adida
-    @version $Id$
+    @author Arjun Sanyal (arjun@openforce.net)
+    @author Ben Adida (ben@openforce.net)
+    @cvs-id $Id$
 
 } -query {
     {object_id:notnull}

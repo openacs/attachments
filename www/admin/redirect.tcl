@@ -15,7 +15,7 @@
 ad_page_contract {
 
     @author Arjun Sanyal (arjun@openforce.net)
-    @version $Id$
+    @cvs-id $Id$
 
 } -query {
     {referer:notnull}
