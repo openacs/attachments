@@ -4,11 +4,12 @@
 
     <fullquery name="attachments::get_attachments.select_attachments">
         <querytext>
-            select item_id,
-                   acs_object.name(item_id)
-            from attachments
+            select a.item_id,
+                   e.label
+            from attachments a, cr_extlinks e
             where object_id = :object_id
-            and approved_p = 't'
+            and a.item_id = e.extlink_id
+            and a.approved_p = 't'
         </querytext>
     </fullquery>
  

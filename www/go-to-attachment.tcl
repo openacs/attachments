@@ -12,12 +12,13 @@ ad_page_contract {
 permission::require_permission -object_id $object_id -privilege read
 
 # Get information about attachment
-if {![db_0or1row select_attachment_data {}]} {
-    ad_return_complaint "No such attachment for this object"
+set content_type [item::get_type $attachment_id]
+if { [string length $content_type] == 0 } {
+    ad_return_complaint 1 "No such attachment for this object"
     return
 }
 
-switch $object_type {
+switch $content_type {
     content_extlink {
         ad_returnredirect [db_string select_url {}]
         ad_script_abort
@@ -32,7 +33,7 @@ switch $object_type {
     }
     
     default {
-        ad_return_complaint "don't know how to deal with this attachment type"
+        ad_return_complaint 1 "don't know how to deal with this attachment type"
         return
     }
 }
