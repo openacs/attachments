@@ -1,11 +1,10 @@
-#  Copyright (C) 2001, 2002 MIT
 #
-#  this is free software; you can redistribute it and/or modify it under the
+#  This is free software; you can redistribute it and/or modify it under the
 #  terms of the GNU General Public License as published by the Free Software
 #  Foundation; either version 2 of the License, or (at your option) any later
 #  version.
 #
-#  this is distributed in the hope that it will be useful, but WITHOUT ANY
+#  This is distributed in the hope that it will be useful, but WITHOUT ANY
 #  WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 #  FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
 #  details.
@@ -69,6 +68,7 @@ namespace eval attachments {
     ad_proc -public attach {
         {-object_id:required}
         {-attachment_id:required}
+        {-approved_p t}
     } {
         perform the attachment
     } {
@@ -82,6 +82,20 @@ namespace eval attachments {
         undo the attachment
     } {
         db_dml delete_attachment {}
+    }
+
+    ad_proc -public toggle_approved {
+        {-object_id:required}
+        {-item_id:required}
+        {-approved_p ""}
+    } {
+        toggle approved_p for attachment
+    } {
+        if {[empty_string_p $approved_p]} {
+            set approved_p [ad_decode [db_string select_attachment_approved_p {}] f t f]
+        }
+
+        db_dml toggle_approved_p {}
     }
 
     ad_proc -public get_package_key {} {
@@ -125,7 +139,24 @@ namespace eval attachments {
         {-object_id:required}
         {-base_url ""}
     } {
-        returns a list of attachment ids and names
+        returns a list of attachment ids and names which are approved: {item_id name url}
+    } {
+        set lst [db_list_of_lists select_attachments {}]
+        set lst_with_urls [list]
+
+        foreach el $lst {
+            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id [lindex $el 0] -base_url $base_url]]
+            lappend lst_with_urls [concat $el $append_lst]
+        }
+
+        return $lst_with_urls
+    }
+
+    ad_proc -public get_all_attachments {
+        {-object_id:required}
+        {-base_url ""}
+    } {
+        returns a list of attachment ids and names: {item_id name approved_p url}
     } {
         set lst [db_list_of_lists select_attachments {}]
         set lst_with_urls [list]

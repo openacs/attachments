@@ -32,11 +32,17 @@ create table attachments_fs_root_folder_map (
 
 create table attachments (
     object_id                   constraint attachments_object_id_fk
-                                references acs_objects(object_id)
+                                references acs_objects (object_id)
                                 on delete cascade,
     item_id                     constraint attachments_item_id_fk
-                                references acs_objects(object_id)
+                                references acs_objects (object_id)
                                 on delete cascade,
+    approved_p                  char(1)
+                                default 't'
+                                constraint attachments_approved_p_ck
+                                check (approved_p in ('t', 'f'))
+                                constraint attachments_approved_p_nn
+                                not null,
     constraint                  attachments_pk
                                 primary key (object_id, item_id)
 );
