@@ -25,7 +25,7 @@ switch $content_type {
         return
     }
 
-    content_item {
+    file_storage_object {
         set title [db_string select_attachment_title {}]
         ad_returnredirect "download/[ad_urlencode $title]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
@@ -33,7 +33,7 @@ switch $content_type {
     }
     
     default {
-        ad_return_complaint 1 "don't know how to deal with this attachment type"
+        ad_return_complaint 1 "don't know how to deal with attachment type $content_type"
         return
     }
 }
