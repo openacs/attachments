@@ -33,10 +33,10 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
     </tr>
 <multiple name="contents">
 <if @contents.rownum@ odd>
-    <tr class="oddrow">
+    <tr class="odd">
 </if>
 <else>
-    <tr class="evenrow">
+    <tr class="even">
 </else>
     <tr>
 <if @contents.type@ eq "folder">
