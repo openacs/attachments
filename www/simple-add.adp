@@ -1,8 +1,8 @@
 <master>
-<property name="title">Attach URL</property>
+<property name="title">#attachments.Attach_URL#</property>
 <property name="context">@context@</property>
 
-You are attaching a <b>new url</b> to @pretty_object_name@.<p>
+#attachments.You_are_attaching_a# <b>#attachments.new_url#</b> #attachments.lt_to_pretty_object_name#<p>
 
 <form method=POST action="simple-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">
@@ -13,7 +13,7 @@ You are attaching a <b>new url</b> to @pretty_object_name@.<p>
 <table border=0>
 
 <tr>
-<td align=right> Title: </td>
+<td align=right> #attachments.Title# </td>
   <if @lock_title_p@ eq 0>
     <td><input size=30 name=title value=@title@></td>
   </if>
@@ -24,12 +24,12 @@ You are attaching a <b>new url</b> to @pretty_object_name@.<p>
 </tr>
 
 <tr>
-<td align=right> URL: </td>
+<td align=right> #attachments.URL_1# </td>
 <td><input size=50 name=url value="http://"></td>
 </tr>
 
 <tr>
-<td valign=top align=right> Description: </td>
+<td valign=top align=right> #attachments.Description# </td>
 <td colspan=2><textarea rows=5 cols=50 name=description wrap=soft></textarea></td>
 </tr>
 
@@ -41,3 +41,4 @@ You are attaching a <b>new url</b> to @pretty_object_name@.<p>
 
 </table>
 </form>
+

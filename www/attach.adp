@@ -1,35 +1,31 @@
 <master>
-<property name="title">Attach a File to @pretty_object_name@</property>
+<property name="title">#attachments.lt_Attach_a_File_to_pret#</property>
 <property name="context">@context@</property>
 
-You are attaching a document to @pretty_object_name@.
+#attachments.lt_You_are_attaching_a_d#
 
 <p>
 
 <small>
-To attach a file already in a folder, open the folder by clicking the
-folder's name, then click the &quot;[ Choose ]&quot; link next to the file. To
-upload a new file into a folder, open the folder by clicking the
-folder's name, then click the appropriate  &quot;Attach a new: File | URL&quot;
-link
+#attachments.lt_To_attach_a_file_alre#
 </small>
 
 <p>
 @fs_context_bar_html@
 <p>
-Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">File</a>
+#attachments.Attach_a# <b>#attachments.new#</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.File#</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
-      <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">URL</a>
+      <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.URL#</a>
 <p>
 <if @contents:rowcount@ gt 0>
   <table width="85%" cellpadding="5" cellspacing="0" class="table-display">
     <tr class="table-header">
       <td>&nbsp;</td>
-      <td>Name</td>
-      <td>Action</td>
-      <td>Size</td>
-      <td>Type</td>
-      <td>Last Modified</td>
+      <td>#attachments.Name#</td>
+      <td>#attachments.Action#</td>
+      <td>#attachments.Size#</td>
+      <td>#attachments.Type#</td>
+      <td>#attachments.Last_Modified#</td>
     </tr>
 <multiple name="contents">
 <if @contents.rownum@ odd>
@@ -47,7 +43,7 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
       </td>
       <td>&nbsp;</td>
       <td>
-        @contents.content_size@ item<if @contents.content_size@ ne 1>s</if>
+        #attachments.lt_contentscontent_size_#<if @contents.content_size@ ne 1>s</if>
       </td>
       <td>@contents.type@</td>
       <td>@contents.last_modified@</td>
@@ -61,7 +57,7 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
       </td>
       <td>
         <small>[
-<a href="attach-2?item_id=@contents.object_id@&@passthrough_vars@">Choose</a>
+<a href="attach-2?item_id=@contents.object_id@&@passthrough_vars@">#attachments.Choose#</a>
           ]</small>
       </td>
       <td>&nbsp;</td>
@@ -78,10 +74,10 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
       </td>
       <td>
         <small>[
-<a href="attach-2?item_id=@contents.object_id@&@passthrough_vars@">Choose</a>
+<a href="attach-2?item_id=@contents.object_id@&@passthrough_vars@">#attachments.Choose#</a>
         ]</small>
       </td>
-      <td>@contents.content_size@ byte<if @contents.content_size@ ne 1>s</if></td>
+      <td>#attachments.lt_contentscontent_size__1#<if @contents.content_size@ ne 1>s</if></td>
       <td>@contents.type@</td>
       <td>@contents.last_modified@</td>
 </else>
@@ -91,5 +87,6 @@ Attach a <b>new</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@
   </table>
 </if>
 <else>
-  <p><blockquote><i>Folder @folder_name@ is empty</i></blockquote></p>
+  <p><blockquote><i>#attachments.lt_Folder_folder_name_is#</i></blockquote></p>
 </else>
+

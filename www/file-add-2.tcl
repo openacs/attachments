@@ -15,7 +15,7 @@ ad_page_contract {
 } -validate {
     valid_folder -requires {folder_id:integer} {
 	if ![fs_folder_p $folder_id] {
-	    ad_complain "The specified parent folder is not valid."
+	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
 
@@ -23,7 +23,9 @@ ad_page_contract {
 	set n_bytes [file size ${upload_file.tmpfile}]
 	set max_bytes [ad_parameter "MaximumFileSize"]
 	if { $n_bytes > $max_bytes } {
-	    ad_complain "Your file is larger than the maximum file size allowed on this system ([util_commify_number $max_bytes] bytes)"
+            # Max number of bytes is used in the error message
+            set max_number_of_bytes [util_commify_number $max_bytes]
+	    ad_complain "[_ attachments.lt_Your_file_is_larger_t]"
 	}
     }
 } 
@@ -139,19 +141,8 @@ db_transaction {
 
     # most likely a duplicate name or a double click
 
-#    if [db_string duplicate_check "
-#    select count(*)
-#    from   cr_items
-#    where  name = :filename
-#    and    parent_id = :folder_id"] {
-#	ad_return_complaint 1 "Either there is already a file with the name \"$tmp_filename\" or you clicked on the button more than once.  You can use the Back button to return and choose a new name, or <a href=\"?folder_id=$folder_id\">return to the directory listing</a> to see if your file is there."
-#    } else {
-#	ad_return_complaint 1 "We got an error that we couldn't readily identify.  Please let the system owner know about this.
-#
-#	<pre>$errmsg</pre>"
-#    }
- 
-       ad_return_complaint 1 "You probably clicked on the Add button more than once. Check if the file is properly loaded on the <a href=\"index?folder_id?$folder_id\">folder</a> you wan, or you can use the Back button to return and re-enter the version file."      
+    set folder_url index?folder_id?$folder_id
+    ad_return_complaint 1 "[_ attachments.lt_You_probably_clicked_]"
 
        ad_script_abort
 }

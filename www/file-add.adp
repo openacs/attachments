@@ -1,8 +1,8 @@
 <master>
-<property name="title">Upload New Attachment</property>
+<property name="title">#attachments.lt_Upload_New_Attachment#</property>
 <property name="context">@context@</property>
 
-You are attaching a <b>new</b> document to @pretty_object_name@.<p>
+#attachments.You_are_attaching_a# <b>#attachments.new#</b> #attachments.lt_document_to_pretty_ob#<p>
 
 <form enctype=multipart/form-data method=POST action="file-add-2">
 <input type=hidden name="folder_id" value="@folder_id@">
@@ -12,14 +12,13 @@ You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 <table border=0>
 
 <tr>
-<td align=right>Version filename : </td>
+<td align=right>#attachments.Version_filename_# </td>
 <td><input type=file name=upload_file size=20></tr>
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-<td><font size=-1>Use the "Browse..." button to locate your file, 
-    then click "Open". </font></td>
+<td><font size=-1>#attachments.lt_Use_the_Browse_button# </font></td>
 </tr>
 
 <tr>
@@ -28,7 +27,7 @@ You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 </tr>
 
 <tr>
-<td align=right> Title: </td>
+<td align=right> #attachments.Title# </td>
   <if @lock_title_p@ eq 0>
     <td><input size=30 name=title value=@title@></td>
   </if>
@@ -39,7 +38,7 @@ You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 </tr>
 
 <tr>
-<td valign=top align=right> Description: </td>
+<td valign=top align=right> #attachments.Description# </td>
 <td colspan=2><textarea rows=5 cols=50 name=description wrap=physical></textarea></td>
 </tr>
 
@@ -51,3 +50,4 @@ You are attaching a <b>new</b> document to @pretty_object_name@.<p>
 
 </table>
 </form>
+

@@ -30,7 +30,7 @@ set instance_name [db_string instance_name_select "select instance_name from apm
 set folder_id [fs::new_root_folder \
     -package_id $package_id \
     -pretty_name "$instance_name's Attachments" \
-    -description "Created by the attachments packge"
+    -description "[_ attachments.lt_Created_by_the_attach]"
 ]
 
 attachments::map_root_folder -package_id $package_id -folder_id $folder_id

@@ -179,9 +179,9 @@ namespace eval attachments {
         set cbar_list [fs_context_bar_list -extra_vars $extra_vars -folder_url "attach" -file_url "attach" -root_folder_id $root_folder_id -final $final $folder_id]
 
         if {![empty_string_p $root_folder_id]} {
-            set cbar_html "<a href=\"attach?${extra_vars}&folder_id=$root_folder_id\">Top</a> &gt; "
+            set cbar_html "<a href=\"attach?${extra_vars}&folder_id=$root_folder_id\">[_ attachments.Top]</a> &gt; "
         } else {
-            set cbar_html "Top &gt; "
+            set cbar_html "[_ attachments.Top] &gt; "
         }
 
         foreach el $cbar_list {

@@ -16,7 +16,7 @@ ad_page_contract {
 } -validate {
     valid_folder -requires {folder_id:integer} {
 	if ![fs_folder_p $folder_id] {
-	    ad_complain "The specified parent folder is not valid."
+	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
 } -properties {
@@ -32,11 +32,7 @@ ad_require_permission $folder_id write
 
 set pretty_name [fs::simple_get_type_pretty_name -type $type]
 if {[empty_string_p $pretty_name]} {
-    return -code error "No such type"
-}
-
-set context {{Attach URL}}
-set fs_context_bar [fs_context_bar_list -final "Add $pretty_name" $folder_id]
+    return -code error "[_ attachments.lt_No_such_typeset_conte]" $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection
@@ -46,4 +42,3 @@ set fs_context_bar [fs_context_bar_list -final "Add $pretty_name" $folder_id]
 if {[empty_string_p $title]} {
     set lock_title_p 0
 }
-

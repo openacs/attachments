@@ -13,7 +13,7 @@ permission::require_permission -object_id $object_id -privilege read
 
 # Get information about attachment
 if {![db_0or1row select_attachment_data {}]} {
-    ad_return_complaint "No such attachment for this object"
+    ad_return_complaint "[_ attachments.lt_No_such_attachment_fo]"
     return
 }
 
@@ -32,7 +32,7 @@ switch $object_type {
     }
     
     default {
-        ad_return_complaint "don't know how to deal with this attachment type"
+        ad_return_complaint "[_ attachments.lt_dont_know_how_to_deal]"
         return
     }
 }

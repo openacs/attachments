@@ -1,10 +1,10 @@
 <master>
-<property name="title">Add Attachment Folder Link </property>
+<property name="title">#attachments.lt_Add_Attachment_Folder# </property>
 
-<h3>Add folder Link</h3>
+<h3>#attachments.Add_folder_Link#</h3>
 
 <if @root_folder_id@ eq 0>
-  No file-storage folders found to link to. Would you like to create one?
+  #attachments.lt_No_file-storage_folde#
   <form method=get action=new-root-folder-map-2>
     <input type=hidden name=package_id value=@package_id@>
     <input type=hidden name=referer value=@referer@>
@@ -18,5 +18,6 @@
 
 </if>
 <else>
-  Found file-storage folder XXX folder_name XXX ... would you like to link to it?
+  #attachments.lt_Found_file-storage_fo#
 </else>
+

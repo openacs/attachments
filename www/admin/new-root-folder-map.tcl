@@ -54,7 +54,7 @@ if {$root_folder_id == 0} {
              -package_id $package_id ]
 
         if {$attachments_root_folder != $root_folder_id} {
-            ad_return_complaint 1 "Error: Attachment root folder and fs root folder different!"
+            ad_return_complaint 1 "[_ attachments.lt_Error_Attachment_root]"
         } else {
             # since this pkg already has a root folder do the mapping and return
             attachments::map_root_folder \

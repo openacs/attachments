@@ -20,7 +20,7 @@ permission::require_permission -object_id $object_id -privilege write
 
 # Give the object a nasty name if it doesn't have a pretty name
 if {[empty_string_p $pretty_object_name]} {
-    set pretty_object_name "Object #$object_id"
+    set pretty_object_name "[_ attachments.Object] #$object_id"
 }
 
 # Load up file storage information
@@ -31,7 +31,7 @@ if {[empty_string_p $folder_id]} {
 
 # sanity check
 if {[empty_string_p $folder_id]} {
-    ad_return_complaint 1 "Error: empty folder_id!"
+    ad_return_complaint 1 "[_ attachments.lt_Error_empty_folder_id]"
     ad_script_abort
 }
 
@@ -50,10 +50,10 @@ db_multirow contents select_folder_contents {}
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
 if {$folder_id == $root_folder_id} {
-    set fs_context_bar_html "Top"
+    set fs_context_bar_html "[_ attachments.Top]"
 } else {
     set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
 }
 
-set context "Attach"
+set context "[_ attachments.Attach]"
 
