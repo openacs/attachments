@@ -13,7 +13,7 @@
 <p>
 @fs_context_bar_html@
 <p>
-#attachments.Attach_a# <b>#attachments.new#</b>:  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.File#</a>
+#attachments.attach_new#  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.File#</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <a href="simple-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.URL#</a>
 <p>
@@ -45,7 +45,7 @@
       <td>
         #attachments.lt_contentscontent_size_#<if @contents.content_size@ ne 1>s</if>
       </td>
-      <td>@contents.type@</td>
+      <td>#file-storage.folder_type_pretty_name#</td>
       <td>@contents.last_modified@</td>
 </if>
 <else>
