@@ -42,10 +42,12 @@ permission::require_permission -object_id $folder_id -privilege read
 set n_contents [fs::get_folder_contents_count -folder_id $folder_id -user_id $user_id]
 
 # Folder name
-set folder_name [fs::get_object_name -object_id $folder_id]
+set folder_name [lang::util::localize [fs::get_object_name -object_id $folder_id]]
 
 # Folder contents
-db_multirow contents select_folder_contents {}
+db_multirow contents select_folder_contents {} {
+    set name [lang::util::localize $name]
+}
 
 set passthrough_vars "object_id=$object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
