@@ -7,7 +7,7 @@
     <initial-install-p>f</initial-install-p>
     <singleton-p>t</singleton-p>
 
-    <version name="0.4" url="http://software.openforce.net/openacs/packages/attachments-0.4.apm">
+    <version name="0.5" url="http://software.openforce.net/openacs/packages/attachments-0.5.apm">
     <database-support>
         <database>oracle</database>
         <database>postgresql</database>
@@ -18,8 +18,8 @@
         <vendor url="http://openforce.biz">OpenForce, Inc.</vendor>
         <description format="text/plain">Attachments</description>
 
-        <provides url="attachments" version="0.4"/>
-        <requires url="file-storage" version="4.2"/>
+        <provides url="attachments" version="0.5"/>
+        <requires url="file-storage" version="4.6.2"/>
 
         <files>
             <file type="package_spec" path="attachments.info"/>

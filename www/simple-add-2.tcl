@@ -24,11 +24,11 @@ ad_page_contract {
 ad_require_permission $folder_id write
 
 db_transaction {
-    # Create the URL (for now)
-    set url_id [fs::url_new -url $url -name $title -description $description -folder_id $folder_id]
     
-    # Attach the URL
-    attachments::attach -object_id $object_id -attachment_id $url_id
+    # Create and attach the URL
+    attachments::attach -object_id $object_id \
+        -attachment_id [content_simple::new -url $url -label $title -description $description -parent_id $folder_id]
+
 }
 
 ad_returnredirect "$return_url"
