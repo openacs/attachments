@@ -1,6 +1,6 @@
 <master>
 <property name="title">#attachments.lt_Upload_New_Attachment#</property>
-<property name="context">@context@</property>
+<property name="context">@context;noquote@</property>
 
 #attachments.You_are_attaching_a# <b>#attachments.new#</b> #attachments.lt_document_to_pretty_ob#<p>
 

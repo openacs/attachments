@@ -1,6 +1,6 @@
 <master>
 <property name="title">#attachments.lt_Attach_a_File_to_pret#</property>
-<property name="context">@context@</property>
+<property name="context">@context;noquote@</property>
 
 #attachments.lt_You_are_attaching_a_d#
 
@@ -11,7 +11,7 @@
 </small>
 
 <p>
-@fs_context_bar_html@
+@fs_context_bar_html;noquote@
 <p>
 #attachments.attach_new#  &nbsp;&nbsp;     <a href="file-add?folder_id=@folder_id@&@passthrough_vars@">#attachments.File#</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;

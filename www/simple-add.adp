@@ -1,6 +1,6 @@
 <master>
 <property name="title">#attachments.Attach_URL#</property>
-<property name="context">@context@</property>
+<property name="context">@context;noquote@</property>
 
 #attachments.You_are_attaching_a# <b>#attachments.new_url#</b> #attachments.lt_to_pretty_object_name#<p>
 
