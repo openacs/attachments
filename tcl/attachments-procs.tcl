@@ -84,14 +84,21 @@ namespace eval attachments {
         db_dml delete_attachment {}
     }
 
+    ad_proc -public get_url {
+    } {
+        return [parameter::get  \
+            -package_id [apm_package_id_from_key attachments] \
+            -parameter RelativeUrl
+        ]
+    }
+
     ad_proc -public add_attachment_url {
         {-package_id ""}
         {-object_id:required}
         {-return_url ""}
         {-pretty_name ""}
     } {
-        # FIXME: absolute URL here!!
-        return "attach/attach?pretty_object_name=[ns_urlencode $pretty_name]&object_id=$object_id&return_url=[ns_urlencode $return_url]"
+        return "[attachments::get_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&object_id=$object_id&return_url=[ns_urlencode $return_url]"
     }
 
     ad_proc -public goto_attachment_url {
@@ -99,15 +106,13 @@ namespace eval attachments {
         {-object_id:required}
         {-attachment_id:required}
     } {
-        # FIXME: absolute URL!
-        return "attach/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
+        return "[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
     }
 
     ad_proc -public graphic_url {
         {-package_id ""}
     } {
-        # FIXME: absolute URL!
-        return "<img valign=bottom src=\"attach/graphics/file.gif\">"
+        return "<img valign=bottom src=\"[attachments::get_url]/graphics/file.gif\">"
     }
 
     ad_proc -public get_attachments {

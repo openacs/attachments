@@ -24,10 +24,15 @@ if {[empty_string_p $pretty_object_name]} {
 }
 
 # Load up file storage information
-
 set root_folder_id [attachments::get_root_folder]
 if {[empty_string_p $folder_id]} {
     set folder_id $root_folder_id
+} 
+
+# sanity check
+if {[empty_string_p $folder_id]} {
+    ad_return_complaint 1 "Error: empty folder_id!"
+    ad_script_abort
 }
 
 # Check permission

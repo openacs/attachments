@@ -52,6 +52,7 @@
         </files>
         <parameters>
             <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="MaximumFileSize"  default="4096000" description="maximum file size for upload"/>
+            <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="RelativeUrl"  default="attach" description="The relative url of this package when mounted under a client."/>
         </parameters>
 
     </version>
