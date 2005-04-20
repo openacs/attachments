@@ -22,7 +22,7 @@ Attachments
   
   The root folder is a "super folder" for all the files in that specific instance of
   file-storage, and it is created automatically when the file-storage
-  pacakge is instanciated.
+  package is instanciated.
 
   When a user wants to make an attachment to an object in your package,
   she is shown the contents of the file-storage root folder mapped to your
@@ -52,7 +52,7 @@ Attachments
 
   First, you must select a file-storage instance that will provide
   the files you can attach. If you do not already have an instance of file-storage
-  that you want to use for your pacakge instance, you must create one using the
+  that you want to use for your package instance, you must create one using the
   site-map.
 
   Once you have a file-storage instance you wish to use, you must map the

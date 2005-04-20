@@ -48,7 +48,7 @@ if {$root_folder_id == 0} {
     ad_return_template
 
 } else {
-    if {[attachments::root_folder_p -pacakge_id $package_id]} {
+    if {[attachments::root_folder_p -package_id $package_id]} {
         # sanity check that the attachments_root_folder and fs_root_folder match
         set attachments_root_folder [attachments::get_root_folder \
              -package_id $package_id ]
