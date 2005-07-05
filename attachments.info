@@ -8,14 +8,14 @@
     <singleton-p>t</singleton-p>
     <auto-mount>attachments</auto-mount>
 
-    <version name="0.9" url="http://openacs.org/repository/download/apm/attachments-0.9.apm">
+    <version name="0.10" url="http://openacs.org/repository/download/apm/attachments-0.10.apm">
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>Attachment support</summary>
         <release-date>2003-11-10</release-date>
         <vendor url="http://openacs.org">OpenACS</vendor>
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
-        <provides url="attachments" version="0.9"/>
+        <provides url="attachments" version="0.10"/>
         <requires url="file-storage" version="4.6.2"/>
 
         <parameters>
