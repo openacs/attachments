@@ -148,7 +148,7 @@ namespace eval attachments {
             if { [content_extlink::extlink_p -item_id $item_id] } {
               set label [content_extlink::extlink_name -item_id $item_id]
             } else {
-              set label [fs::get_object_name -object_id $item_id]
+              set label [fs::get_object_prettyname -object_id $item_id]
             }
             set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
             lappend lst_with_urls [concat [list $item_id $label] $append_lst]

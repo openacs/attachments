@@ -69,7 +69,8 @@
 <else>
       <td><img src="graphics/file.gif"></td>
       <td>
-        @contents.name@
+      <if @contents.title@ eq nil>@contents.name@</if>
+      <else>@contents.title@</else>
 <if @contents.new_p@>
         (&nbsp;new&nbsp;)
 </if>
