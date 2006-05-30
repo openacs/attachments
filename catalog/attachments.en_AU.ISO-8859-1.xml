@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<message_catalog package_key="attachments" package_version="0.8" locale="en_AU" charset="ISO-8859-1">
+<message_catalog package_key="attachments" package_version="0.10" locale="en_AU" charset="ISO-8859-1">
 
   <msg key="Action">Action</msg>
   <msg key="Add_File">Add File</msg>
   <msg key="Add_folder_Link">Add folder Link</msg>
-  <description key="Add_folder_Link">Used as a header on the page for creating a new root folder. A root folder is a folder linked to a certain package instance.
-</description>
-
   <msg key="Add_pretty_name">Add %pretty_name%</msg>
   <msg key="Attach">Attach</msg>
   <msg key="attach_new">Attach a &lt;b&gt;new&lt;/b&gt;:</msg>
-  <description key="attach_new">This key is going to give problems with word-order for several languages, because the &quot;attach new&quot; grammar is quite specific to English. For example the best translation in Dutch would be &quot;Nieuwe xxxx toevoegen&quot;, but we do not know xxxx yet. A work around is to write &quot;Voeg toe nieuw&quot;, but depending on what is behind it, grammar requires &quot;Voeg toe nieuwe&quot;. So, we get a very forced translation: &quot;Voeg toe nieuw(e)&quot;.
-
-Please fix.</description>
-
   <msg key="Attach_URL">Attach URL</msg>
-  <description key="Attach_URL">Used as title on page for attaching a URL to an object.</description>
-
   <msg key="Choose">Choose</msg>
   <msg key="Description">Description:</msg>
   <msg key="File">File</msg>
   <msg key="Last_Modified">Last Modified</msg>
   <msg key="lt_Add_Attachment_Folder">Add Attachment Folder Link</msg>
-  <description key="lt_Add_Attachment_Folder">Used as a title on the page for creating a new root folder. A root folder is a folder linked to a certain package instance.</description>
-
   <msg key="lt_Attach_a_File_to_pret">Attach a File to %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% item</msg>
   <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
@@ -48,8 +37,6 @@ Please fix.</description>
   <msg key="Object">Object</msg>
   <msg key="Size">Size</msg>
   <msg key="Title">Title</msg>
-  <description key="Title">Used as label in a form for the title of a new document to attach to an object.</description>
-
   <msg key="Top">Top</msg>
   <msg key="Type">Type</msg>
   <msg key="URL">URL</msg>
