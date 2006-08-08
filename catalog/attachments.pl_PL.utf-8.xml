@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<message_catalog package_key="attachments" package_version="0.8" locale="pl_PL" charset="utf-8">
+<message_catalog package_key="attachments" package_version="0.10" locale="pl_PL" charset="utf-8">
 
   <msg key="Action">Czynność</msg>
   <msg key="Add_File">Dodaj Plik</msg>
@@ -41,4 +41,6 @@
   <msg key="URL">URL</msg>
   <msg key="URL_1">URL:</msg>
   <msg key="Version_filename_">Nazwa Pliku Wersji:</msg>
+  <msg key="you_are_attaching_document_to_object">Dołączasz nowy dokument do %pretty_object_name%.</msg>
+  <msg key="you_are_attaching_url_to_object">Dołączasz nowy url do %pretty_object_name%.</msg>
 </message_catalog>
