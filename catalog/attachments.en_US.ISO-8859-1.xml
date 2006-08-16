@@ -8,6 +8,7 @@
 </description>
 
   <msg key="Add_pretty_name">Add %pretty_name%</msg>
+  <msg key="Are_you_sure_detach">Are you sure you want to remove this attachment?</msg>
   <msg key="Attach">Attach</msg>
   <msg key="attach_new">Attach a &lt;b&gt;new&lt;/b&gt;:</msg>
   <description key="attach_new">This key is going to give problems with word-order for several languages, because the &quot;attach new&quot; grammar is quite specific to English. For example the best translation in Dutch would be &quot;Nieuwe xxxx toevoegen&quot;, but we do not know xxxx yet. A work around is to write &quot;Voeg toe nieuw&quot;, but depending on what is behind it, grammar requires &quot;Voeg toe nieuwe&quot;. So, we get a very forced translation: &quot;Voeg toe nieuw(e)&quot;.
@@ -17,8 +18,13 @@ Please fix.</description>
   <msg key="Attach_URL">Attach URL</msg>
   <description key="Attach_URL">Used as title on page for attaching a URL to an object.</description>
 
+  <msg key="Attachment">Attachment</msg>
+  <msg key="Can_delete">This is the only object this item is attached to.  You can choose to delete it from file storage as well.</msg>
   <msg key="Choose">Choose</msg>
+  <msg key="delete_from_fs">Delete this attachment from file storage?</msg>
   <msg key="Description">Description:</msg>
+  <msg key="Detach">Detach</msg>
+  <msg key="Detach_file_from">Detach file from %object_name%</msg>
   <msg key="File">File</msg>
   <msg key="Last_Modified">Last Modified</msg>
   <msg key="lt_Add_Attachment_Folder">Add Attachment Folder Link</msg>
@@ -46,6 +52,9 @@ Please fix.</description>
   <msg key="Name">Name</msg>
   <msg key="No_such_type">No such type</msg>
   <msg key="Object">Object</msg>
+  <msg key="on_Object">on Object</msg>
+  <msg key="Only_detach">This item is attached to other objects.  You can only remove it from this object but not delete from file storage.</msg>
+  <msg key="remove">remove</msg>
   <msg key="Size">Size</msg>
   <msg key="Title">Title</msg>
   <description key="Title">Used as label in a form for the title of a new document to attach to an object.</description>
