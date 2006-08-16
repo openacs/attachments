@@ -129,6 +129,16 @@ namespace eval attachments {
         return "${base_url}[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
     }
 
+    ad_proc -public detach_url {
+        {-package_id ""}
+        {-object_id:required}
+        {-attachment_id:required}
+        {-base_url ""}
+	{-return_url ""}
+    } {
+        return "${base_url}[attachments::get_url]/detach?object_id=$object_id&attachment_id=$attachment_id&return_url=[ad_urlencode $return_url]"
+    }
+
     ad_proc -public graphic_url {
         {-package_id ""}
     } {
@@ -138,8 +148,9 @@ namespace eval attachments {
     ad_proc -public get_attachments {
         {-object_id:required}
         {-base_url ""}
+	{-return_url ""}
     } {
-        returns a list of attachment ids and names which are approved: {item_id name url}
+        returns a list of attachment ids and names which are approved: {item_id name url detach_url}
     } {
         set lst [db_list select_attachments {}]
         set lst_with_urls [list]
@@ -151,6 +162,7 @@ namespace eval attachments {
               set label [fs::get_object_prettyname -object_id $item_id]
             }
             set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
+	    lappend append_lst [detach_url -object_id $object_id -attachment_id $item_id -base_url $base_url -return_url $return_url]
             lappend lst_with_urls [concat [list $item_id $label] $append_lst]
         }
 
