@@ -26,11 +26,11 @@ switch $content_type {
     }
 
     file_storage_object {
-        db_1row select_attachment_info {}]
+        db_1row select_attachment_info {}
         if {[parameter::get -package_id $package_id -parameter BehaveLikeFilesystemP -default 0]} {
             set filename $title
         } else {
-            set filename name
+            set filename $name
         }
         ad_returnredirect "download/[ad_urlencode $filename]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
