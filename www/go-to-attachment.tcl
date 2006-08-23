@@ -26,8 +26,13 @@ switch $content_type {
     }
 
     file_storage_object {
-        set title [db_string select_attachment_title {}]
-        ad_returnredirect "download/[ad_urlencode $title]?object_id=$object_id&attachment_id=$attachment_id"
+        db_1row select_attachment_info {}]
+        if {[parameter::get -package_id $package_id -parameter BehaveLikeFilesystemP -default 0]} {
+            set filename $title
+        } else {
+            set filename name
+        }
+        ad_returnredirect "download/[ad_urlencode $filename]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
         return
     }
