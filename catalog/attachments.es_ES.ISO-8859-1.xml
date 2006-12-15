@@ -5,11 +5,17 @@
   <msg key="Add_File">Añadir Archivo</msg>
   <msg key="Add_folder_Link">Añadir Enlace a la Carpeta</msg>
   <msg key="Add_pretty_name">Añadir %pretty_name% </msg>
+  <msg key="Are_you_sure_detach">¿Está seguro de querer eliminar este adjunto?</msg>
   <msg key="Attach">Adjuntar</msg>
   <msg key="attach_new">Adjuntar un &lt;b&gt;nuevo&lt;/b&gt;:</msg>
   <msg key="Attach_URL">Adjuntar URL</msg>
+  <msg key="Attachment">Adjunto</msg>
+  <msg key="Can_delete">Es el único objeto al que está adjuntado. Puede elegir borrarlo de los documentos también.</msg>
   <msg key="Choose">Elegir</msg>
+  <msg key="delete_from_fs">¿Borrar este adjunto de los documentos?</msg>
   <msg key="Description">Descripción:</msg>
+  <msg key="Detach">Quitar</msg>
+  <msg key="Detach_file_from">Quitar el archivo adjunto a %object_name%</msg>
   <msg key="File">Archivo</msg>
   <msg key="Last_Modified">Última modificación</msg>
   <msg key="lt_Add_Attachment_Folder">Añadir enlace a carpeta adjunta</msg>
@@ -34,6 +40,9 @@
   <msg key="Name">Nombre</msg>
   <msg key="No_such_type">No existe el tipo</msg>
   <msg key="Object">Objeto</msg>
+  <msg key="on_Object">sobre el objeto</msg>
+  <msg key="Only_detach">Este elemento está adjuntado a otros objetos. Sólo puede desasociarlo de este objeto pero no puede borrarlo de los documentos.</msg>
+  <msg key="remove">eliminar</msg>
   <msg key="Size">Tamaño</msg>
   <msg key="Title">Nombre</msg>
   <msg key="Top">Arriba</msg>
