@@ -32,6 +32,15 @@ switch $content_type {
         } else {
             set filename $name
         }
+	
+	# Test if the filename contains the extension, otherwise append it
+	# This usually happens if you just rename the title (displayed filename) but forget
+	# to append the extension to it.
+	set extension [file extension $filename]
+	if {$extension ne $file_extension} {
+	    append filename ".${file_extension}"
+	}
+
         ad_returnredirect "download/[ad_urlencode $filename]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
         return
