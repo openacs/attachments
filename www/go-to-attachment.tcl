@@ -26,7 +26,15 @@ switch $content_type {
     }
 
     file_storage_object {
-        set title [db_string select_attachment_title {}]
+        db_1row select_attachment {}
+	
+	# Test if the filename contains the extension, otherwise append it
+	# This usually happens if you just rename the title (displayed filename) but forget
+	# to append the extension to it.
+	set extension [file extension $title]
+	if {$extension ne $file_extension} {
+	    append title ".${file_extension}"
+	}
         ad_returnredirect "download/[ad_urlencode $title]?object_id=$object_id&attachment_id=$attachment_id"
         ad_script_abort
         return

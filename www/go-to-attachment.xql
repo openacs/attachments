@@ -10,12 +10,13 @@
 </fullquery>
 
 
-  <fullquery name="select_attachment_title">      
+  <fullquery name="select_attachment">      
     <querytext>
-      select r.title 
-      from cr_revisions r, cr_items i 
+      select r.title, m.file_extension, r.mime_type
+      from cr_revisions r, cr_items i, cr_mime_types m 
       where i.item_id = :attachment_id 
       and r.revision_id  = i.live_revision
+      and r.mime_type = m.mime_type
     </querytext>
   </fullquery>
  
