@@ -16,7 +16,7 @@
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
         <provides url="attachments" version="0.10"/>
-        <requires url="file-storage" version="4.6.2"/>
+        <requires url="file-storage" version="5.3.0d1"/>
 
         <parameters>
             <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="RelativeUrl"  default="attach" description="The relative url of this package when mounted under a client."/>
