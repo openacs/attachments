@@ -12,11 +12,12 @@
 
   <fullquery name="select_attachment_info">      
     <querytext>
-      select r.title,i.name, o.package_id
-      from cr_revisions r, cr_items i, acs_objects o
+      select r.title,i.name, o.package_id, m.file_extension
+      from cr_revisions r, cr_items i, acs_objects o, cr_mime_types m
       where i.item_id = :attachment_id 
       and r.revision_id  = i.live_revision
       and i.item_id = o.object_id
+      and m.mime_type = r.mime_type
     </querytext>
   </fullquery>
 
