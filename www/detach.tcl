@@ -44,7 +44,7 @@ set attached_to_other_objects_n [db_string get_other_object_count {
           and object_id <> :object_id
 }]
 
-set delete_options [list [list [_ acs-kernel.common_no] 0] [list [_ acs-kernel.common_Yes] 1]]
+set delete_options [list [list [_ acs-kernel.common_No] 0] [list [_ acs-kernel.common_Yes] 1]]
 
 if {$attached_to_other_objects_n} {
     ad_form \
