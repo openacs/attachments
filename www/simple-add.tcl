@@ -35,7 +35,8 @@ if {[empty_string_p $pretty_name]} {
     return -code error "[_ attachments.No_such_type]"
 }
 
-set context [fs_context_bar_list -final [_ attachments.Add_pretty_name [list pretty_name $pretty_name]] $folder_id]
+set context [_ attachments.Add_pretty_name [list pretty_name $pretty_name]]
+#set context [fs_context_bar_list -final [_ attachments.Add_pretty_name [list pretty_name $pretty_name]] $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection

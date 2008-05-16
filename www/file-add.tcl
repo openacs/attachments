@@ -30,8 +30,8 @@ ad_require_permission $folder_id write
 
 # set templating datasources
 
-set context {{Attach File}}
-set fs_context [fs_context_bar_list -final "[_ attachments.Add_File]" $folder_id]
+set context [_ attachments.Add_File]
+#set fs_context [fs_context_bar_list -final "[_ attachments.Add_File]" $folder_id]
 
 # Should probably generate the item_id and version_id now for
 # double-click protection
