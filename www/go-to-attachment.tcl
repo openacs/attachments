@@ -36,8 +36,12 @@ switch $content_type {
 	# Test if the filename contains the extension, otherwise append it
 	# This usually happens if you just rename the title (displayed filename) but forget
 	# to append the extension to it.
+
+	#file extension return "." extension without "."
+	set file_extension_aux [concat .$file_extension]
+
 	set extension [file extension $filename]
-	if {$extension ne $file_extension} {
+	if {$extension ne $file_extension_aux} {
 	    append filename ".${file_extension}"
 	}
 
