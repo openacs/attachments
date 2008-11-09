@@ -205,13 +205,15 @@ namespace eval attachments {
         } else {
             set cbar_html "[_ attachments.Top] &gt; "
         }
-
+	set length_list [llength $cbar_list]
+	set aux 1
         foreach el $cbar_list {
-            if {[llength $el] < 2} {
+            if {$aux == $length_list } {
                 append cbar_html "$el"
             } else {
                 append cbar_html "<a href=\"[lindex $el 0]\">[lindex $el 1]</a> &gt; "
             }
+	    incr aux
         }
 
         return $cbar_html

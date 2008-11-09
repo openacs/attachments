@@ -2,23 +2,25 @@
 <property name="title">#attachments.lt_Upload_New_Attachment#</property>
 <property name="context">@context;noquote@</property>
 
-#attachments.you_are_attaching_document_to_object#
+<p>#attachments.you_are_attaching_document_to_object#</p>
 
 <form enctype=multipart/form-data method=POST action="file-add-2">
+<div>
 <input type=hidden name="folder_id" value="@folder_id@">
 <input type=hidden name="object_id" value="@object_id@">
 <input type=hidden name="return_url" value="@return_url@">
+</div>
 
 <table border=0>
 
 <tr>
 <td align=right>#attachments.Version_filename_# </td>
-<td><input type=file name=upload_file size=20></tr>
+<td><input type=file name=upload_file size=20></td>
 </tr>
 
 <tr>
 <td>&nbsp;</td>
-<td><font size=-1>#attachments.lt_Use_the_Browse_button# </font></td>
+<td>#attachments.lt_Use_the_Browse_button#</td>
 </tr>
 
 <tr>

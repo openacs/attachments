@@ -90,6 +90,6 @@
   </table>
 </if>
 <else>
-  <p><blockquote><i>#attachments.lt_Folder_folder_name_is#</i></blockquote></p>
+  <p><em>#attachments.lt_Folder_folder_name_is#</em></p>
 </else>
 
