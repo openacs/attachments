@@ -156,8 +156,8 @@ namespace eval attachments {
         set lst_with_urls [list]
 
         foreach item_id $lst {
-            if { [content_extlink::extlink_p -item_id $item_id] } {
-              set label [content_extlink::extlink_name -item_id $item_id]
+            if { [content::extlink::is_extlink -item_id $item_id] } {
+              set label [content::extlink::name -item_id $item_id]
             } else {
               set label [fs::get_object_prettyname -object_id $item_id]
             }
@@ -179,8 +179,8 @@ namespace eval attachments {
         set lst_with_urls [list]
 
         foreach item_id $lst {
-            if { [content_extlink::extlink_p -item_id $item_id] } {
-              set label [content_extlink::extlink_name -item_id $item_id]
+            if { [content::extlink::is_extlink -item_id $item_id] } {
+              set label [content::extlink::name -item_id $item_id]
             } else {
               set label [fs::get_object_name -object_id $item_id] 
             }
