@@ -4,7 +4,7 @@
 
 <p>#attachments.you_are_attaching_document_to_object#</p>
 
-<form enctype=multipart/form-data method=POST action="file-add-2">
+<form enctype="multipart/form-data" method="POST" action="file-add-2">
 <div>
 <input type=hidden name="folder_id" value="@folder_id@">
 <input type=hidden name="object_id" value="@object_id@">
@@ -14,8 +14,9 @@
 <table border=0>
 
 <tr>
-<td align=right>#attachments.Version_filename_# </td>
-<td><input type=file name=upload_file size=20></td>
+<td align=right>
+<label for="upload_file">#attachments.Version_filename_#</label></td>
+<td><input type="file" name="upload_file" id="upload_file" size=20></td>
 </tr>
 
 <tr>
@@ -29,19 +30,24 @@
 </tr>
 
 <tr>
-<td align=right> #attachments.Title# </td>
   <if @lock_title_p@ eq 0>
-    <td><input size=30 name=title value=@title@></td>
+    <td align=right><label for="title">#attachments.Title#</label></td>
+    <td><input size=30 name="title" id="title" value="@title@"></td>
   </if>
   <else>
-      <input type=hidden name=title value=@title@>
+      <td align=right> #attachments.Title#
+        <input type=hidden name=title value=@title@>
+      </td>
       <td>@title@</td>
   </else>
 </tr>
 
 <tr>
-<td valign=top align=right> #attachments.Description# </td>
-<td colspan=2><textarea rows=5 cols=50 name=description wrap=physical></textarea></td>
+<td valign=top align=right>
+  <label for="description">#attachments.Description#</label>
+</td>
+<td>
+  <textarea rows=5 cols=50 name="description" id="description"></textarea></td>
 </tr>
 
 <tr>
@@ -52,4 +58,3 @@
 
 </table>
 </form>
-
