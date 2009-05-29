@@ -195,28 +195,30 @@ namespace eval attachments {
         {-folder_id:required}
         {-final ""}
         {-extra_vars ""}
+        {-multirow "fs_context"}
     } {
+        Create a multirow with cols (url title) for the file-storage bar
+        starting at folder_id
+    } {
+
         set root_folder_id [attachments::get_root_folder]
 
         set cbar_list [fs_context_bar_list -extra_vars $extra_vars -folder_url "attach" -file_url "attach" -root_folder_id $root_folder_id -final $final $folder_id]
 
-        if {![empty_string_p $root_folder_id]} {
-            set cbar_html "<a href=\"attach?${extra_vars}&folder_id=$root_folder_id\">[_ attachments.Top]</a> &gt; "
-        } else {
-            set cbar_html "[_ attachments.Top] &gt; "
-        }
-	set length_list [llength $cbar_list]
-	set aux 1
-        foreach el $cbar_list {
-            if {$aux == $length_list } {
-                append cbar_html "$el"
-            } else {
-                append cbar_html "<a href=\"[lindex $el 0]\">[lindex $el 1]</a> &gt; "
+        template::multirow create $multirow url label
+    
+        if { $root_folder_id ne "" && $cbar_list ne "" } {
+            template::multirow append $multirow "attach?${extra_vars}&folder_id=$root_folder_id" [_ attachments.Top]
+            foreach elm $cbar_list {
+                if { [llength elm] > 1 } {
+                    template::multirow append $multirow [lindex $elm 0] [lindex $elm 1]
+                } else {
+                    template::multirow append $multirow "" $elm
+                }
             }
-	    incr aux
+        } else {
+            template::multirow append $multirow "" [_ attachments.Top]
         }
-
-        return $cbar_html
     }
     
 }

@@ -1,5 +1,5 @@
 <master>
-<property name="title">#attachments.lt_Attach_a_File_to_pret#</property>
+<property name="&doc">doc</property>
 <property name="context">@context;noquote@</property>
 
 <p>#attachments.lt_You_are_attaching_a_d#</p>
@@ -15,7 +15,23 @@
 </if>
 
 
-<p class="attach-fs-bar">@fs_context_bar_html;noquote@</p>
+<div class="attach-fs-bar">
+      <ul class="compact">
+        <if @fs_context:rowcount@ not nil>
+          #file-storage.Folder#:&nbsp;
+          <multiple name="fs_context">
+            <li>
+              <if @fs_context.url@ not nil>
+                <a href="@fs_context.url@">@fs_context.label@</a> @separator@
+              </if>
+              <else>
+                @fs_context.label@
+              </else>
+            </li>
+          </multiple>
+        </if>
+      </ul>
+</div>
 
 <if @contents:rowcount@ gt 0>
   <table width="95%" class="list-table">

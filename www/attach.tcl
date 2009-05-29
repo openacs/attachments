@@ -31,7 +31,7 @@ if {[empty_string_p $pretty_object_name]} {
 
 # Load up file storage information
 if {[empty_string_p $folder_id]} {
-    set folder_id [dotlrn_fs::get_user_shared_folder -user_id $user_id]
+    set folder_id [attachments::get_root_folder]
 } 
 
 # sanity check
@@ -65,15 +65,18 @@ db_multirow -unclobber -extend {name_url action_url} contents select_folder_cont
 
 set passthrough_vars "object_id=$to_object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
 
-set fs_context_bar_html [attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id]
+# Context bar
+set separator [parameter::get -package_id [ad_conn subsite_id] -parameter ContextBarSeparator -default ">"]
+attachments::context_bar -extra_vars $passthrough_vars -folder_id $folder_id -multirow fs_context
 
+set doc(title) [_ attachments.lt_Attach_a_File_to_pret]
 set context "[_ attachments.Attach]"
 
 template::head::add_style -style "
 .attach-fs-bar {
-    background-color: #F0EFF0;
-    color: inherit;
-    border-bottom: thin solid #555;
+    border-top: thin solid #555;
+    margin: 0.8em 0;
+    padding-left: 0.5em;
 }"
 
 # Build URLs
