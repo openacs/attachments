@@ -13,5 +13,12 @@
 
 </fullquery>
 
- 
+  <fullquery name="get_fs_package_id">
+    <querytext>
+      select package_id 
+      from fs_root_folders 
+      where folder_id=:root_folder
+    </querytext>
+  </fullquery>
+
 </queryset>
