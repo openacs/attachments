@@ -31,7 +31,7 @@ ad_page_contract {
 } 
 
 # Check for write permission on this folder
-ad_require_permission $folder_id write
+permission::require_permission -object_id $folder_id -privilege write
 
 # Get the filename part of the upload file
 if ![regexp {[^//\\]+$} $upload_file filename] {
