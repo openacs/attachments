@@ -21,7 +21,7 @@ ad_page_contract {
 
     max_size -requires {upload_file} {
 	set n_bytes [file size ${upload_file.tmpfile}]
-	set max_bytes [ad_parameter "MaximumFileSize"]
+	set max_bytes [parameter::get -parameter "MaximumFileSize"]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
             set max_number_of_bytes [util_commify_number $max_bytes]
