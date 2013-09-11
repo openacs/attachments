@@ -1,5 +1,5 @@
 <master>
-<property name="title">#attachments.Attach_URL#</property>
+<property name="doc(title)">#attachments.Attach_URL#</property>
 <property name="context">@context;noquote@</property>
 
 <p>

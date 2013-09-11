@@ -1,5 +1,5 @@
 <master>
-<property name="title">#attachments.lt_Upload_New_Attachment#</property>
+<property name="doc(title)">#attachments.lt_Upload_New_Attachment#</property>
 <property name="context">@context;noquote@</property>
 
 <p>#attachments.you_are_attaching_document_to_object#</p>
