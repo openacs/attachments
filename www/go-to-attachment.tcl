@@ -13,7 +13,7 @@ permission::require_permission -object_id $object_id -privilege read
 
 # Get information about attachment
 set content_type [item::get_type $attachment_id]
-if { [string length $content_type] == 0 } {
+if { $content_type eq "" } {
     ad_return_complaint 1 [_ attachments.lt_No_such_attachment_fo]
     return
 }

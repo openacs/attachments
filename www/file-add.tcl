@@ -13,7 +13,7 @@ ad_page_contract {
     {lock_title_p 0}
 } -validate {
     valid_folder -requires {folder_id:integer} {
-	if ![fs_folder_p $folder_id] {
+	if {![fs_folder_p $folder_id]} {
 	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
@@ -37,7 +37,7 @@ set context [_ attachments.Add_File]
 # double-click protection
 
 # if title isn't passed in ignore lock_title_p
-if {[empty_string_p $title]} {
+if {$title eq ""} {
     set lock_title_p 0
 }
 

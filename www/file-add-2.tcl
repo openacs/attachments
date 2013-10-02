@@ -14,7 +14,7 @@ ad_page_contract {
     description
 } -validate {
     valid_folder -requires {folder_id:integer} {
-	if ![fs_folder_p $folder_id] {
+	if {![fs_folder_p $folder_id]} {
 	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
@@ -34,7 +34,7 @@ ad_page_contract {
 permission::require_permission -object_id $folder_id -privilege write
 
 # Get the filename part of the upload file
-if ![regexp {[^//\\]+$} $upload_file filename] {
+if {![regexp {[^//\\]+$} $upload_file filename]} {
     # no match
     set filename $upload_file
 }

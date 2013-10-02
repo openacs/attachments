@@ -31,7 +31,7 @@ namespace eval attachments {
         {-package_id ""}
     } {
     } {
-        if {[empty_string_p $package_id]} {
+        if {$package_id eq ""} {
             # Get the package ID from the parent URL
             array set parent_node [site_node::get_parent -node_id [ad_conn node_id]]
             set package_id $parent_node(object_id)
@@ -91,7 +91,7 @@ namespace eval attachments {
     } {
         toggle approved_p for attachment
     } {
-        if {[empty_string_p $approved_p]} {
+        if {$approved_p eq ""} {
             set approved_p [ad_decode [db_string select_attachment_approved_p {}] f t f]
         }
 

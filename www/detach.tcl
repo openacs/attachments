@@ -72,7 +72,9 @@ ad_form \
     } -on_request {
     } -on_submit {
 	attachments::unattach -object_id $object_id -attachment_id $attachment_id
-	if {[exists_and_not_null delete_button] && !$attached_to_other_objects_n} {
+	if {([info exists delete_button] && $delete_button ne "") 
+	    && !$attached_to_other_objects_n
+	} {
 	    fs::delete_file -item_id $attachment_id		
 	}
     } -after_submit {
