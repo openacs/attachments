@@ -6,8 +6,8 @@ ad_page_contract {
     @creation-date 01 April 2002
     @cvs-id $Id$
 } {
-    folder_id:integer,notnull
-    object_id:integer,notnull
+    folder_id:naturalnum,notnull
+    object_id:naturalnum,notnull
     return_url:notnull
     pretty_object_name:notnull
     {type "fs_url"}

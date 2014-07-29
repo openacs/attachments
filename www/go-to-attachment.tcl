@@ -4,8 +4,8 @@ ad_page_contract {
     
     @author Ben Adida (ben@openforce.net)
 } {
-    {object_id:integer,notnull}
-    {attachment_id:integer,notnull}
+    {object_id:naturalnum,notnull}
+    {attachment_id:naturalnum,notnull}
 }
 
 # We check permissions on the object

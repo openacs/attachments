@@ -5,10 +5,10 @@ ad_page_contract {
     @creation-date 6 Nov 2000
     @cvs-id $Id$
 } {
-    folder_id:integer,notnull
+    folder_id:naturalnum,notnull
     upload_file:notnull,trim
     upload_file.tmpfile:tmpfile
-    object_id:integer,notnull
+    object_id:naturalnum,notnull
     return_url:notnull
     title:notnull,trim
     description
