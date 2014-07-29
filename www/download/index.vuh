@@ -8,8 +8,8 @@ ad_page_contract {
     @creation-date 2 July 2002
     @cvs-id $Id$
 } {
-    object_id:integer,notnull
-    attachment_id:integer,notnull
+    object_id:naturalnum,notnull
+    attachment_id:naturalnum,notnull
 }
 
 # Permission check
