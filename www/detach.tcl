@@ -8,8 +8,8 @@ ad_page_contract {
     @creation-date 2006-07-13
     @cvs-id $Id$
 } {
-    object_id:notnull
-    attachment_id:notnull
+    object_id:naturalnum,notnull
+    attachment_id:naturalnum,notnull
     {return_url ""}
 } -properties {
 } -validate {
