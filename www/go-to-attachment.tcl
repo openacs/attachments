@@ -12,7 +12,7 @@ ad_page_contract {
 permission::require_permission -object_id $object_id -privilege read
 
 # Get information about attachment
-set content_type [item::get_type $attachment_id]
+set content_type [content::item::get_content_type -item_id $attachment_id]
 if { $content_type eq "" } {
     ad_return_complaint 1 [_ attachments.lt_No_such_attachment_fo]
     return
