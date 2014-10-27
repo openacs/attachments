@@ -25,17 +25,17 @@ set to_object_id $object_id
 permission::require_permission -object_id $to_object_id -privilege write
 
 # Give the object a nasty name if it doesn't have a pretty name
-if {[empty_string_p $pretty_object_name]} {
+if {$pretty_object_name eq ""} {
     set pretty_object_name "[_ attachments.Object] #$to_object_id"
 }
 
 # Load up file storage information
-if {[empty_string_p $folder_id]} {
+if {$folder_id eq ""} {
     set folder_id [attachments::get_root_folder]
 } 
 
 # sanity check
-if {[empty_string_p $folder_id]} {
+if {$folder_id eq ""} {
     ad_return_complaint 1 "[_ attachments.lt_Error_empty_folder_id]"
     ad_script_abort
 }

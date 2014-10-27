@@ -1,5 +1,5 @@
 <master>
-<property name="title">#attachments.lt_Add_Attachment_Folder# </property>
+<property name="doc(title)">#attachments.lt_Add_Attachment_Folder# </property>
 
 <h3>#attachments.Add_folder_Link#</h3>
 

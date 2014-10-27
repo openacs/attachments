@@ -5,8 +5,8 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {object_id:integer,notnull}
-    {item_id:integer,notnull}
+    {object_id:naturalnum,notnull}
+    {item_id:naturalnum,notnull}
     {approved_p ""}
     {return_url:notnull}
 }

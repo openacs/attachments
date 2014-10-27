@@ -5,23 +5,23 @@ ad_page_contract {
     @creation-date 6 Nov 2000
     @cvs-id $Id$
 } {
-    folder_id:integer,notnull
+    folder_id:naturalnum,notnull
     upload_file:notnull,trim
     upload_file.tmpfile:tmpfile
-    object_id:integer,notnull
+    object_id:naturalnum,notnull
     return_url:notnull
     title:notnull,trim
     description
 } -validate {
     valid_folder -requires {folder_id:integer} {
-	if ![fs_folder_p $folder_id] {
+	if {![fs_folder_p $folder_id]} {
 	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
 
     max_size -requires {upload_file} {
 	set n_bytes [file size ${upload_file.tmpfile}]
-	set max_bytes [ad_parameter "MaximumFileSize"]
+	set max_bytes [parameter::get -parameter "MaximumFileSize"]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
             set max_number_of_bytes [util_commify_number $max_bytes]
@@ -31,10 +31,10 @@ ad_page_contract {
 } 
 
 # Check for write permission on this folder
-ad_require_permission $folder_id write
+permission::require_permission -object_id $folder_id -privilege write
 
 # Get the filename part of the upload file
-if ![regexp {[^//\\]+$} $upload_file filename] {
+if {![regexp {[^//\\]+$} $upload_file filename]} {
     # no match
     set filename $upload_file
 }

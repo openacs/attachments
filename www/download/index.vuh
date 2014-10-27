@@ -8,8 +8,8 @@ ad_page_contract {
     @creation-date 2 July 2002
     @cvs-id $Id$
 } {
-    object_id:integer,notnull
-    attachment_id:integer,notnull
+    object_id:naturalnum,notnull
+    attachment_id:naturalnum,notnull
 }
 
 # Permission check
@@ -19,7 +19,7 @@ permission::require_permission -object_id $object_id -privilege read
 # (and check that this is the right attachment while we're at it)
 set version_id [db_string select_version_id {} -default {}]
 
-if {[empty_string_p $version_id]} {
+if {$version_id eq ""} {
     ad_return_complaint "bad attachment"
     ad_script_abort
     return

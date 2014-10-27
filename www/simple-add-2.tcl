@@ -5,15 +5,15 @@ ad_page_contract {
     @creation-date 6 Nov 2000
     @cvs-id $Id$
 } {
-    folder_id:integer,notnull
-    object_id:integer,notnull
+    folder_id:naturalnum,notnull
+    object_id:naturalnum,notnull
     return_url:notnull
     title:notnull,trim
     description
     url:notnull,trim
 } -validate {
     valid_folder -requires {folder_id:integer} {
-	if ![fs_folder_p $folder_id] {
+	if {![fs_folder_p $folder_id]} {
 	    ad_complain "[_ attachments.lt_The_specified_parent_]"
 	}
     }
@@ -21,7 +21,7 @@ ad_page_contract {
 } 
 
 # Check for write permission on this folder
-ad_require_permission $folder_id write
+permission::require_permission -object_id $folder_id -privilege write
 
 db_transaction {
 

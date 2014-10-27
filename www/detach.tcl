@@ -8,8 +8,8 @@ ad_page_contract {
     @creation-date 2006-07-13
     @cvs-id $Id$
 } {
-    object_id:notnull
-    attachment_id:notnull
+    object_id:naturalnum,notnull
+    attachment_id:naturalnum,notnull
     {return_url ""}
 } -properties {
 } -validate {
@@ -72,7 +72,9 @@ ad_form \
     } -on_request {
     } -on_submit {
 	attachments::unattach -object_id $object_id -attachment_id $attachment_id
-	if {[exists_and_not_null delete_button] && !$attached_to_other_objects_n} {
+	if {([info exists delete_button] && $delete_button ne "") 
+	    && !$attached_to_other_objects_n
+	} {
 	    fs::delete_file -item_id $attachment_id		
 	}
     } -after_submit {
