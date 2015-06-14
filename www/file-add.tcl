@@ -10,7 +10,7 @@ ad_page_contract {
     return_url:notnull
     pretty_object_name:notnull
     {title ""}
-    {lock_title_p 0}
+    {lock_title_p:boolean 0}
 } -validate {
     valid_folder -requires {folder_id:integer} {
 	if {![fs_folder_p $folder_id]} {
