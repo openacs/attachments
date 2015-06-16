@@ -11,10 +11,10 @@
 <input type=hidden name="return_url" value="@return_url@">
 </div>
 
-<table border=0>
+<table border="0">
 
 <tr>
-<td align=right>
+<td align="right">
 <label for="upload_file">#attachments.Version_filename_#</label></td>
 <td><input type="file" name="upload_file" id="upload_file" size=20></td>
 </tr>
@@ -31,11 +31,11 @@
 
 <tr>
   <if @lock_title_p@ eq 0>
-    <td align=right><label for="title">#attachments.Title#</label></td>
+    <td align="right"><label for="title">#attachments.Title#</label></td>
     <td><input size=30 name="title" id="title" value="@title@"></td>
   </if>
   <else>
-      <td align=right> #attachments.Title#
+      <td align="right"> #attachments.Title#
         <input type=hidden name=title value=@title@>
       </td>
       <td>@title@</td>
@@ -43,7 +43,7 @@
 </tr>
 
 <tr>
-<td valign=top align=right>
+<td valign="top" align="right">
   <label for="description">#attachments.Description#</label>
 </td>
 <td>

@@ -14,15 +14,15 @@
 <input type=hidden name="return_url" value="@return_url@">
 </div>
 
-<table border=0>
+<table border="0">
 
 <tr>
   <if @lock_title_p@ eq 0>
-    <td align=right><label for="title">#attachments.Title#</label></td>
+    <td align="right"><label for="title">#attachments.Title#</label></td>
     <td><input size=30 name="title" value="@title@" id="title"></td>
   </if>
   <else>
-     <td align=right>#attachments.Title#</td>
+     <td align="right">#attachments.Title#</td>
      <td>
        @title@
        <input type=hidden name="title" value="@title@">
@@ -31,12 +31,12 @@
 </tr>
 
 <tr>
-<td align=right><label for="url">#attachments.URL_1#</label></td>
+<td align="right"><label for="url">#attachments.URL_1#</label></td>
 <td><input size=50 name="url" value="http://" id="url"></td>
 </tr>
 
 <tr>
-<td valign=top align=right><label for="description">#attachments.Description#</label></td>
+<td valign="top" align="right"><label for="description">#attachments.Description#</label></td>
 <td><textarea rows=5 cols=50 name="description" id="description"></textarea></td>
 </tr>
 
