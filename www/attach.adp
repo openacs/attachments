@@ -1,6 +1,6 @@
 <master>
 <property name="&doc">doc</property>
-<property name="context">@context;noquote@</property>
+<property name="context">@context;literal@</property>
 
 <p>#attachments.lt_You_are_attaching_a_d#</p>
 
