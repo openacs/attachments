@@ -24,8 +24,7 @@ attachments is mounted properly</a></dd><dd><a href="#id.s1.2.3.2">1.2.3.2 Get t
 </dl>
 </dd>
 </dl>
-</dd></dl><hr><h1>
-<a id="id.s1" name="id.s1">1</a>Attachments</h1><h2>
+</dd></dl><hr><h1>1 Attachments</h1><h2>
 <a id="id.s1.1" name="id.s1.1">1.1</a> Basics</h2><h3>
 <a id="id.s1.1.1" name="id.s1.1.1">1.1.1</a> What does
 attachments do?</h3><p>
@@ -93,5 +92,5 @@ Url into the attachments package mounted under your package.</p><div class="box"
 to add an attachment to their posting.</p><h3>
 <a id="id.s1.2.4" name="id.s1.2.4">1.2.4</a> Viewing attached
 files</h3><p>You can use the "attachments::get_attachments" proc to see the
-list of attachments to a given object.</p>
+list of attachments to a given object.</p><h2>Release Notes</h2><p>Please file bugs in the <a href="http://openacs.org/bugtracker/openacs/">Bug Tracker</a>.</p>
 </body>
