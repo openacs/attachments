@@ -83,3 +83,9 @@ template::head::add_style -style "
 set file_add_url [export_vars -base "file-add" { {object_id $to_object_id} folder_id return_url pretty_object_name}]
 
 set simple_add_url [export_vars -base "simple-add" { {object_id $to_object_id} folder_id return_url pretty_object_name}]
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

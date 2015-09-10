@@ -76,3 +76,9 @@ set fs_package_id [db_string get_fs_package_id {}]
 
 
 ad_returnredirect $return_url
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

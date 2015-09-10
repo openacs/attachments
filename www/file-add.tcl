@@ -41,3 +41,9 @@ if {$title eq ""} {
     set lock_title_p 0
 }
 
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

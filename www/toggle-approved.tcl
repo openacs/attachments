@@ -14,3 +14,9 @@ ad_page_contract {
 attachments::toggle_approved -object_id $object_id -item_id $item_id -approved_p $approved_p
 
 ad_returnredirect $return_url
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

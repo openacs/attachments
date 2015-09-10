@@ -37,3 +37,9 @@ attachments::map_root_folder -package_id $package_id -folder_id $folder_id
 
 
 ad_returnredirect $referer
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:
