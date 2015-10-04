@@ -12,13 +12,13 @@
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>Attachment support</summary>
         <maturity>2</maturity>
-        <release-date>2015-09-25</release-date>
+        <release-date>2015-10-04</release-date>
         <vendor url="http://openacs.org">OpenACS</vendor>
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
         <provides url="attachments" version="0.11d2"/>
-	<requires url="acs-kernel" version="5.9.0b1"/>
-        <requires url="file-storage" version="5.9.0b1"/>
+	<requires url="acs-kernel" version="5.9.0b2"/>
+        <requires url="file-storage" version="5.9.0b2"/>
 
         <parameters>
             <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="RelativeUrl"  default="attach" description="The relative url of this package when mounted under a client."/>
