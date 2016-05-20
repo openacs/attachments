@@ -8,7 +8,7 @@ ad_page_contract {
 } {
     folder_id:naturalnum,notnull
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     pretty_object_name:notnull
     {type "fs_url"}
     {title ""}

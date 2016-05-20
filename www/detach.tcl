@@ -10,7 +10,7 @@ ad_page_contract {
 } {
     object_id:naturalnum,notnull
     attachment_id:naturalnum,notnull
-    {return_url ""}
+    {return_url:localurl ""}
 } -properties {
 } -validate {
 } -errors {

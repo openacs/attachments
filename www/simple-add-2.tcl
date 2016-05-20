@@ -7,7 +7,7 @@ ad_page_contract {
 } {
     folder_id:naturalnum,notnull
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     title:notnull,trim
     description
     url:notnull,trim
