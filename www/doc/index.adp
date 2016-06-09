@@ -55,12 +55,12 @@ to upload a new file into file-storage to attach.</p>
 <h3>
 <a id="id.s1.2.1" name="id.s1.2.1">1.2.1</a> Mount attachments
 under your package</h3>
-<p>The first step is to mount the attachments package <b>under</b>
+<p>The first step is to mount the attachments package <strong>under</strong>
 your package. In the <tt>site-map</tt>, you should create a new
 site-node (sub-folder) under your package called "attach".</p>
 <p>"attach" is the standard URL, however URL this can be changed on
 a site-wide basis by changing the "RelativeUrl" parameter of
-<b>any</b> of the attachments packages (this works since there's
+<strong>any</strong> of the attachments packages (this works since there's
 only one instance of attachments in the entire system. The same
 instance is just re-mounted)</p>
 <h3>
