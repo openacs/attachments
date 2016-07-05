@@ -35,7 +35,7 @@ attachments do?</h3>
 <tt>attachments</tt> is a service package that allows you to
 attach one or more file-storage files to any <tt>acs_object</tt>.
 <tt>attachments</tt> is mounted below a package that uses it, and
-the application provides links into the attachments package's
+the application provides links into the attachments package&#39;s
 UI.</p>
 <h3>
 <a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high level,
@@ -43,9 +43,9 @@ how does attachments work?</h3>
 <p>Before you can use the attachments package, each instance of
 your package must be mapped to a <tt>file-storage root
 folder</tt>.</p>
-<p>The root folder is a "super folder" for all the files in that
-specific instance of file-storage, and it is created automatically
-when the file-storage package is instanciated.</p>
+<p>The root folder is a "super folder" for all the files
+in that specific instance of file-storage, and it is created
+automatically when the file-storage package is instanciated.</p>
 <p>When a user wants to make an attachment to an object in your
 package, she is shown the contents of the file-storage root folder
 mapped to your package instance. The user is also given the option
@@ -55,14 +55,16 @@ to upload a new file into file-storage to attach.</p>
 <h3>
 <a id="id.s1.2.1" name="id.s1.2.1">1.2.1</a> Mount attachments
 under your package</h3>
-<p>The first step is to mount the attachments package <strong>under</strong>
-your package. In the <tt>site-map</tt>, you should create a new
-site-node (sub-folder) under your package called "attach".</p>
-<p>"attach" is the standard URL, however URL this can be changed on
-a site-wide basis by changing the "RelativeUrl" parameter of
-<strong>any</strong> of the attachments packages (this works since there's
-only one instance of attachments in the entire system. The same
-instance is just re-mounted)</p>
+<p>The first step is to mount the attachments package
+<strong>under</strong> your package. In the <tt>site-map</tt>, you
+should create a new site-node (sub-folder) under your package
+called "attach".</p>
+<p>"attach" is the standard URL, however URL this can be
+changed on a site-wide basis by changing the
+"RelativeUrl" parameter of <strong>any</strong> of the
+attachments packages (this works since there&#39;s only one
+instance of attachments in the entire system. The same instance is
+just re-mounted)</p>
 <h3>
 <a id="id.s1.2.2" name="id.s1.2.2">1.2.2</a> Map an
 file-storage root folder to your package instance</h3>
@@ -87,8 +89,8 @@ package check if attachments is mounted properly</h4>
 <p>Most likely, you want your package to work even if the
 attachments package is not installed on the system or if
 attachments is not properly mounted. To do this, add the following
-proc to your package's API and wrap all calls to the attachments
-package with it:</p>
+proc to your package&#39;s API and wrap all calls to the
+attachments package with it:</p>
 <div class="box" style="border: 2px solid; width: 100%"><pre>
     ad_proc -private attachments_enabled_p {} {
         set package_id [site_node_apm_integration::child_package_exists_p \
@@ -118,7 +120,7 @@ to add an attachment to their posting.</p>
 <h3>
 <a id="id.s1.2.4" name="id.s1.2.4">1.2.4</a> Viewing attached
 files</h3>
-<p>You can use the "attachments::get_attachments" proc to see the
-list of attachments to a given object.</p>
+<p>You can use the "attachments::get_attachments" proc to
+see the list of attachments to a given object.</p>
 <h2>Release Notes</h2>
 <p>Please file bugs in the <a href="http://openacs.org/bugtracker/openacs/">Bug Tracker</a>.</p>
