@@ -32,17 +32,17 @@ attachments is mounted properly</a></dd><dd><a href="#id.s1.2.3.2">1.2.3.2 Get t
 <a id="id.s1.1.1" name="id.s1.1.1">1.1.1</a> What does
 attachments do?</h3>
 <p>
-<tt>attachments</tt> is a service package that allows you to
-attach one or more file-storage files to any <tt>acs_object</tt>.
-<tt>attachments</tt> is mounted below a package that uses it, and
+<kbd>attachments</kbd> is a service package that allows you to
+attach one or more file-storage files to any <kbd>acs_object</kbd>.
+<kbd>attachments</kbd> is mounted below a package that uses it, and
 the application provides links into the attachments package&#39;s
 UI.</p>
 <h3>
 <a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high level,
 how does attachments work?</h3>
 <p>Before you can use the attachments package, each instance of
-your package must be mapped to a <tt>file-storage root
-folder</tt>.</p>
+your package must be mapped to a <kbd>file-storage root
+folder</kbd>.</p>
 <p>The root folder is a "super folder" for all the files
 in that specific instance of file-storage, and it is created
 automatically when the file-storage package is instanciated.</p>
@@ -56,7 +56,7 @@ to upload a new file into file-storage to attach.</p>
 <a id="id.s1.2.1" name="id.s1.2.1">1.2.1</a> Mount attachments
 under your package</h3>
 <p>The first step is to mount the attachments package
-<strong>under</strong> your package. In the <tt>site-map</tt>, you
+<strong>under</strong> your package. In the <kbd>site-map</kbd>, you
 should create a new site-node (sub-folder) under your package
 called "attach".</p>
 <p>"attach" is the standard URL, however URL this can be
@@ -77,8 +77,8 @@ map the root folder of that file-storage instance with the
 package_id of the instance of your package.</p>
 <p>Two utility procs to help you do this:</p>
 <p>
-<tt>fs::get_root_folder</tt> and
-<tt>attachments::map_root_folder</tt>
+<kbd>fs::get_root_folder</kbd> and
+<kbd>attachments::map_root_folder</kbd>
 </p>
 <h3>
 <a id="id.s1.2.3" name="id.s1.2.3">1.2.3</a> Attaching files to
