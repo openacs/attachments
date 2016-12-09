@@ -6,7 +6,7 @@
   <msg key="Add_folder_Link">Ordnerlink hinzufügen</msg>
   <msg key="Add_pretty_name">%pretty_name% hinzufügen</msg>
   <msg key="Attach">Anhängen</msg>
-  <msg key="attach_new">Anfügen: &lt;b&gt;Neue&lt;/b&gt; </msg>
+  <msg key="attach_new">&lt;b&gt;Neu&lt;/b&gt; anfügen:</msg>
   <msg key="Attach_URL">URL anhängen</msg>
   <msg key="Choose">Auswählen</msg>
   <msg key="Description">Beschreibung:</msg>
@@ -37,7 +37,7 @@
   <msg key="No_such_type">Typ nicht vorhanden</msg>
   <msg key="Object">Objekt</msg>
   <msg key="Size">Größe</msg>
-  <msg key="Title">Name das Dokuments:</msg>
+  <msg key="Title">Titel das Dokuments</msg>
   <msg key="Top">Anfang</msg>
   <msg key="Type">Typ</msg>
   <msg key="URL">URL</msg>
