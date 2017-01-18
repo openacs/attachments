@@ -17,7 +17,7 @@
 <table border="0">
 
 <tr>
-  <if @lock_title_p@ eq 0>
+  <if @lock_title_p;literal@ false>
     <td align="right"><label for="title">#attachments.Title#</label></td>
     <td><input size="30" name="title" value="@title@" id="title"></td>
   </if>
