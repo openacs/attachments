@@ -7,10 +7,10 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {object_id:notnull}
-    {folder_id ""}
+    {object_id:naturalnum,notnull,notnull}
+    {folder_id:integer ""}
     {pretty_object_name ""}
-    {return_url:notnull}
+    {return_url:localurl,notnull}
 }
 
 set user_id [ad_conn user_id]

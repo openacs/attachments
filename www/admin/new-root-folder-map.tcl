@@ -20,7 +20,7 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {package_id:notnull}
+    {package_id:naturalnum,notnull,notnull}
     {referer:notnull}
 }
 

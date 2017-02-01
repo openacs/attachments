@@ -7,9 +7,9 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {object_id:notnull}
-    {item_id:notnull}
-    {return_url:notnull}
+    {object_id:naturalnum,notnull,notnull}
+    {item_id:naturalnum,notnull,notnull}
+    {return_url:localurl,notnull}
 }
 
 # Perms
