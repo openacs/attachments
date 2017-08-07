@@ -8,7 +8,7 @@ ad_page_contract {
 } {
     folder_id:naturalnum,notnull
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     pretty_object_name:notnull
     {type "fs_url"}
     {title ""}
@@ -45,3 +45,9 @@ set context [_ attachments.Add_pretty_name [list pretty_name $pretty_name]]
 if {$title eq ""} {
     set lock_title_p 0
 }
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

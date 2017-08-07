@@ -7,10 +7,10 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {object_id:notnull}
-    {folder_id ""}
+    {object_id:naturalnum,notnull,notnull}
+    {folder_id:integer ""}
     {pretty_object_name ""}
-    {return_url:notnull}
+    {return_url:localurl,notnull}
 }
 
 set user_id [ad_conn user_id]
@@ -83,3 +83,9 @@ template::head::add_style -style "
 set file_add_url [export_vars -base "file-add" { {object_id $to_object_id} folder_id return_url pretty_object_name}]
 
 set simple_add_url [export_vars -base "simple-add" { {object_id $to_object_id} folder_id return_url pretty_object_name}]
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

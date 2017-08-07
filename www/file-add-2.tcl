@@ -9,7 +9,7 @@ ad_page_contract {
     upload_file:notnull,trim
     upload_file.tmpfile:tmpfile
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     title:notnull,trim
     description
 } -validate {
@@ -76,3 +76,9 @@ set fs_package_id [db_string get_fs_package_id {}]
 
 
 ad_returnredirect $return_url
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

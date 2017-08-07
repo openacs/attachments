@@ -33,9 +33,9 @@
   <msg key="lt_The_specified_parent_">La carpeta padre especificada no es válida.</msg>
   <msg key="lt_To_attach_a_file_alre">Para adjuntar un archivo a una carpeta, haga click en el nombre de la carpeta, después un click en &amp;quot; Seleccionar ]&amp;quot; al lado del nombre del archivo. Para subir un nuevo archivo a una carpeta en particular, haga click en el nombre de la carpeta en la que quiere poner su archivo y haga click en el botón de &amp;quot;Añadir nuevo: Archivo | URL&amp;quot;. </msg>
   <msg key="lt_Upload_New_Attachment">Subir un nuevo archivo adjunto</msg>
-  <msg key="lt_Use_the_Browse_button">Pulse el botón &quot;Explorar&quot; para localizar el archivo. Una vez localizado, pulse &quot;Abrir&quot;.</msg>
+  <msg key="lt_Use_the_Browse_button">Pulse el botón &#34;Explorar&#34; para localizar el archivo. Una vez localizado, pulse &#34;Abrir&#34;.</msg>
   <msg key="lt_You_are_attaching_a_d">Ud. está creando un adjunto para %pretty_object_name%.</msg>
-  <msg key="lt_You_probably_clicked_">Es probable que haya pulsado el botón Añadir más de una vez. Compruebe que el archivo haya sido correctamente añadido a la &lt;a href=&quot;%folder_url%&quot;&gt;carpeta&lt;/a&gt; elegida, o bien, utilice el botón Atrás de su navegador y repita la operación.</msg>
+  <msg key="lt_You_probably_clicked_">Es probable que haya pulsado el botón Añadir más de una vez. Compruebe que el archivo haya sido correctamente añadido a la &lt;a href=&#34;%folder_url%&#34;&gt;carpeta&lt;/a&gt; elegida, o bien, utilice el botón Atrás de su navegador y repita la operación.</msg>
   <msg key="lt_Your_file_is_larger_t">El archivo que está tratando de subir supera el tamaño máximo permitido (%max_number_of_bytes% bytes).</msg>
   <msg key="Name">Nombre</msg>
   <msg key="No_such_type">No existe el tipo</msg>

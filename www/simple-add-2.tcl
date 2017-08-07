@@ -7,7 +7,7 @@ ad_page_contract {
 } {
     folder_id:naturalnum,notnull
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     title:notnull,trim
     description
     url:notnull,trim
@@ -34,3 +34,9 @@ db_transaction {
 }
 
 ad_returnredirect "$return_url"
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

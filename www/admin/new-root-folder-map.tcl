@@ -20,7 +20,7 @@ ad_page_contract {
     @cvs-id $Id$
 
 } -query {
-    {package_id:notnull}
+    {package_id:naturalnum,notnull,notnull}
     {referer:notnull}
 }
 
@@ -66,3 +66,9 @@ if {$root_folder_id == 0} {
         }
     }
 }
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

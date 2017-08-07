@@ -8,31 +8,31 @@
 
 <form method=POST action="simple-add-2">
 <div>
-<input type=hidden name="folder_id" value="@folder_id@">
-<input type=hidden name="type" value="@type@">
-<input type=hidden name="object_id" value="@object_id@">
-<input type=hidden name="return_url" value="@return_url@">
+<input type="hidden" name="folder_id" value="@folder_id@">
+<input type="hidden" name="type" value="@type@">
+<input type="hidden" name="object_id" value="@object_id@">
+<input type="hidden" name="return_url" value="@return_url@">
 </div>
 
 <table border="0">
 
 <tr>
-  <if @lock_title_p@ eq 0>
+  <if @lock_title_p;literal@ false>
     <td align="right"><label for="title">#attachments.Title#</label></td>
-    <td><input size=30 name="title" value="@title@" id="title"></td>
+    <td><input size="30" name="title" value="@title@" id="title"></td>
   </if>
   <else>
      <td align="right">#attachments.Title#</td>
      <td>
        @title@
-       <input type=hidden name="title" value="@title@">
+       <input type="hidden" name="title" value="@title@">
      </td>
   </else>
 </tr>
 
 <tr>
 <td align="right"><label for="url">#attachments.URL_1#</label></td>
-<td><input size=50 name="url" value="http://" id="url"></td>
+<td><input size="50" name="url" value="http://" id="url"></td>
 </tr>
 
 <tr>
@@ -42,7 +42,7 @@
 
 <tr>
 <td></td>
-<td><input type=submit value="Create">
+<td><input type="submit" value="Create">
 </td>
 </tr>
 

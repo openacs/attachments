@@ -6,7 +6,7 @@
 
 <p>#attachments.lt_To_attach_a_file_alre#</p>
 
-<if @write_permission_p@ eq 1>
+<if @write_permission_p;literal@ true>
 #attachments.attach_new#
       &nbsp;
       <a href="@file_add_url@">#attachments.File#</a>

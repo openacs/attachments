@@ -7,7 +7,7 @@ ad_page_contract {
 } {
     folder_id:naturalnum,notnull
     object_id:naturalnum,notnull
-    return_url:notnull
+    return_url:localurl,notnull
     pretty_object_name:notnull
     {title ""}
     {lock_title_p:boolean 0}
@@ -41,3 +41,9 @@ if {$title eq ""} {
     set lock_title_p 0
 }
 
+
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:

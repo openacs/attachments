@@ -10,7 +10,7 @@ ad_page_contract {
 } {
     object_id:naturalnum,notnull
     attachment_id:naturalnum,notnull
-    {return_url ""}
+    {return_url:localurl ""}
 } -properties {
 } -validate {
 } -errors {
@@ -80,3 +80,8 @@ ad_form \
     } -after_submit {
 	ad_returnredirect $return_url
     }
+# Local variables:
+#    mode: tcl
+#    tcl-indent-level: 4
+#    indent-tabs-mode: nil
+# End:
