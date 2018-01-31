@@ -1,5 +1,5 @@
 ad_page_contract {
-    script to recieve the new file and insert it into the database
+    script to receive the new file and insert it into the database
 
     @author Kevin Scaldeferri (kevin@arsdigita.com)
     @creation-date 6 Nov 2000
