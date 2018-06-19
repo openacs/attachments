@@ -149,43 +149,64 @@ namespace eval attachments {
         {-object_id:required}
         {-base_url ""}
 	{-return_url ""}
+    } {        
+        Returns a list of attachment ids and names which are approved:
+        {item_id name url detach_url}
     } {
-        returns a list of attachment ids and names which are approved: {item_id name url detach_url}
-    } {
-        set lst [db_list select_attachments {}]
-        set lst_with_urls [list]
-
-        foreach item_id $lst {
-            if { [content::extlink::is_extlink -item_id $item_id] } {
-              set label [content::extlink::name -item_id $item_id]
-            } else {
-              set label [fs::get_object_prettyname -object_id $item_id]
-            }
-            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
-	    lappend append_lst [detach_url -object_id $object_id -attachment_id $item_id -base_url $base_url -return_url $return_url]
-            lappend lst_with_urls [concat [list $item_id $label] $append_lst]
-        }
-
-        return $lst_with_urls
+        return [get_all_attachments \
+                    -object_id $object_id \
+                    -base_url $base_url \
+                    -return_url $return_url \
+                    -approved_only -add_detach_url]
     }
 
     ad_proc -public get_all_attachments {
         {-object_id:required}
         {-base_url ""}
+        {-return_url ""}
+        -approved_only:boolean
+        -add_detach_url:boolean
     } {
-        returns a list of attachment ids and names: {item_id name approved_p url}
-    } {
-        set lst [db_list select_attachments {}]
-        set lst_with_urls [list]
+        Returns a list representing attachments and their UI URLs.
 
-        foreach item_id $lst {
-            if { [content::extlink::is_extlink -item_id $item_id] } {
-              set label [content::extlink::name -item_id $item_id]
-            } else {
-              set label [fs::get_object_name -object_id $item_id] 
+        @param object_id object to check for attachments.
+        @param base_url URL path that will be prepended to generated URLs.        
+        @param return_url only meaningful if we are also generating
+                          detach_url, is the location we will return
+                          to after detaching.        
+        @param approved_only flag deciding if we want to return only
+                             attachments that have been approved. All
+                             attachments will be returned when this is
+                             not specified.        
+        @param add_detach_url flag deciding whether we want to
+                              generate also detach_url in the result.
+
+        @return list of lists in the format {item_id name url} or
+                {item_id name url detach_url} when
+                <code>add_detach_url</code> is specified.        
+    } {
+        set lst_with_urls [list]
+        
+        foreach item_id [db_list_of_lists select_attachments {
+            select item_id from attachments
+            where object_id = :object_id
+              and (not :approved_only_p or approved_p)}] {
+            set label [expr {[content::extlink::is_extlink -item_id $item_id] ?
+                             [content::extlink::name -item_id $item_id] :
+                             [fs::get_object_name -object_id $item_id]}]
+            set url [goto_attachment_url \
+                         -object_id     $object_id \
+                         -attachment_id $item_id \
+                         -base_url      $base_url]
+            set element [list $item_id $label $url]
+            if {$add_detach_url_p} {
+                lappend element [detach_url \
+                                     -object_id     $object_id \
+                                     -attachment_id $item_id \
+                                     -base_url      $base_url \
+                                     -return_url    $return_url]
             }
-            set append_lst [list [goto_attachment_url -object_id $object_id -attachment_id $item_id -base_url $base_url]]
-            lappend lst_with_urls [concat [list $item_id $label] $append_lst]
+            lappend lst_with_urls $element
         }
 
         return $lst_with_urls
