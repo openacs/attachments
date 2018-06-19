@@ -91,10 +91,6 @@ namespace eval attachments {
     } {
         toggle approved_p for attachment
     } {
-        if {$approved_p eq ""} {
-            set approved_p [ad_decode [db_string select_attachment_approved_p {}] f t f]
-        }
-
         db_dml toggle_approved_p {}
     }
 

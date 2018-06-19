@@ -55,19 +55,14 @@
         </querytext>
     </fullquery>
 
-    <fullquery name="attachments::toggle_approved.select_attachment_approved_p">
-        <querytext>
-            select approved_p
-            from attachments
-            where object_id = :object_id
-            and item_id = :item_id
-        </querytext>
-    </fullquery>
-
     <fullquery name="attachments::toggle_approved.toggle_approved_p">
         <querytext>
             update attachments
-            set approved_p = :approved_p
+            set approved_p = (
+                case when :approved_p is not null
+                   then :approved_p
+                   else not approved_p
+                end)
             where object_id = :object_id
             and item_id = :item_id
         </querytext>
