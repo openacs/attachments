@@ -57,14 +57,10 @@
 
     <fullquery name="attachments::toggle_approved.toggle_approved_p">
         <querytext>
-            update attachments
-            set approved_p = (
-                case when :approved_p is not null
-                   then :approved_p
-                   else not approved_p
-                end)
+          update attachments set
+             approved_p = coalesce(:approved_p, not approved_p)
             where object_id = :object_id
-            and item_id = :item_id
+              and item_id = :item_id
         </querytext>
     </fullquery>
 
