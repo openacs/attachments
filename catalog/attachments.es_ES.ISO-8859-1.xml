@@ -2,6 +2,7 @@
 <message_catalog package_key="attachments" locale="es_ES" charset="ISO-8859-1">
 
   <msg key="Action">Acción</msg>
+  <msg key="Add_Attachment">Añadir Adjunto</msg>
   <msg key="Add_File">Añadir Archivo</msg>
   <msg key="Add_folder_Link">Añadir Enlace a la Carpeta</msg>
   <msg key="Add_pretty_name">Añadir %pretty_name% </msg>
