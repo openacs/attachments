@@ -177,23 +177,23 @@ namespace eval attachments {
         @return a list representing attachments and their UI URLs.
 
         @param object_id object to check for attachments.
-        @param base_url URL path that will be prepended to generated URLs.        
+        @param base_url URL path that will be prepended to generated URLs.
         @param return_url only meaningful if we are also generating
                           detach_url, is the location we will return
-                          to after detaching.        
+                          to after detaching.
         @param approved_only flag deciding if we want to return only
                              attachments that have been approved. All
                              attachments will be returned when this is
-                             not specified.        
+                             not specified.
         @param add_detach_url flag deciding whether we want to
                               generate also detach_url in the result.
 
         @return list of lists in the format {item_id name url} or
                 {item_id name url detach_url} when
-                <code>add_detach_url</code> is specified.        
+                <code>add_detach_url</code> is specified.
     } {
         set lst_with_urls [list]
-        
+
         foreach item_id [db_list_of_lists select_attachments {
             select item_id from attachments
             where object_id = :object_id
@@ -234,7 +234,7 @@ namespace eval attachments {
         set cbar_list [fs_context_bar_list -extra_vars $extra_vars -folder_url "attach" -file_url "attach" -root_folder_id $root_folder_id -final $final $folder_id]
 
         template::multirow create $multirow url label
-    
+
         if { $root_folder_id ne "" && $cbar_list ne "" } {
             template::multirow append $multirow "attach?${extra_vars}&folder_id=$root_folder_id" [_ attachments.Top]
             foreach elm $cbar_list {
@@ -248,7 +248,7 @@ namespace eval attachments {
             template::multirow append $multirow "" [_ attachments.Top]
         }
     }
-    
+
 }
 
 # Local variables:
