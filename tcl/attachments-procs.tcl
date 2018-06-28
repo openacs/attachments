@@ -22,7 +22,7 @@ namespace eval attachments {
     ad_proc -public root_folder_p {
         {-package_id:required}
     } {
-        Returns 1 if the package_id has an fs_folder mapped to it
+        @return 1 if the package_id has an fs_folder mapped to it
     } {
         return [db_string root_folder_p_select {} -default 0]
     }
@@ -43,7 +43,7 @@ namespace eval attachments {
     ad_proc -public root_folder_map_p {
         {-package_id:required}
     } {
-        Returns 1 if the package_id has an fs_folder mapped to it
+        @return 1 if the package_id has an fs_folder mapped to it
     } {
         # this is a duplicate (Ben)
         return [root_folder_p -package_id $package_id]
@@ -95,10 +95,13 @@ namespace eval attachments {
     }
 
     ad_proc -public get_package_key {} {
+        @return the package key (attachments)
+    } {
         return attachments
     }
 
-    ad_proc -public get_url {
+    ad_proc -public get_url {} {
+        @return the value of the RelativeUrl package parameter
     } {
         return [parameter::get  \
             -package_id [apm_package_id_from_key [get_package_key]] \
@@ -113,6 +116,8 @@ namespace eval attachments {
         {-return_url ""}
         {-pretty_name ""}
     } {
+        @return the url that can be used to attach something to an object
+    } {
         return "[attachments::get_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&folder_id=$folder_id&object_id=$object_id&return_url=[ns_urlencode $return_url]"
     }
 
@@ -122,6 +127,8 @@ namespace eval attachments {
         {-attachment_id:required}
         {-base_url ""}
     } {
+        @return the url to go to an attachment
+    } {
         return "${base_url}[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
     }
 
@@ -130,7 +137,9 @@ namespace eval attachments {
         {-object_id:required}
         {-attachment_id:required}
         {-base_url ""}
-	{-return_url ""}
+        {-return_url ""}
+    } {
+        @return the url to detach an attached item from an object
     } {
         return "${base_url}[attachments::get_url]/detach?object_id=$object_id&attachment_id=$attachment_id&return_url=[ad_urlencode $return_url]"
     }
@@ -138,15 +147,17 @@ namespace eval attachments {
     ad_proc -public graphic_url {
         {-package_id ""}
     } {
+        @return the attachment icon
+    } {
         return "<img valign=bottom src=\"[attachments::get_url]/graphics/file.gif\">"
     }
 
     ad_proc -public get_attachments {
         {-object_id:required}
         {-base_url ""}
-	{-return_url ""}
-    } {        
-        Returns a list of attachment ids and names which are approved:
+        {-return_url ""}
+    } {
+        @return a list of attachment ids and names which are approved:
         {item_id name url detach_url}
     } {
         return [get_all_attachments \
@@ -163,7 +174,7 @@ namespace eval attachments {
         -approved_only:boolean
         -add_detach_url:boolean
     } {
-        Returns a list representing attachments and their UI URLs.
+        @return a list representing attachments and their UI URLs.
 
         @param object_id object to check for attachments.
         @param base_url URL path that will be prepended to generated URLs.        
