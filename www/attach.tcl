@@ -22,7 +22,7 @@ set user_id [ad_conn user_id]
 set to_object_id $object_id
 
 # We require the write permission on an object
-permission::require_permission -object_id $to_object_id -privilege write
+permission::require_permission -party_id $user_id -object_id $to_object_id -privilege write
 
 # Give the object a nasty name if it doesn't have a pretty name
 if {$pretty_object_name eq ""} {
@@ -47,7 +47,7 @@ set write_permission_p \
 permission::require_permission -object_id $folder_id -privilege read
 
 # Size of contents
-set n_contents [fs::get_folder_contents_count -folder_id $folder_id -user_id $user_id]
+set n_contents [fs::get_folder_contents_count -folder_id $folder_id]
 
 # Folder name
 set folder_name [lang::util::localize [fs::get_object_name -object_id $folder_id]]
