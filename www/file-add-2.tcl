@@ -27,7 +27,7 @@ ad_page_contract {
             from fs_root_folders
             where folder_id=:root_folder
         }]
-	set max_bytes [parameter::get -package_id $fs_package_id -parameter "MaximumFileSize"]
+	set max_bytes [fs::max_upload_size -package_id $fs_package_id]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
             set max_number_of_bytes [util_commify_number $max_bytes]
