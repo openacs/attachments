@@ -39,12 +39,6 @@ if {![regexp {[^//\\]+$} $upload_file filename]} {
     set filename $upload_file
 }
 
-# Get the user
-set user_id [ad_conn user_id]
-
-# Get the ip
-set creation_ip [ad_conn peeraddr]
-
 set root_folder [attachments::get_root_folder]
 set fs_package_id [db_string get_fs_package_id {
     select package_id
@@ -59,8 +53,6 @@ set fs_package_id [db_string get_fs_package_id {
             -item_id $file_id \
             -parent_id $folder_id \
             -tmp_filename ${upload_file.tmpfile}\
-            -creation_user $user_id \
-            -creation_ip $creation_ip \
             -title $title \
             -description $description \
             -package_id $fs_package_id
