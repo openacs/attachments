@@ -28,7 +28,7 @@ ad_page_contract {
 	    ad_complain "[_ attachments.lt_Your_file_is_larger_t]"
 	}
     }
-} 
+}
 
 # Check for write permission on this folder
 permission::require_permission -object_id $folder_id -privilege write
@@ -64,7 +64,7 @@ set fs_package_id [db_string get_fs_package_id {
             -title $title \
             -description $description \
             -package_id $fs_package_id
-                                                                                                                          
+
     # attach the file_id
     attachments::attach -object_id $object_id -attachment_id $file_id
 
