@@ -45,6 +45,13 @@ if {![regexp {[^//\\]+$} $upload_file filename]} {
     set filename $upload_file
 }
 
+set root_folder [attachments::get_root_folder]
+set fs_package_id [db_string get_fs_package_id {
+    select package_id
+    from fs_root_folders
+    where folder_id=:root_folder
+}]
+
 #db_transaction {
     set file_id [db_nextval "acs_object_id_seq"]
     fs::add_file \
