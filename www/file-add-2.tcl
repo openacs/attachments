@@ -21,7 +21,13 @@ ad_page_contract {
 
     max_size -requires {upload_file} {
 	set n_bytes [file size ${upload_file.tmpfile}]
-	set max_bytes [parameter::get -parameter "MaximumFileSize"]
+        set root_folder [attachments::get_root_folder]
+        set fs_package_id [db_string get_fs_package_id {
+            select package_id
+            from fs_root_folders
+            where folder_id=:root_folder
+        }]
+	set max_bytes [parameter::get -package_id $fs_package_id -parameter "MaximumFileSize"]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
             set max_number_of_bytes [util_commify_number $max_bytes]
@@ -38,13 +44,6 @@ if {![regexp {[^//\\]+$} $upload_file filename]} {
     # no match
     set filename $upload_file
 }
-
-set root_folder [attachments::get_root_folder]
-set fs_package_id [db_string get_fs_package_id {
-    select package_id
-    from fs_root_folders
-    where folder_id=:root_folder
-}]
 
 #db_transaction {
     set file_id [db_nextval "acs_object_id_seq"]
