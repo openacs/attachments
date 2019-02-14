@@ -21,14 +21,20 @@ ad_page_contract {
 
     max_size -requires {upload_file} {
 	set n_bytes [file size ${upload_file.tmpfile}]
-	set max_bytes [parameter::get -parameter "MaximumFileSize"]
+        set root_folder [attachments::get_root_folder]
+        set fs_package_id [db_string get_fs_package_id {
+            select package_id
+            from fs_root_folders
+            where folder_id=:root_folder
+        }]
+	set max_bytes [fs::max_upload_size -package_id $fs_package_id]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
             set max_number_of_bytes [util_commify_number $max_bytes]
 	    ad_complain "[_ attachments.lt_Your_file_is_larger_t]"
 	}
     }
-} 
+}
 
 # Check for write permission on this folder
 permission::require_permission -object_id $folder_id -privilege write
@@ -39,14 +45,12 @@ if {![regexp {[^//\\]+$} $upload_file filename]} {
     set filename $upload_file
 }
 
-# Get the user
-set user_id [ad_conn user_id]
-
-# Get the ip
-set creation_ip [ad_conn peeraddr]
-
 set root_folder [attachments::get_root_folder]
-set fs_package_id [db_string get_fs_package_id {}]
+set fs_package_id [db_string get_fs_package_id {
+    select package_id
+    from fs_root_folders
+    where folder_id=:root_folder
+}]
 
 #db_transaction {
     set file_id [db_nextval "acs_object_id_seq"]
@@ -55,12 +59,10 @@ set fs_package_id [db_string get_fs_package_id {}]
             -item_id $file_id \
             -parent_id $folder_id \
             -tmp_filename ${upload_file.tmpfile}\
-            -creation_user $user_id \
-            -creation_ip $creation_ip \
             -title $title \
             -description $description \
             -package_id $fs_package_id
-                                                                                                                          
+
     # attach the file_id
     attachments::attach -object_id $object_id -attachment_id $file_id
 

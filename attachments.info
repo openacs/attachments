@@ -8,7 +8,7 @@
     <singleton-p>t</singleton-p>
     <auto-mount>attachments</auto-mount>
 
-    <version name="0.11" url="http://openacs.org/repository/download/apm/attachments-0.11.apm">
+    <version name="0.12" url="http://openacs.org/repository/download/apm/attachments-0.12.apm">
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>Attachment support</summary>
         <maturity>2</maturity>
@@ -16,14 +16,14 @@
         <vendor url="http://openacs.org">OpenACS</vendor>
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
-        <provides url="attachments" version="0.11"/>
+        <provides url="attachments" version="0.12"/>
 	<requires url="acs-tcl" version="5.9.1"/>
 	<requires url="acs-kernel" version="5.9.1"/>
         <requires url="file-storage" version="5.9.1"/>
 
         <parameters>
             <parameter datatype="string"  min_n_values="1"  max_n_values="1"  name="RelativeUrl"  default="attach" description="The relative url of this package when mounted under a client."/>
-            <parameter datatype="number"  min_n_values="1"  max_n_values="1"  name="MaximumFileSize"  default="4096000" description="maximum file size for upload"/>
+            <parameter  datatype="number"  min_n_values="1"  max_n_values="1"  name="MaximumFileSize"  default="4096000" description="maximum file size for upload. DEPRECATED: please use the homonymous parameter in the file-storage" section_name="deprecated"/>
         </parameters>
 
     </version>
