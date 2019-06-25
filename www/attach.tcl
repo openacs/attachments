@@ -32,7 +32,7 @@ if {$pretty_object_name eq ""} {
 # Load up file storage information
 if {$folder_id eq ""} {
     set folder_id [attachments::get_root_folder]
-} 
+}
 
 # sanity check
 if {$folder_id eq ""} {
@@ -63,8 +63,6 @@ db_multirow -unclobber -extend {name_url action_url} contents select_folder_cont
         }
         set action_url [export_vars -base "attach-2" {{item_id $object_id} {object_id $to_object_id} return_url pretty_object_name}]
     }
-
-
 }
 
 set passthrough_vars "object_id=$to_object_id&return_url=[ns_urlencode $return_url]&pretty_object_name=[ns_urlencode $pretty_object_name]"
