@@ -21,7 +21,6 @@
   <msg key="lt_Add_Attachment_Folder">Προσθήκη συνδέσμου φακέλου συνημμένων</msg>
   <msg key="lt_Attach_a_File_to_pret">Επισυνάψτε ένα φάκελο στο %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% αντικείμενο</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte </msg>
   <msg key="lt_Created_by_the_attach">Δημιουργήθηκε από το πακέτο συνημμένων</msg>
   <msg key="lt_dont_know_how_to_deal">Δεν γνωρίζω πως θα χειριστώ τα συνημμένα τύπου %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Σφάλμα: Οι διαδρομές φακέλου συνημμένων και αποθήκευσης αρχείων είναι διαφορετικές! </msg>

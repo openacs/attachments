@@ -21,7 +21,6 @@
   <msg key="lt_Add_Attachment_Folder">Добавить ссылку на папку вложений</msg>
   <msg key="lt_Attach_a_File_to_pret">Прикрепить файл к %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% элемент</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% байт</msg>
   <msg key="lt_Created_by_the_attach">Создано пакетом вложений</msg>
   <msg key="lt_dont_know_how_to_deal">Неизвестно, как поступить с вложением типа %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Ошибка: Корневая папка вложения и корневая папка хранилища файла различны!</msg>

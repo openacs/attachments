@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Agregar Enlace a una carpeta adjunta</msg>
   <msg key="lt_Attach_a_File_to_pret">Adjuntar un archivo a %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">elemento %contents.content_size%</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte </msg>
   <msg key="lt_Created_by_the_attach">Creado por el paquete Attachments</msg>
   <msg key="lt_dont_know_how_to_deal">no se sabe como manejar este tipo de archivo</msg>
   <msg key="lt_Error_Attachment_root">Error: la carpeta raíz de adjuntos es diferente de la carpeta raíz del sistema de archivos</msg>

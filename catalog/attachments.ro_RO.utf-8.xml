@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Adaugă </msg>
   <msg key="lt_Attach_a_File_to_pret">Ataşează un Fişier la %pretty_object_name% </msg>
   <msg key="lt_contentscontent_size_">obiectul %contents.content_size% </msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Creat de către programul attachments</msg>
   <msg key="lt_dont_know_how_to_deal">Nu ştiu ce să fac cu acest tip de fişier: %content_type% </msg>
   <msg key="lt_Error_Attachment_root">Eroare: Directorul rădăcină pentru fişiere ataşate şi directorul rădăcină sunt diferite !</msg>

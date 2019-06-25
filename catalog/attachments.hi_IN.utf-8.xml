@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">अटेचमेन्ट फ़ोलडर लिन्क को जोडे</msg>
   <msg key="lt_Attach_a_File_to_pret">%pretty_object_name% मे एक फ़ाइल सम्बन्ध करे</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% मद</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% बाइट</msg>
   <msg key="lt_Created_by_the_attach">अटेचमेन्ट्स पेकेज द्वारा सर्जित </msg>
   <msg key="lt_dont_know_how_to_deal">नही मालूम कि अटेचमेन्ट प्रकार %content_type%से केसे कार्य किया जाये</msg>
   <msg key="lt_Error_Attachment_root">त्रुटि: अटेचमेन्ट रुट फ़ोल्डर और फ़ाइल स्टोरेज रुट फ़ोल्डर अलग अलग है!</msg>

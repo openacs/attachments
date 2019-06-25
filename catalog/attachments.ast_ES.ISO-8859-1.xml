@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Axuntar enllaz al Directoriu d'Adxuntos</msg>
   <msg key="lt_Attach_a_File_to_pret">Adxuntar un Archivu a &quot;%pretty_object_name%&quot;</msg>
   <msg key="lt_contentscontent_size_">&quot;%contents.content_size%&quot; item</msg>
-  <msg key="lt_contentscontent_size__1">&quot;%contents.content_size%&quot; byte</msg>
   <msg key="lt_Created_by_the_attach">Creáu pol paquete d'adxuntos</msg>
   <msg key="lt_dont_know_how_to_deal">nun sé que facer con adxuntos d'esti calter</msg>
   <msg key="lt_Error_Attachment_root">Error: ¡el directoriu raíz del adxuntu y el directoriu raíz del sistema d'archivos son diferentes!</msg>

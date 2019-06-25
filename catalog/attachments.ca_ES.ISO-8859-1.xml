@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Afegeix un enllaç a carpeta adjunta</msg>
   <msg key="lt_Attach_a_File_to_pret">Adjunta un arxiu a %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% element</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Generat pel paquet d'adjunts</msg>
   <msg key="lt_dont_know_how_to_deal">No es pot gestionar el tipus d'adjunt %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Error: la carpeta arrel d'adjunts és diferent de la carpeta arrel del sistema d'arxius</msg>

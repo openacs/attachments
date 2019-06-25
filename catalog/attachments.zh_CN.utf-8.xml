@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">增加附件文件夹链接</msg>
   <msg key="lt_Attach_a_File_to_pret">给%pretty_object_name%添加文件</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size%条</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size%字节</msg>
   <msg key="lt_Created_by_the_attach">由附件创建</msg>
   <msg key="lt_dont_know_how_to_deal">不知如何处理附件类型%content_type%</msg>
   <msg key="lt_Error_Attachment_root">错误：附件根文件夹和文件存储根文件夹不同！</msg>

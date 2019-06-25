@@ -58,8 +58,12 @@ db_multirow -unclobber -extend {name_url action_url} contents select_folder_cont
     if { $type eq "folder" } {
         set name_url [export_vars -base "attach" { {folder_id $object_id} {object_id $to_object_id} return_url pretty_object_name}]
     } else {
+        if {$content_size ne ""} {
+            set content_size [util::content_size_pretty -size $content_size]
+        }
         set action_url [export_vars -base "attach-2" {{item_id $object_id} {object_id $to_object_id} return_url pretty_object_name}]
     }
+
 
 }
 

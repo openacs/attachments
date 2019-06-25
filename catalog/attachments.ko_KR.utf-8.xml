@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">첨부 폴더 링크 추가</msg>
   <msg key="lt_Attach_a_File_to_pret">%pretty_object_name%에 파일 첨부</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% 항목</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% 바이트</msg>
   <msg key="lt_Created_by_the_attach">첨부된 패케이지에 의해 생성되었습니다.</msg>
   <msg key="lt_dont_know_how_to_deal">이 첨부된 유형을 어떻게 취급해야 할 지 모르겠습니다.</msg>
   <msg key="lt_Error_Attachment_root">오류: 첨부 루트 폴더와 fs 루트 폴더가 다릅니다.</msg>

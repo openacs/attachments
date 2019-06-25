@@ -86,7 +86,7 @@
         <td>
           <a href="@contents.action_url@" class="button">#attachments.Choose#</a>
         </td>
-        <td>#attachments.lt_contentscontent_size__1#<if @contents.content_size@ ne 1>s</if></td>
+        <td>@contents.content_size@</td>
       </else>
       <td>@contents.last_modified@</td>
     </else>

@@ -21,7 +21,6 @@
   <msg key="lt_Add_Attachment_Folder">Link zu einem angehängten Ordner hinzufügen</msg>
   <msg key="lt_Attach_a_File_to_pret">Datei anhängen an %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size%-Element</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% Bytes</msg>
   <msg key="lt_Created_by_the_attach">Erstellt vom Programmpaket &#39;Anhänge&#39;</msg>
   <msg key="lt_dont_know_how_to_deal">Der Anhang vom Typ %content_type% kann nicht verarbeitet werden.</msg>
   <msg key="lt_Error_Attachment_root">Fehler: Wurzelverzeichnis von Anhängen stimmt nicht mit Wurzelverzeichnis von Dateien überein</msg>
