@@ -206,7 +206,7 @@ namespace eval attachments {
             # the attachment is not in the file storage
             #
             if {$label eq $item_id} {
-                set label [content::item::get_title -item_id [content::revision::item_id -revision_id $item_id]]
+                set label [content::item::get_title -item_id $item_id]
             }
             set url [goto_attachment_url \
                          -object_id     $object_id \
