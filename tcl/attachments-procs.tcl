@@ -201,6 +201,13 @@ namespace eval attachments {
             set label [expr {[content::extlink::is_extlink -item_id $item_id] ?
                              [content::extlink::name -item_id $item_id] :
                              [fs::get_object_name -object_id $item_id]}]
+            #
+            # Check directly in the content repository for the title, in case
+            # the attachment is not in the file storage
+            #
+            if {$label eq $item_id} {
+                set label [content::item::get_title -item_id [content::revision::item_id -revision_id $item_id]]
+            }
             set url [goto_attachment_url \
                          -object_id     $object_id \
                          -attachment_id $item_id \
