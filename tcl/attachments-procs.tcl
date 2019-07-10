@@ -196,17 +196,34 @@ namespace eval attachments {
 
         foreach item_id [db_list_of_lists select_attachments {
             select item_id from attachments
-            where object_id = :object_id
-              and (not :approved_only_p or approved_p)}] {
+             where object_id = :object_id
+               and (not :approved_only_p or approved_p)}] {
             set label [expr {[content::extlink::is_extlink -item_id $item_id] ?
                              [content::extlink::name -item_id $item_id] :
                              [fs::get_object_name -object_id $item_id]}]
             #
             # Check directly in the content repository for the title, in case
-            # the attachment is not in the file storage
+            # the attachment is not in the file storage.
+            #
+            # Assume that the attachment could be a 'content_item' or a
+            # 'content_revision'.
             #
             if {$label eq $item_id} {
-                set label [content::item::get_title -item_id $item_id]
+                set object_type [acs_object_type $item_id]
+                switch -- $object_type {
+                    content_item {
+                        set new_label [content::item::get_title -item_id $item_id]
+                    }
+                    content_revision {
+                        set new_label [content::item::get_title -item_id [content::revision::item_id -revision_id $item_id]]
+                    }
+                    default {
+                        set new_label ""
+                    }
+                }
+                if {$new_label ne ""} {
+                    set label $new_label
+                }
             }
             set url [goto_attachment_url \
                          -object_id     $object_id \
