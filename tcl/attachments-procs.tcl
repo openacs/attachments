@@ -198,33 +198,47 @@ namespace eval attachments {
             select item_id from attachments
              where object_id = :object_id
                and (not :approved_only_p or approved_p)}] {
-            set label [expr {[content::extlink::is_extlink -item_id $item_id] ?
-                             [content::extlink::name -item_id $item_id] :
-                             [fs::get_object_name -object_id $item_id]}]
             #
-            # Check directly in the content repository for the title, in case
-            # the attachment is not in the file storage.
+            # Try our best to get the 'label', depending on the object type
             #
-            # Assume that the attachment could be a 'content_item' or a
-            # 'content_revision'.
-            #
-            if {$label eq $item_id} {
-                set object_type [acs_object_type $item_id]
-                switch -- $object_type {
-                    content_item {
-                        set new_label [content::item::get_title -item_id $item_id -is_live t]
-                    }
-                    content_revision {
-                        set new_label [content::item::get_title -item_id [content::revision::item_id -revision_id $item_id]]
-                    }
-                    default {
-                        set new_label ""
-                    }
-                }
-                if {$new_label ne ""} {
-                    set label $new_label
-                }
+            set label ""
+            set object_type [acs_object_type $item_id]
+            if {[content::extlink::is_extlink -item_id $item_id]} {
+                #
+                # URL
+                #
+                set label [content::extlink::name -item_id $item_id]
+            } elseif {[content::item::is_subclass \
+                            -object_type $object_type \
+                            -supertype "content_item"]} {
+                #
+                # Content item, or subtype
+                #
+                set label [content::item::get_title -item_id $item_id]
+            } elseif {[content::item::is_subclass \
+                            -object_type $object_type \
+                            -supertype "content_revision"]} {
+                #
+                # Content revision, or subtype
+                #
+                set label [content::revision::get_title -revision_id $item_id]
+            } else {
+                #
+                # Let's try the 'title' column on 'acs_objects'
+                #
+                set label [acs_object::get_element \
+                                -object_id $item_id \
+                                -element "title"]
             }
+            #
+            # If everything fails, set the 'item_id' as title
+            #
+            if {$label eq ""} {
+                set label $item_id
+            }
+            #
+            # Set the attachment URL
+            #
             set url [goto_attachment_url \
                          -object_id     $object_id \
                          -attachment_id $item_id \
