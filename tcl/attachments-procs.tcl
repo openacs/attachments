@@ -212,7 +212,7 @@ namespace eval attachments {
                 set object_type [acs_object_type $item_id]
                 switch -- $object_type {
                     content_item {
-                        set new_label [content::item::get_title -item_id $item_id]
+                        set new_label [content::item::get_title -item_id $item_id -is_live t]
                     }
                     content_revision {
                         set new_label [content::item::get_title -item_id [content::revision::item_id -revision_id $item_id]]
