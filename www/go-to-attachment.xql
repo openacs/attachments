@@ -21,4 +21,18 @@
     </querytext>
   </fullquery>
 
+  <fullquery name="select_attachment_info_specific_revision">
+    <querytext>
+      select r.title,
+             o.package_id,
+             m.file_extension
+        from cr_revisions r,
+             acs_objects o,
+             cr_mime_types m
+       where revision_id = :attachment_id
+         and r.revision_id  = o.object_id
+         and m.mime_type= r.mime_type
+    </querytext>
+  </fullquery>
+
 </queryset>
