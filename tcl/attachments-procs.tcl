@@ -167,6 +167,54 @@ namespace eval attachments {
                     -approved_only -add_detach_url]
     }
 
+    ad_proc -public get_title {
+        {-attachment_id:required}
+    } {
+        @param attachment_id ID of the attachment (item_id)
+        @return The title of the attachment (string)
+    } {
+        #
+        # Try our best to get the 'title', depending on the object type
+        #
+        set title ""
+        set object_type [acs_object_type $attachment_id]
+        if {[content::extlink::is_extlink -item_id $attachment_id]} {
+            #
+            # URL
+            #
+            set title [content::extlink::name -item_id $attachment_id]
+        } elseif {[content::item::is_subclass \
+                        -object_type $object_type \
+                        -supertype "content_item"]} {
+            #
+            # Content item, or subtype
+            #
+            set title [content::item::get_title -item_id $attachment_id]
+        } elseif {[content::item::is_subclass \
+                        -object_type $object_type \
+                        -supertype "content_revision"]} {
+            #
+            # Content revision, or subtype
+            #
+            set title [content::revision::get_title -revision_id $attachment_id]
+        } else {
+            #
+            # Let's try the 'title' column on 'acs_objects'
+            #
+            set title [acs_object::get_element \
+                            -object_id $attachment_id \
+                            -element "title"]
+        }
+        #
+        # If everything fails, set the 'attachment_id' as title
+        #
+        if {$title eq ""} {
+            set title $attachment_id
+        }
+
+        return $title
+    }
+
     ad_proc -public get_all_attachments {
         {-object_id:required}
         {-base_url ""}
@@ -199,43 +247,9 @@ namespace eval attachments {
              where object_id = :object_id
                and (not :approved_only_p or approved_p)}] {
             #
-            # Try our best to get the 'label', depending on the object type
+            # Set the attachment 'label'
             #
-            set label ""
-            set object_type [acs_object_type $item_id]
-            if {[content::extlink::is_extlink -item_id $item_id]} {
-                #
-                # URL
-                #
-                set label [content::extlink::name -item_id $item_id]
-            } elseif {[content::item::is_subclass \
-                            -object_type $object_type \
-                            -supertype "content_item"]} {
-                #
-                # Content item, or subtype
-                #
-                set label [content::item::get_title -item_id $item_id]
-            } elseif {[content::item::is_subclass \
-                            -object_type $object_type \
-                            -supertype "content_revision"]} {
-                #
-                # Content revision, or subtype
-                #
-                set label [content::revision::get_title -revision_id $item_id]
-            } else {
-                #
-                # Let's try the 'title' column on 'acs_objects'
-                #
-                set label [acs_object::get_element \
-                                -object_id $item_id \
-                                -element "title"]
-            }
-            #
-            # If everything fails, set the 'item_id' as title
-            #
-            if {$label eq ""} {
-                set label $item_id
-            }
+            set label [attachments::get_title -attachment_id $item_id]
             #
             # Set the attachment URL
             #
