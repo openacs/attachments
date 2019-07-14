@@ -7,7 +7,7 @@
 <a href="#id.s1">1 Attachments</a><dl>
 <dd>
 <a href="#id.s1.1">1.1 Basics</a><dl>
-<dd><a href="#id.s1.1.1">1.1.1 What does attachments do?</a></dd><dd><a href="#id.s1.1.2">1.1.2 At a high level, how does
+<dd><a href="#id.s1.1.1">1.1.1 What does attachments do?</a></dd><dd><a href="#id.s1.1.2">1.1.2 At a high-level, how does
 attachments work?</a></dd>
 </dl>
 </dd><dd>
@@ -38,7 +38,7 @@ attach one or more file-storage files to any <tt>acs_object</tt>.
 the application provides links into the attachments package&#39;s
 UI.</p>
 <h3>
-<a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high level,
+<a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high-level,
 how does attachments work?</h3>
 <p>Before you can use the attachments package, each instance of
 your package must be mapped to a <tt>file-storage root
