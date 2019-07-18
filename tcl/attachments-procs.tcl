@@ -109,6 +109,53 @@ namespace eval attachments {
         ]
     }
 
+    ad_proc -private get_attachments_url {
+        {-base_url ""}
+    } {
+
+        As 'attachments::get_url' returns the value of the attachments package
+        'RelativeUrl' parameter, which can change at any time, it could happen
+        that previously mounted attachments have a different url and are not
+        found anymore.
+
+        We try our best here to find a mounted attachments package under
+        'base_url' to mitigate this, probably flawed, package logic.
+
+        In the future, probably a better method should be used for URL resolving
+        that is not so broken.
+
+        The whole thing is even more weird, as the attachments package is
+        currently a singleton that auto-mounts on /attachments, so i am tempted
+        to replace this whole thing with just that, but anyway...
+
+        @param base_url The base URL where to look for the attachments package.
+
+        @return The attachments package URL under 'base_url', or "" if none is
+                found.
+
+        @see attachments::get_url
+
+    } {
+        #
+        # Get some context
+        #
+        set url             "[ad_conn package_url]${base_url}"
+        set relative_url    "${url}[attachments::get_url]"
+        #
+        # Is this URL an attachments package? Otherwise try to find one...
+        #
+        set package_key [dict get [site_node::get_from_url -url "$relative_url"] package_key]
+        if {$package_key eq "attachments"} {
+            return $relative_url
+        } else {
+            set url_node_id [site_node::get_node_id -url $url]
+            return [site_node::get_children \
+                        -package_key "attachments" \
+                        -element "url" \
+                        -node_id $url_node_id]
+        }
+    }
+
     ad_proc -public add_attachment_url {
         {-folder_id ""}
         {-package_id ""}
@@ -118,7 +165,7 @@ namespace eval attachments {
     } {
         @return the url that can be used to attach something to an object
     } {
-        return "[attachments::get_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&folder_id=$folder_id&object_id=$object_id&return_url=[ns_urlencode $return_url]"
+        return "[get_attachments_url]/attach?pretty_object_name=[ns_urlencode $pretty_name]&folder_id=$folder_id&object_id=$object_id&return_url=[ns_urlencode $return_url]"
     }
 
     ad_proc -public goto_attachment_url {
@@ -129,7 +176,7 @@ namespace eval attachments {
     } {
         @return the url to go to an attachment
     } {
-        return "${base_url}[attachments::get_url]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
+        return "[get_attachments_url -base_url ${base_url}]/go-to-attachment?object_id=$object_id&attachment_id=$attachment_id"
     }
 
     ad_proc -public detach_url {
@@ -141,7 +188,7 @@ namespace eval attachments {
     } {
         @return the url to detach an attached item from an object
     } {
-        return "${base_url}[attachments::get_url]/detach?object_id=$object_id&attachment_id=$attachment_id&return_url=[ad_urlencode $return_url]"
+        return "[get_attachments_url -base_url ${base_url}]/detach?object_id=$object_id&attachment_id=$attachment_id&return_url=[ad_urlencode $return_url]"
     }
 
     ad_proc -public graphic_url {
