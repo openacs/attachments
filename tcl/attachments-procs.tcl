@@ -136,23 +136,27 @@ namespace eval attachments {
         @see attachments::get_url
 
     } {
-        #
-        # Get some context
-        #
-        set url             "[ad_conn package_url]${base_url}"
-        set relative_url    "${url}[attachments::get_url]"
-        #
-        # Is this URL an attachments package? Otherwise try to find one...
-        #
-        set package_key [dict get [site_node::get_from_url -url "$relative_url"] package_key]
-        if {$package_key eq "attachments"} {
-            return $relative_url
+        if {![ns_conn isconnected]} {
+            return "${base_url}[attachments::get_url]"
         } else {
-            set url_node_id [site_node::get_node_id -url $url]
-            return [site_node::get_children \
-                        -package_key "attachments" \
-                        -element "url" \
-                        -node_id $url_node_id]
+            #
+            # Get some context
+            #
+            set url             "[ad_conn package_url]${base_url}"
+            set relative_url    "${url}[attachments::get_url]"
+            #
+            # Is this URL an attachments package? Otherwise try to find one...
+            #
+            set package_key [dict get [site_node::get_from_url -url "$relative_url"] package_key]
+            if {$package_key eq "attachments"} {
+                return $relative_url
+            } else {
+                set url_node_id [site_node::get_node_id -url $url]
+                return [site_node::get_children \
+                            -package_key "attachments" \
+                            -element "url" \
+                            -node_id $url_node_id]
+            }
         }
     }
 
