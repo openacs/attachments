@@ -14,7 +14,7 @@ Attachments
   
 
 
-** At a high level, how does attachments work?
+** At a high-level, how does attachments work?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   Before you can use the attachments package, each instance of your package must be
@@ -22,7 +22,7 @@ Attachments
   
   The root folder is a "super folder" for all the files in that specific instance of
   file-storage, and it is created automatically when the file-storage
-  package is instanciated.
+  package is instantiated.
 
   When a user wants to make an attachment to an object in your package,
   she is shown the contents of the file-storage root folder mapped to your
@@ -47,7 +47,7 @@ Attachments
   re-mounted)
 
 
-** Map an file-storage root folder to your package instance
+** Map a file-storage root folder to your package instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
   First, you must select a file-storage instance that will provide
