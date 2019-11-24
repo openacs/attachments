@@ -59,7 +59,7 @@ under your package</h3>
 <strong>under</strong> your package. In the <tt>site-map</tt>, you
 should create a new site-node (sub-folder) under your package
 called "attach".</p>
-<p>"attach" is the standard URL, however URL this can be
+<p>"attach" is the standard URL. However, this URL can be
 changed on a site-wide basis by changing the
 "RelativeUrl" parameter of <strong>any</strong> of the
 attachments packages (this works since there&#39;s only one
