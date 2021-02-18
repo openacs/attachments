@@ -44,7 +44,6 @@ aa_register_case -procs {
         set attachment_list [attachments::get_all_attachments \
                                 -object_id $object_id]
         set attachment_list_ids [lsort [lmap x $attachment_list {lindex $x 0}]]
-        #attachments::get_attachments
         aa_equals "Check for new attachments object" \
            "$attachment_list_ids" "$attachment_ids"
         #
