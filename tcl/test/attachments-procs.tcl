@@ -81,6 +81,17 @@ aa_register_case -procs {
     }
 }
 
+aa_register_case -procs {
+    attachments::get_package_key
+} -cats {
+    api
+    production_safe
+} attachments_package_key {
+    Test attachments::get_package_key.
+} {
+    aa_equals "Package_key" [attachments::get_package_key] "attachments"
+}
+
 # Local variables:
 #    mode: tcl
 #    tcl-indent-level: 4
