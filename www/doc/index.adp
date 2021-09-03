@@ -1,5 +1,5 @@
 
-<property name="context">{/doc/attachments {Attachments}} {}</property>
+<property name="context">{/doc/attachments/ {Attachments}} {}</property>
 <property name="doc(title)"></property>
 <master>
 <h1><a id="id.toc" name="id.toc">Contents</a></h1>
@@ -66,7 +66,8 @@ attachments packages (this works since there&#39;s only one
 instance of attachments in the entire system. The same instance is
 just re-mounted)</p>
 <h3>
-<a id="id.s1.2.2" name="id.s1.2.2">1.2.2</a> Map a file-storage root folder to your package instance</h3>
+<a id="id.s1.2.2" name="id.s1.2.2">1.2.2</a> Map a file-storage
+root folder to your package instance</h3>
 <p>First, you must select a file-storage instance that will provide
 the files you can attach. If you do not already have an instance of
 file-storage that you want to use for your package instance, you
