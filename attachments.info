@@ -17,8 +17,8 @@
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
         <provides url="attachments" version="0.13"/>
-        <requires url="acs-tcl" version="5.10.0b1"/>
-        <requires url="acs-kernel" version="5.10.0b1"/>
+        <requires url="acs-tcl" version="5.10.0"/>
+        <requires url="acs-kernel" version="5.10.0"/>
         <requires url="file-storage" version="5.9.1"/>
 
         <parameters>
