@@ -12,7 +12,7 @@
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>Attachment support</summary>
         <maturity>2</maturity>
-        <release-date>2017-08-06</release-date>
+        <release-date>2021-09-15</release-date>
         <vendor url="http://openacs.org">OpenACS</vendor>
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
