@@ -30,7 +30,7 @@ ad_page_contract {
 	set max_bytes [fs::max_upload_size -package_id $fs_package_id]
 	if { $n_bytes > $max_bytes } {
             # Max number of bytes is used in the error message
-            set max_number_of_bytes [util_commify_number $max_bytes]
+            set max_number_of_bytes [lc_numeric $max_bytes]
 	    ad_complain "[_ attachments.lt_Your_file_is_larger_t]"
 	}
     }
