@@ -43,10 +43,12 @@ namespace eval attachments {
         return [db_string get_root_folder_select {} -default {}]
     }
 
-    ad_proc -public root_folder_map_p {
+    ad_proc -deprecated root_folder_map_p {
         {-package_id:required}
     } {
         @return 1 if the package_id has an fs_folder mapped to it
+
+        @see attachments::root_folder_p
     } {
         # this is a duplicate (Ben)
         return [root_folder_p -package_id $package_id]
