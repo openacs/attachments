@@ -30,6 +30,9 @@ namespace eval attachments {
     ad_proc -public get_root_folder {
         {-package_id ""}
     } {
+        @param package_id when omitted, will default to the package
+                          mounted on the current node's parent.
+        @return the attachment root folder id for the package.
     } {
         if {$package_id eq ""} {
             # Get the package ID from the parent URL
@@ -53,6 +56,8 @@ namespace eval attachments {
         {-package_id:required}
         {-folder_id:required}
     } {
+        Designate a folder as the attachment root folder for a
+        package.
     } {
         db_dml map_root_folder_insert {}
     }
@@ -61,6 +66,8 @@ namespace eval attachments {
         {-package_id:required}
         {-folder_id:required}
     } {
+        Designate a folder as the attachment root folder for a
+        package.
     } {
         db_dml unmap_root_folder_delete {}
     }
