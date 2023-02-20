@@ -82,8 +82,7 @@ aa_register_case -procs {
 }
 
 aa_register_case -procs {
-    content::item::get_descendants
-    attachments::get_root_folder
+    attachments::get_package_key
 } -cats {
     api
     production_safe
