@@ -278,26 +278,38 @@ aa_register_case -procs {
 
     aa_section "Attachment Context-Bar"
 
-    set root_folder_id [attachments::get_root_folder]
-    set folder_id [db_string get_any_attachment_folder {
-        select coalesce(max(f.folder_id), :root_folder_id)
-        from cr_folders f, cr_items i
-        where f.folder_id = i.item_id
-          and i.parent_id = :root_folder_id
-    } -default ""]
-    set extra_vars {a 1 b 2 c 3}
-    set cbar_list [fs_context_bar_list \
-                       -extra_vars $extra_vars \
-                       -folder_url "attach" \
-                       -file_url "attach" \
-                       -root_folder_id $root_folder_id \
-                       -final t $folder_id]
+    try {
+        #
+        # attachments::get_root_folder relies on the node from the
+        # connection.
+        #
+        set orig_node_id [ad_conn node_id]
+        ad_conn -set node_id [site_node::get_node_id_from_object_id \
+                                  -object_id [apm_package_id_from_key "acs-automated-testing"]]
 
-    attachments::context_bar \
-        -folder_id $folder_id \
-        -extra_vars $extra_vars \
-        -final t \
-        -multirow attachments_test_multirow
+        set root_folder_id [attachments::get_root_folder]
+        set folder_id [db_string get_any_attachment_folder {
+            select coalesce(max(f.folder_id), :root_folder_id)
+            from cr_folders f, cr_items i
+            where f.folder_id = i.item_id
+            and i.parent_id = :root_folder_id
+        } -default ""]
+        set extra_vars {a 1 b 2 c 3}
+        set cbar_list [fs_context_bar_list \
+                           -extra_vars $extra_vars \
+                           -folder_url "attach" \
+                           -file_url "attach" \
+                           -root_folder_id $root_folder_id \
+                           -final t $folder_id]
+
+        attachments::context_bar \
+            -folder_id $folder_id \
+            -extra_vars $extra_vars \
+            -final t \
+            -multirow attachments_test_multirow
+    } finally {
+        ad_conn -set node_id $orig_node_id
+    }
 
     aa_true "Multirow 'attachments_test_multirow' was created" \
         [template::multirow exists attachments_test_multirow]
