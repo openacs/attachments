@@ -12,13 +12,13 @@
         <owner url="http://openacs.org">OpenACS</owner>
         <summary>Attachment support</summary>
         <maturity>2</maturity>
-        <release-date>2021-09-15</release-date>
+        <release-date>2021-09-16</release-date>
         <vendor url="http://openacs.org">OpenACS</vendor>
         <description format="text/plain">Provide widgets and datamodel to support attachments on arbitrary objects.  Used by forums.</description>
 
         <provides url="attachments" version="0.13"/>
-        <requires url="acs-tcl" version="5.10.0"/>
-        <requires url="acs-kernel" version="5.10.0"/>
+        <requires url="acs-tcl" version="5.10.1b1"/>
+        <requires url="acs-kernel" version="5.10.1b1"/>
         <requires url="file-storage" version="5.9.1"/>
 
         <parameters>
