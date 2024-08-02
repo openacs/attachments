@@ -11,6 +11,7 @@
   <msg key="attach_new">Allega un &lt;b&gt;nuovo&lt;/b&gt;:</msg>
   <msg key="Attach_URL">Allega una URL</msg>
   <msg key="Attachment">Allegato</msg>
+  <msg key="Attachments">Allegati</msg>
   <msg key="Can_delete">Questo è l&#39;unico oggetto al quale questo elemento è stato allegato. Puoi anche scegliere di eliminarlo dal file storage.</msg>
   <msg key="Choose">Scegli</msg>
   <msg key="delete_from_fs">Eliminare questo allegato dal file storage?</msg>

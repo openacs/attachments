@@ -12,7 +12,7 @@
   <msg key="Are_you_sure_detach">Are you sure you want to remove this attachment?</msg>
   <msg key="Attach">Attach</msg>
   <msg key="attach_new">Attach a &lt;b&gt;new&lt;/b&gt;:</msg>
-  <description key="attach_new">This key is going to give problems with word-order for several languages, because the &quot;attach new&quot; grammar is quite specific to English. For example the best translation in Dutch would be &quot;Nieuwe xxxx toevoegen&quot;, but we do not know xxxx yet. A work around is to write &quot;Voeg toe nieuw&quot;, but depending on what is behind it, grammar requires &quot;Voeg toe nieuwe&quot;. So, we get a very forced translation: &quot;Voeg toe nieuw(e)&quot;.
+  <description key="attach_new">This key is going to give problems with word-order for several languages, because the &#34;attach new&#34; grammar is quite specific to English. For example the best translation in Dutch would be &#34;Nieuwe xxxx toevoegen&#34;, but we do not know xxxx yet. A work around is to write &#34;Voeg toe nieuw&#34;, but depending on what is behind it, grammar requires &#34;Voeg toe nieuwe&#34;. So, we get a very forced translation: &#34;Voeg toe nieuw(e)&#34;.
 
 Please fix.</description>
 
@@ -20,6 +20,7 @@ Please fix.</description>
   <description key="Attach_URL">Used as title on page for attaching a URL to an object.</description>
 
   <msg key="Attachment">Attachment</msg>
+  <msg key="Attachments">Attachments</msg>
   <msg key="Can_delete">This is the only object this item is attached to.  You can choose to delete it from file storage as well.</msg>
   <msg key="Choose">Choose</msg>
   <msg key="delete_from_fs">Delete this attachment from file storage?</msg>
@@ -34,7 +35,7 @@ Please fix.</description>
   <msg key="lt_Attach_a_File_to_pret">Attach a File to %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% item</msg>
   <msg key="lt_Created_by_the_attach">Created by the attachments package</msg>
-  <msg key="lt_dont_know_how_to_deal">Don't know how to deal with attachment type %content_type%</msg>
+  <msg key="lt_dont_know_how_to_deal">Don&#39;t know how to deal with attachment type %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Error: Attachment root folder and file storage root folder are different!</msg>
   <msg key="lt_Error_empty_folder_id">Error: empty folder_id!</msg>
   <msg key="lt_Folder_folder_name_is">Folder %folder_name% is empty</msg>
@@ -42,12 +43,12 @@ Please fix.</description>
   <msg key="lt_No_file-storage_folde">No file-storage folders found to link to. Would you like to create one?</msg>
   <msg key="lt_No_such_attachment_fo">No such attachment for this object</msg>
   <msg key="lt_The_specified_parent_">The specified parent folder is not valid.</msg>
-  <msg key="lt_To_attach_a_file_alre">To attach a file already in a folder, open the folder by clicking the folder's name, then click the &amp;quot;[ Choose ]&amp;quot; link next to the file. If you have appropriate system permissions, you will also be able to upload a new file into a folder. To do so, open the folder by clicking the link.  The &quot;Attach a new: File | URL&quot; link will only appear if you have permission to use it.</msg>
+  <msg key="lt_To_attach_a_file_alre">To attach a file already in a folder, open the folder by clicking the folder&#39;s name, then click the &amp;quot;[ Choose ]&amp;quot; link next to the file. If you have appropriate system permissions, you will also be able to upload a new file into a folder. To do so, open the folder by clicking the link.  The &#34;Attach a new: File | URL&#34; link will only appear if you have permission to use it.</msg>
   <msg key="lt_Upload_New_Attachment">Upload New Attachment</msg>
-  <msg key="lt_Use_the_Browse_button">Use the &quot;Browse...&quot; button to locate your file, 
-    then click &quot;Open&quot;.</msg>
+  <msg key="lt_Use_the_Browse_button">Use the &#34;Browse...&#34; button to locate your file, 
+    then click &#34;Open&#34;.</msg>
   <msg key="lt_You_are_attaching_a_d">You are attaching a document to %pretty_object_name%.</msg>
-  <msg key="lt_You_probably_clicked_">You probably clicked on the Add button more than once. Check if the file is properly loaded on the &lt;a href=&quot;%folder_url%&quot;&gt;folder&lt;/a&gt; you want, or you can use the Back button to return and re-enter the version file.</msg>
+  <msg key="lt_You_probably_clicked_">You probably clicked on the Add button more than once. Check if the file is properly loaded on the &lt;a href=&#34;%folder_url%&#34;&gt;folder&lt;/a&gt; you want, or you can use the Back button to return and re-enter the version file.</msg>
   <msg key="lt_Your_file_is_larger_t">Your file is larger than the maximum file size allowed on this system (%max_number_of_bytes% bytes)</msg>
   <msg key="Name">Name</msg>
   <msg key="No_such_type">No such type</msg>
