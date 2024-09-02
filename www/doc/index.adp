@@ -2,6 +2,10 @@
 <property name="context">{/doc/attachments/ {Attachments}} {}</property>
 <property name="doc(title)"></property>
 <master>
+<style>
+div.sect2 > div.itemizedlist > ul.itemizedlist > li.listitem {margin-top: 16px;}
+div.sect3 > div.itemizedlist > ul.itemizedlist > li.listitem {margin-top: 6px;}
+</style>              
 <h1><a id="id.toc" name="id.toc">Contents</a></h1>
 <dl><dd>
 <a href="#id.s1">1 Attachments</a><dl>
@@ -91,13 +95,11 @@ attachments package is not installed on the system or if
 attachments is not properly mounted. To do this, add the following
 proc to your package&#39;s API and wrap all calls to the
 attachments package with it:</p>
-<div class="box" style="border: 2px solid; width: 100%"><pre>
-    ad_proc -private attachments_enabled_p {} {
+<div class="box" style="border: 2px solid; width: 100%"><pre>    ad_proc -private attachments_enabled_p {} {
         set package_id [site_node_apm_integration::child_package_exists_p \
             -package_key attachments
         ]
-    }
-</pre></div>
+    }</pre></div>
 <h4>
 <a id="id.s1.2.3.2" name="id.s1.2.3.2">1.2.3.2</a> Get the
 attachment Url</h4>
@@ -105,16 +107,14 @@ attachment Url</h4>
 attach something to an object, use the
 attachments::add_attachment_url proc, which will return the correct
 Url into the attachments package mounted under your package.</p>
-<div class="box" style="border: 2px solid; width: 100%"><pre>
-    if {$attachments_enabled_p} {
+<div class="box" style="border: 2px solid; width: 100%"><pre>    if {$attachments_enabled_p} {
         if {$attach_p} {
             set redirect_url [attachments::add_attachment_url \
                                   -object_id $message_id \
                                   -return_url $redirect_url \
                                   -pretty_name "$subject"]
         }
-    }
-</pre></div>
+    }</pre></div>
 <p>forums redirects the user to the redirect_url, if the user chose
 to add an attachment to their posting.</p>
 <h3>
