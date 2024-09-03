@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Gehitu karpeta</msg>
   <msg key="lt_Attach_a_File_to_pret">%pretty_object_name%(en) fitxategia erantsi</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% elementu</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Attachments paketeak eratuta</msg>
   <msg key="lt_dont_know_how_to_deal">Ez dakigu zer egin %content_type% motako eransketarekin</msg>
   <msg key="lt_Error_Attachment_root">Errorea: &quot;Attachment&quot; eta &quot;file storage&quot;ren karpeta nagusiak ezberdinak dira</msg>

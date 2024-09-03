@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Tilføj Link til Vedhæftningsmappe</msg>
   <msg key="lt_Attach_a_File_to_pret">Vedhæft en fil til %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% emner</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Oprettet af pakken til vedhæftninger</msg>
   <msg key="lt_dont_know_how_to_deal">Ved ikke hvordan denne vedhæftningsype skal håndteres.</msg>
   <msg key="lt_Error_Attachment_root">Fejl: Vedhæftningens rodmappe var forskellig fra file-storage's rodmappe. </msg>

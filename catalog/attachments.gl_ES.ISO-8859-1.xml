@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Engadir Ligazón para Cartafol de Anexos</msg>
   <msg key="lt_Attach_a_File_to_pret">Anexar un Ficheiro a %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% ítem</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Creado polo paquete de anexos</msg>
   <msg key="lt_dont_know_how_to_deal">non sei o que facer con este tipo de anexo</msg>
   <msg key="lt_Error_Attachment_root">Erro: O cartafol raíz do anexo e cartafol raíz do sistema de ficheiros son diferentes!</msg>

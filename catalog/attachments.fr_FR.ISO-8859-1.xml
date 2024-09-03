@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Ajouter un lien</msg>
   <msg key="lt_Attach_a_File_to_pret">Attacher un document à %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% item</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% octet</msg>
   <msg key="lt_Created_by_the_attach">Créé par le logiciel attachments</msg>
   <msg key="lt_dont_know_how_to_deal">type de document inconnu</msg>
   <msg key="lt_Error_Attachment_root">Erreur: le dossier attaches et le dossier root son différents!</msg>

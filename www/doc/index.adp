@@ -1,19 +1,23 @@
 
-<property name="context">{/doc/attachments {Attachments}} {}</property>
+<property name="context">{/doc/attachments/ {Attachments}} {}</property>
 <property name="doc(title)"></property>
 <master>
+<style>
+div.sect2 > div.itemizedlist > ul.itemizedlist > li.listitem {margin-top: 16px;}
+div.sect3 > div.itemizedlist > ul.itemizedlist > li.listitem {margin-top: 6px;}
+</style>              
 <h1><a id="id.toc" name="id.toc">Contents</a></h1>
 <dl><dd>
 <a href="#id.s1">1 Attachments</a><dl>
 <dd>
 <a href="#id.s1.1">1.1 Basics</a><dl>
-<dd><a href="#id.s1.1.1">1.1.1 What does attachments do?</a></dd><dd><a href="#id.s1.1.2">1.1.2 At a high level, how does
+<dd><a href="#id.s1.1.1">1.1.1 What does attachments do?</a></dd><dd><a href="#id.s1.1.2">1.1.2 At a high-level, how does
 attachments work?</a></dd>
 </dl>
 </dd><dd>
 <a href="#id.s1.2">1.2 Using attachments</a><dl>
 <dd><a href="#id.s1.2.1">1.2.1 Mount attachments under your
-package</a></dd><dd><a href="#id.s1.2.2">1.2.2 Map an file-storage root folder to
+package</a></dd><dd><a href="#id.s1.2.2">1.2.2 Map a file-storage root folder to
 your package instance</a></dd><dd>
 <a href="#id.s1.2.3">1.2.3 Attaching files to your objects</a><dl>
 <dd><a href="#id.s1.2.3.1">1.2.3.1 Have your package check if
@@ -38,14 +42,14 @@ attach one or more file-storage files to any <tt>acs_object</tt>.
 the application provides links into the attachments package&#39;s
 UI.</p>
 <h3>
-<a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high level,
+<a id="id.s1.1.2" name="id.s1.1.2">1.1.2</a> At a high-level,
 how does attachments work?</h3>
 <p>Before you can use the attachments package, each instance of
 your package must be mapped to a <tt>file-storage root
 folder</tt>.</p>
 <p>The root folder is a "super folder" for all the files
 in that specific instance of file-storage, and it is created
-automatically when the file-storage package is instanciated.</p>
+automatically when the file-storage package is instantiated.</p>
 <p>When a user wants to make an attachment to an object in your
 package, she is shown the contents of the file-storage root folder
 mapped to your package instance. The user is also given the option
@@ -59,15 +63,15 @@ under your package</h3>
 <strong>under</strong> your package. In the <tt>site-map</tt>, you
 should create a new site-node (sub-folder) under your package
 called "attach".</p>
-<p>"attach" is the standard URL, however URL this can be
+<p>"attach" is the standard URL. However, this URL can be
 changed on a site-wide basis by changing the
 "RelativeUrl" parameter of <strong>any</strong> of the
 attachments packages (this works since there&#39;s only one
 instance of attachments in the entire system. The same instance is
 just re-mounted)</p>
 <h3>
-<a id="id.s1.2.2" name="id.s1.2.2">1.2.2</a> Map an
-file-storage root folder to your package instance</h3>
+<a id="id.s1.2.2" name="id.s1.2.2">1.2.2</a> Map a file-storage
+root folder to your package instance</h3>
 <p>First, you must select a file-storage instance that will provide
 the files you can attach. If you do not already have an instance of
 file-storage that you want to use for your package instance, you

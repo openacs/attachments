@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">أضفْ ملحق لإرتباط الحافظة</msg>
   <msg key="lt_Attach_a_File_to_pret">ألحق ملفّ بِ %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% بنداً</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% بايت</msg>
   <msg key="lt_Created_by_the_attach">خُلِقتْ برزمةِ الملحقاتِ</msg>
   <msg key="lt_dont_know_how_to_deal">لا نَعْرفْ كيفية التَعَامُل مع هذا نوعِ الملحق</msg>
   <msg key="lt_Error_Attachment_root">خطأُ: ملحق حافظةُ الجذرِ وحافظة جذرِ fs مختليفان!</msg>

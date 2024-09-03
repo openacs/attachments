@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">增加附件文件夾連結</msg>
   <msg key="lt_Attach_a_File_to_pret">附加一個檔案至 %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% 件</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% 位元組</msg>
   <msg key="lt_Created_by_the_attach">由附件所建立</msg>
   <msg key="lt_dont_know_how_to_deal">無法處理附件類型 %content_type%</msg>
   <msg key="lt_Error_Attachment_root">錯誤: 附件根檔案夾與檔案儲存根檔案夾不同.</msg>

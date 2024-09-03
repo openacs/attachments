@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Dodaj Załącznik Folder Link</msg>
   <msg key="lt_Attach_a_File_to_pret">Załącz Plik do %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% obiekt /?/</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% bajt</msg>
   <msg key="lt_Created_by_the_attach">Utworzony przez pakiet Załączniki</msg>
   <msg key="lt_dont_know_how_to_deal">nie wiem co zrobić z tym typem załącznika</msg>
   <msg key="lt_Error_Attachment_root">Błąd: Różne katalogi główne dla Załączników i Systemu Plików!</msg>

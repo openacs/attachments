@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Legg til lenke for vedleggsmappe</msg>
   <msg key="lt_Attach_a_File_to_pret">Legg til en fil til %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% innlegg </msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte </msg>
   <msg key="lt_Created_by_the_attach">Generert av vedleggssystemet</msg>
   <msg key="lt_dont_know_how_to_deal">vet ikke hva jeg skal gjøre med denne vedleggstypen %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Feil: Rotmappe for vedlegg og fillager er forskjellige!</msg>

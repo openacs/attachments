@@ -15,8 +15,7 @@
   <msg key="lt_Add_Attachment_Folder">Add Attachment Folder Link</msg>
   <msg key="lt_Attach_a_File_to_pret">Attach a File to %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% item</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
-  <msg key="lt_Created_by_the_attach">Created by the attachments packge</msg>
+  <msg key="lt_Created_by_the_attach">Created by the attachments package</msg>
   <msg key="lt_dont_know_how_to_deal">Don't know how to deal with attachment type %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Error: Attachment root folder and file storage root folder are different!</msg>
   <msg key="lt_Error_empty_folder_id">Error: empty folder_id!</msg>

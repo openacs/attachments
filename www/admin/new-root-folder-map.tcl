@@ -31,7 +31,7 @@ set root_folder_id [db_string has_fs_root_folder_p_select \
      -default 0 ]
 
 if {$root_folder_id == 0} {
-    # look for a fs root folder candidate, by looking for an file-storage
+    # look for a fs root folder candidate, by looking for a file-storage
     # sibling of our parent (uncle? or aunt? node). Should generalize sibling 
     # stuff, search by parent etc.
     set parent_id [site_node::get_parent \

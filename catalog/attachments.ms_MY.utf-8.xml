@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Tambah Lampiran Folder Pepaut</msg>
   <msg key="lt_Attach_a_File_to_pret">Lampirkan Fail kepada %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% butiran</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% bait</msg>
   <msg key="lt_Created_by_the_attach">Direka oleh pakej lampiran-lampiran</msg>
   <msg key="lt_dont_know_how_to_deal">Tidak tahu bagaimana untuk mengendalikan jenis lampiran %content_type%</msg>
   <msg key="lt_Error_Attachment_root">Ralat: Punca folder lampiran  dan punca folder simpanan fail adalah berlainan!</msg>

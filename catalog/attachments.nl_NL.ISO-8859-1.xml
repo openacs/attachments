@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Nieuwe hoofdmap aanmaken</msg>
   <msg key="lt_Attach_a_File_to_pret">Bestand bijvoegen bij %pretty_object_name% </msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% bericht</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Aangemaakt door de Bijlagen module (Attachments)</msg>
   <msg key="lt_dont_know_how_to_deal">Onbekend hoe met bijlagen van het type %content_type% moet worden omgegaan </msg>
   <msg key="lt_Error_Attachment_root">Fout: de hoofdmap voor bijlagen en voor bestandsopslag verschillen!</msg>

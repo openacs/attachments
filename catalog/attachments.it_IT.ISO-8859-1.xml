@@ -11,6 +11,7 @@
   <msg key="attach_new">Allega un &lt;b&gt;nuovo&lt;/b&gt;:</msg>
   <msg key="Attach_URL">Allega una URL</msg>
   <msg key="Attachment">Allegato</msg>
+  <msg key="Attachments">Allegati</msg>
   <msg key="Can_delete">Questo è l&#39;unico oggetto al quale questo elemento è stato allegato. Puoi anche scegliere di eliminarlo dal file storage.</msg>
   <msg key="Choose">Scegli</msg>
   <msg key="delete_from_fs">Eliminare questo allegato dal file storage?</msg>
@@ -22,7 +23,6 @@
   <msg key="lt_Add_Attachment_Folder">Aggiungi un allegato alla cartella</msg>
   <msg key="lt_Attach_a_File_to_pret">Allega un file a %pretty_object_name% </msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% elemento</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% byte</msg>
   <msg key="lt_Created_by_the_attach">Creato dal pacchetto Attachments</msg>
   <msg key="lt_dont_know_how_to_deal">sono incerto su come trattare questo tipo di allegato</msg>
   <msg key="lt_Error_Attachment_root">Errore: la directory root dell&#39;allegato e quella del filesystem sono differenti!</msg>

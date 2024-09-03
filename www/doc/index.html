@@ -10,12 +10,12 @@
 <dd><a href="#id.s1">1 Attachments</a><dl>
 <dd><a href="#id.s1.1">1.1 Basics</a><dl>
 <dd><a href="#id.s1.1.1">1.1.1 What does attachments do?</a></dd>
-<dd><a href="#id.s1.1.2">1.1.2 At a high level, how does attachments
+<dd><a href="#id.s1.1.2">1.1.2 At a high-level, how does attachments
 work?</a></dd>
 </dl></dd>
 <dd><a href="#id.s1.2">1.2 Using attachments</a><dl>
 <dd><a href="#id.s1.2.1">1.2.1 Mount attachments under your package</a></dd>
-<dd><a href="#id.s1.2.2">1.2.2 Map an file-storage root folder to your package
+<dd><a href="#id.s1.2.2">1.2.2 Map a file-storage root folder to your package
 instance</a></dd>
 <dd><a href="#id.s1.2.3">1.2.3 Attaching files to your objects</a><dl>
 <dd><a href="#id.s1.2.3.1">1.2.3.1 Have your package check if attachments is
@@ -34,12 +34,12 @@ do?</h3>
 more file-storage files to any <tt>acs_object</tt>. <tt>attachments</tt> is
 mounted below a package that uses it, and the application provides links into
 the attachments package's UI.</p><h3><a id="id.s1.1.2" name="id.s1.1.2">1.1.2
-</a>At a high level, how does attachments work?</h3>
+</a>At a high-level, how does attachments work?</h3>
 <p>Before you can use the attachments package, each instance of your package
 must be mapped to a <tt>file-storage root folder</tt>.</p><p>The root folder
 is a &quot;super folder&quot; for all the files in that specific instance of
 file-storage, and it is created automatically when the file-storage package is
-instanciated.</p><p>When a user wants to make an attachment to an object in
+instantiated.</p><p>When a user wants to make an attachment to an object in
 your package, she is shown the contents of the file-storage root folder mapped
 to your package instance. The user is also given the option to upload a new
 file into file-storage to attach.</p><h2><a id="id.s1.2" name="id.s1.2">1.2
@@ -49,12 +49,11 @@ package</h3>
 <p>The first step is to mount the attachments package <b>under</b> your
 package. In the <tt>site-map</tt>, you should create a new site-node
 (sub-folder) under your package called &quot;attach&quot;.
-</p><p>&quot;attach&quot; is the standard URL, however URL this can be changed
+</p><p>&quot;attach&quot; is the standard URL. However, this URL can be changed
 on a site-wide basis by changing the &quot;RelativeUrl&quot; parameter of
 <b>any</b> of the attachments packages (this works since there's only one
 instance of attachments in the entire system. The same instance is just
-re-mounted)</p><h3><a id="id.s1.2.2" name="id.s1.2.2">1.2.2 </a>Map an
-file-storage root folder to your package instance</h3>
+re-mounted)</p><h3><a id="id.s1.2.2" name="id.s1.2.2">1.2.2 </a>Map a file-storage root folder to your package instance</h3>
 <p>First, you must select a file-storage instance that will provide the files
 you can attach. If you do not already have an instance of file-storage that
 you want to use for your package instance, you must create one using the

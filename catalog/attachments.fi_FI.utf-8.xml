@@ -15,7 +15,6 @@
   <msg key="lt_Add_Attachment_Folder">Lisää linkki liitetiedostohakemistoon</msg>
   <msg key="lt_Attach_a_File_to_pret">Liitä tiedosto kohteeseen %pretty_object_name%</msg>
   <msg key="lt_contentscontent_size_">%contents.content_size% nimike</msg>
-  <msg key="lt_contentscontent_size__1">%contents.content_size% tavua</msg>
   <msg key="lt_Created_by_the_attach">Luotu attachments-paketilla</msg>
   <msg key="lt_dont_know_how_to_deal">en tiedä, kuinka tämän liitetiedostotyypin kanssa tulisi toimia</msg>
   <msg key="lt_Error_Attachment_root">Virhe: Liitetiedostojen juurihakemisto ja fs-juurihakemisto poikkeavat toisistaan!</msg>

@@ -54,7 +54,7 @@
 </else>
     <if @contents.type@ eq "folder">
       <td>
-        <img src="graphics/folder.gif" alt="#file-storage.Folder#">
+        <adp:icon name="folder" text="#file-storage.Folder#">
         #file-storage.folder_type_pretty_name#
       </td>
       <td>
@@ -68,7 +68,7 @@
     </if>
     <else>
       <td>
-        <img src="graphics/file.gif" alt="@contents.type@">
+        <adp:icon name="file" text="@contents.type@">
         @contents.type@
       </td>
       <if @contents.type@ eq "url">
@@ -86,7 +86,7 @@
         <td>
           <a href="@contents.action_url@" class="button">#attachments.Choose#</a>
         </td>
-        <td>#attachments.lt_contentscontent_size__1#<if @contents.content_size@ ne 1>s</if></td>
+        <td>@contents.content_size@</td>
       </else>
       <td>@contents.last_modified@</td>
     </else>
